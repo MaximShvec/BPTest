@@ -1,0 +1,457 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<title>Balance Pay — главная, десктоп 1512</title>
+<script>
+if (sessionStorage.getItem('bp_demo_session') !== '1') {
+  location.replace('./index.html');
+}
+</script>
+<script src="./vendor/react.js"></script>
+<script src="./vendor/react-dom.js"></script>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500&amp;family=Space+Grotesk:wght@500&amp;display=swap">
+<style>
+body{margin:0;font-family:'Inter',system-ui,sans-serif;background:#f3f5f5;color:#272727}
+#dc-root>.sc-host{display:flex;justify-content:center}
+a{color:#272727;text-decoration:none}
+a:hover{color:#C4A300}
+h1,h2,h3,h4,h5,p,dl,dd,dt{margin:0}
+ul,ol,li{margin:0;padding:0;list-style:none}
+</style>
+</helmet>
+
+<div style="width: 1512px; height: 8000px; flex-shrink: 0; box-sizing: border-box; display: flex; flex-direction: column; background: #f3f5f5; color: #272727; overflow: hidden; margin: 0 auto;">
+
+  <!-- HEADER -->
+  <header style="height: 72px; box-sizing: border-box; padding: 0 64px; display: flex; align-items: center; justify-content: space-between; gap: 32px; background: rgba(243,245,245,0.8); box-shadow: inset 0 -1px #e3e3e3; flex-shrink: 0;">
+    <a href="#home" style="display: flex; align-items: center; gap: 12px; flex-shrink: 0;">
+      <span style="display: flex; align-items: center; justify-content: center; width: 121px; height: 34px; border: 1px dashed #939393; border-radius: 8px; font-size: 11px; color: #939393; letter-spacing: 0;">[ЛОГОТИП Balance Pay]</span>
+      <span style="font-family: 'Space Grotesk', sans-serif; font-weight: 500; font-size: 10px; line-height: 1; color: #272727;">Rockin’<br>since 2014</span>
+    </a>
+    <nav style="display: flex; align-items: center; justify-content: center; gap: 24px; flex-grow: 1;">
+      <a href="#personal" style="font-size: 16px; line-height: 22px; font-weight: 500; letter-spacing: -0.01em; color: #939393;">Частным лицам</a>
+      <a href="#business" style="font-size: 16px; line-height: 22px; font-weight: 500; letter-spacing: -0.01em; color: #939393;">Бизнесу</a>
+      <a href="#cards" style="font-size: 16px; line-height: 22px; font-weight: 500; letter-spacing: -0.01em; color: #939393;">Карты</a>
+      <a href="#exchange" style="font-size: 16px; line-height: 22px; font-weight: 500; letter-spacing: -0.01em; color: #939393;">Обмен</a>
+      <button type="button" style="font-family: 'Inter', sans-serif; font-size: 16px; line-height: 22px; font-weight: 500; letter-spacing: -0.01em; color: #939393; background: none; border: none; cursor: pointer;">Компания</button>
+      <button type="button" style="font-family: 'Inter', sans-serif; font-size: 16px; line-height: 22px; font-weight: 500; letter-spacing: -0.01em; color: #939393; background: none; border: none; cursor: pointer;">Разработчикам</button>
+    </nav>
+    <div style="display: flex; align-items: center; gap: 8px; flex-shrink: 0;">
+      <a href="./index.html" style="height: 40px; padding: 0 16px; border-radius: 8px; background: #272727; color: #f3f5f5; font-size: 14px; line-height: 20px; font-weight: 500; letter-spacing: -0.01em; display: flex; align-items: center;">Войти</a>
+      <a href="./index.html?mode=signup" style="height: 40px; padding: 0 16px; border-radius: 8px; background: #FFD400; color: #272727; font-size: 14px; line-height: 20px; font-weight: 500; letter-spacing: -0.01em; display: flex; align-items: center;">Попробовать бесплатно</a>
+      <button type="button" style="height: 40px; padding: 0 16px; border-radius: 8px; background: none; box-shadow: inset 0 0 0 1px #e3e3e3; color: #272727; font-family: 'Inter', sans-serif; font-size: 14px; line-height: 20px; font-weight: 500; cursor: pointer;">RU</button>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main style="box-sizing: border-box; padding: 72px 64px; display: flex; flex-direction: column; gap: 80px; flex-grow: 1;">
+
+    <!-- HERO -->
+    <section style="box-sizing: border-box; padding: 32px; border-radius: 32px; display: flex; flex-direction: column; align-items: center; gap: 24px;">
+      <img src="./assets/087adce6a1078e7891a46dc9858627f2.png" alt="Стеклянный глобус с самолётом — международные платежи" style="width: 480px; height: 356px; object-fit: contain; display: block;">
+      <h1 style="font-family: 'Space Grotesk', sans-serif; font-weight: 500; font-size: 72px; line-height: 64px; letter-spacing: -0.06em; text-align: center; max-width: 1100px; font-feature-settings: 'ss07' on;">Крипта, IBAN и выплаты контрагентам — в одном аккаунте</h1>
+      <p style="font-size: 20px; line-height: 28px; letter-spacing: -0.01em; color: #646464; text-align: center; max-width: 720px;">Принимайте переводы на свой счёт, меняйте криптовалюту на евро и доллары, рассчитывайтесь с сотнями партнёров. Одна верификация вместо пяти сервисов.</p>
+      <a href="#signup" style="height: 88px; padding: 0 32px; border-radius: 16px; background: #FFD400; color: #272727; font-size: 16px; line-height: 22px; font-weight: 500; letter-spacing: -0.01em; display: flex; align-items: center;">Открыть аккаунт бесплатно</a>
+    </section>
+
+    <!-- ROW: CARDS + PAYOUTS -->
+    <section style="display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 8px;">
+      <div style="grid-column: span 8; box-sizing: border-box; padding: 32px; border-radius: 32px; background: #ffffff; display: flex; gap: 32px; align-items: center;">
+        <img src="./assets/670951e6e799e4a4fb190633ee6886d2.png" alt="Стеклянная карта и глобус с символами валют" style="width: 320px; height: 320px; flex-shrink: 0; object-fit: contain; display: block;">
+        <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 16px;">
+          <h2 style="font-family: 'Space Grotesk', sans-serif; font-weight: 500; font-size: 52px; line-height: 54px; letter-spacing: -0.06em; font-feature-settings: 'ss07' on, 'ss04' on;">IBAN, который принимает SWIFT и SEPA</h2>
+          <p style="font-size: 16px; line-height: 22px; letter-spacing: -0.01em; color: #646464; max-width: 480px;">Счёт на компанию с реквизитами для входящих переводов. Держите баланс в нужной валюте, выгружайте выписки для бухгалтерии и не объясняйте банку, откуда пришла криптовалюта.</p>
+          <a href="#all-cards" style="height: 56px; padding: 0 24px; border-radius: 12px; background: #FFD400; color: #272727; font-size: 16px; line-height: 22px; font-weight: 500; display: flex; align-items: center;">Открыть счёт</a>
+        </div>
+      </div>
+      <div style="grid-column: span 4; box-sizing: border-box; padding: 32px; border-radius: 32px; background: #FFD400; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 16px;">
+        <img src="./assets/9b915ca39bee5861cfff5a8182796733.png" alt="Схема выплат: один центр и получатели в USD, USDT и BTC" style="width: 280px; height: 280px; object-fit: contain; display: block;">
+        <h2 style="font-family: 'Space Grotesk', sans-serif; font-weight: 500; font-size: 36px; line-height: 36px; letter-spacing: -0.04em; font-feature-settings: 'ss07' on, 'ss04' on;">Выплаты сотням контрагентов за один раз</h2>
+        <p style="font-size: 16px; line-height: 22px; letter-spacing: -0.01em; color: #272727;">Загрузите файл с получателями — деньги уйдут на кошельки Balance Pay, в USDT и USDC или банковским переводом. Курс и комиссия известны до отправки.</p>
+        <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-top: auto;">
+          <a href="#payouts" style="height: 56px; padding: 0 24px; border-radius: 12px; background: #272727; color: #f3f5f5; font-size: 16px; line-height: 22px; font-weight: 500; display: flex; align-items: center;">Как это работает</a>
+          <a href="#demo" style="height: 56px; padding: 0 24px; border-radius: 12px; box-shadow: inset 0 0 0 1px #272727; color: #272727; font-size: 16px; line-height: 22px; font-weight: 500; display: flex; align-items: center;">Записаться на демо</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ROW: HUB + PERSONAL + BUSINESS -->
+    <section style="display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 8px;">
+      <div style="grid-column: span 12; box-sizing: border-box; padding: 32px; border-radius: 32px; background: #ffffff; display: flex; gap: 40px; align-items: center;">
+        <div style="width: 300px; height: 200px; flex-shrink: 0; border: 1px dashed #e3e3e3; border-radius: 16px; display: flex; align-items: center; justify-content: center; color: #939393; font-size: 13px;">[coin-into-hand.svg]</div>
+        <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 16px;">
+          <h2 style="font-family: 'Space Grotesk', sans-serif; font-weight: 500; font-size: 52px; line-height: 54px; letter-spacing: -0.06em; font-feature-settings: 'ss07' on, 'ss04' on; max-width: 900px;">Весь оборот <span style="color: rgb(147, 147, 147)">от инвойса до выплаты —</span> криптовалюта, фиат и расчёты с партнёрами</h2>
+          <p style="font-size: 20px; line-height: 28px; letter-spacing: -0.01em; color: #646464; max-width: 760px;">Выставили счёт в USDT, получили оплату, поменяли на евро, заплатили подрядчикам. Четыре шага в одном интерфейсе — без бирж, посредников и трёх разных проверок.</p>
+          <a href="#try" style="height: 56px; padding: 0 24px; border-radius: 12px; background: #FFD400; color: #272727; font-size: 16px; line-height: 22px; font-weight: 500; display: flex; align-items: center;">Попробовать Balance Pay</a>
+        </div>
+      </div>
+
+      <div id="personal" style="grid-column: span 6; box-sizing: border-box; padding: 32px; border-radius: 32px; background: #ffffff; display: flex; flex-direction: column; gap: 16px;">
+        <span style="font-size: 10px; line-height: 14px; text-transform: uppercase; color: #939393;">Для частных лиц</span>
+        <h2 style="font-family: 'Space Grotesk', sans-serif; font-weight: 500; font-size: 52px; line-height: 54px; letter-spacing: -0.06em; font-feature-settings: 'ss07' on, 'ss04' on;">Криптовалюта и деньги — в одном кошельке.</h2>
+        <p style="font-size: 20px; line-height: 28px; letter-spacing: -0.01em; color: #646464;">Покупайте, храните и меняйте криптовалюту, тратьте картой и выводите на счёт. Курс и комиссия видны до подтверждения — без скрытых спредов.</p>
+        <ul style="display: flex; flex-direction: column; gap: 12px; margin-top: 8px;">
+          <li style="font-family: 'Space Grotesk', sans-serif; font-weight: 500; font-size: 24px; line-height: 28px; letter-spacing: -0.015em; font-feature-settings: 'ss07' on, 'ss04' on;">Меняйте USDT, BTC и ETH на евро и доллары</li>
+          <li style="font-family: 'Space Grotesk', sans-serif; font-weight: 500; font-size: 24px; line-height: 28px; letter-spacing: -0.015em; font-feature-settings: 'ss07' on, 'ss04' on;">Получайте переводы из 120 стран</li>
+          <li style="font-family: 'Space Grotesk', sans-serif; font-weight: 500; font-size: 24px; line-height: 28px; letter-spacing: -0.015em; font-feature-settings: 'ss07' on, 'ss04' on;">Платите картой онлайн и офлайн</li>
+          <li style="font-family: 'Space Grotesk', sans-serif; font-weight: 500; font-size: 24px; line-height: 28px; letter-spacing: -0.015em; font-feature-settings: 'ss07' on, 'ss04' on;">Выводите на карту, кошелёк или банковский счёт</li>
+          <li style="font-family: 'Space Grotesk', sans-serif; font-weight: 500; font-size: 24px; line-height: 28px; letter-spacing: -0.015em; color: #939393; font-feature-settings: 'ss07' on, 'ss04' on;">И всё это — в приложении</li>
+        </ul>
+        <a href="#personal-more" style="margin-top: auto; align-self: flex-start; height: 56px; padding: 0 24px; border-radius: 12px; box-shadow: inset 0 0 0 1px #e3e3e3; color: #272727; font-size: 16px; line-height: 22px; font-weight: 500; display: flex; align-items: center;">Частным лицам</a>
+      </div>
+
+      <div id="business" style="grid-column: span 6; box-sizing: border-box; padding: 32px; border-radius: 32px; background: #141414; color: #f3f5f5; display: flex; flex-direction: column; gap: 16px;">
+        <span style="font-size: 10px; line-height: 14px; text-transform: uppercase; color: #939393;">Для бизнеса</span>
+        <h2 style="font-family: 'Space Grotesk', sans-serif; font-weight: 500; font-size: 52px; line-height: 54px; letter-spacing: -0.06em; font-feature-settings: 'ss07' on, 'ss04' on;">Принимайте, меняйте и выплачивайте — в любом объёме.</h2>
+        <ul style="display: flex; flex-direction: column; gap: 12px; margin-top: 8px;">
+          <li style="font-family: 'Space Grotesk', sans-serif; font-weight: 500; font-size: 24px; line-height: 28px; letter-spacing: -0.015em; font-feature-settings: 'ss07' on, 'ss04' on;">Принимайте оплату в криптовалюте и фиате</li>
+          <li style="font-family: 'Space Grotesk', sans-serif; font-weight: 500; font-size: 24px; line-height: 28px; letter-spacing: -0.015em; font-feature-settings: 'ss07' on, 'ss04' on;">Выставляйте криптоинвойсы клиентам</li>
+          <li style="font-family: 'Space Grotesk', sans-serif; font-weight: 500; font-size: 24px; line-height: 28px; letter-spacing: -0.015em; font-feature-settings: 'ss07' on, 'ss04' on;">Платите подрядчикам и партнёрам одним файлом</li>
+          <li style="font-family: 'Space Grotesk', sans-serif; font-weight: 500; font-size: 24px; line-height: 28px; letter-spacing: -0.015em; font-feature-settings: 'ss07' on, 'ss04' on;">Меняйте крипту на фиат и обратно в один шаг</li>
+          <li style="font-family: 'Space Grotesk', sans-serif; font-weight: 500; font-size: 24px; line-height: 28px; letter-spacing: -0.015em; color: #939393; font-feature-settings: 'ss07' on, 'ss04' on;">Подключайте выплаты по API</li>
+        </ul>
+        <a href="#business-more" style="margin-top: auto; align-self: flex-start; height: 56px; padding: 0 24px; border-radius: 12px; box-shadow: inset 0 0 0 1px #939393; color: #ffffff; font-size: 16px; line-height: 22px; font-weight: 500; display: flex; align-items: center;">Бизнес-клиентам</a>
+      </div>
+    </section>
+
+    <!-- TRUST -->
+    <section style="box-sizing: border-box; padding: 32px; border-radius: 32px; background: #ffffff; display: flex; flex-direction: column; gap: 32px;">
+      <div style="display: flex; gap: 32px; align-items: stretch;">
+        <div style="flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between; gap: 24px;">
+          <div style="width: 158px; height: 40px; border: 1px dashed #e3e3e3; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 12px; color: #939393;">[still rockin]</div>
+          <h3 style="font-family: 'Space Grotesk', sans-serif; font-weight: 500; font-size: 36px; line-height: 36px; letter-spacing: -0.04em; font-feature-settings: 'ss07' on, 'ss04' on; max-width: 620px;">Нам доверяют компании по всему миру — с 2014 года&nbsp;</h3>
+        </div>
+        <div style="display: flex; gap: 8px; align-items: flex-end;">
+          <div style="width: 200px; box-sizing: border-box; padding: 24px; border-radius: 24px; background: #f3f5f5; display: flex; flex-direction: column; gap: 4px;">
+            <span style="font-family: 'Space Grotesk', sans-serif; font-weight: 500; font-size: 36px; line-height: 36px; letter-spacing: -0.04em;">500+</span>
+            <span style="font-size: 10px; line-height: 14px; text-transform: uppercase; color: #939393;">довольных бизнес-клиентов</span>
+          </div>
+          <div style="width: 200px; box-sizing: border-box; padding: 24px; border-radius: 24px; background: #f3f5f5; display: flex; flex-direction: column; gap: 4px; height: 114px">
+            <span style="font-family: 'Space Grotesk', sans-serif; font-weight: 500; font-size: 36px; line-height: 36px; letter-spacing: -0.04em;">$1M+</span>
+            <span style="font-size: 10px; line-height: 14px; text-transform: uppercase; color: #939393;">оборот клиентов</span>
+          </div>
+          <div style="width: 200px; box-sizing: border-box; padding: 24px; border-radius: 24px; background: #f3f5f5; display: flex; flex-direction: column; gap: 4px; height: 114px">
+            <span style="font-family: 'Space Grotesk', sans-serif; font-weight: 500; font-size: 36px; line-height: 36px; letter-spacing: -0.04em;">120</span>
+            <span style="font-size: 10px; line-height: 14px; text-transform: uppercase; color: #939393;">стран</span>
+          </div>
+        </div>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 6px;">
+        <p style="font-size: 14px; line-height: 20px; letter-spacing: -0.01em; color: #646464;">Лицензии, сертификаты и соответствие требованиям.</p>
+        <ul style="display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 2px;">
+          <li style="height: 96px; background: #f3f5f5; border-radius: 16px 0 0 16px; display: flex; align-items: center; justify-content: center; color: #939393; font-size: 12px;">[ЛИЦЕНЗИЯ]</li>
+          <li style="height: 96px; background: #f3f5f5; display: flex; align-items: center; justify-content: center; color: #939393; font-size: 12px;">[ISO 27001]</li>
+          <li style="height: 96px; background: #f3f5f5; display: flex; align-items: center; justify-content: center; color: #939393; font-size: 12px;">[PCI DSS]</li>
+          <li style="height: 96px; background: #f3f5f5; display: flex; align-items: center; justify-content: center; color: #939393; font-size: 12px;">[GDPR]</li>
+          <li style="height: 96px; background: #f3f5f5; display: flex; align-items: center; justify-content: center; color: #939393; font-size: 12px;">[SSL]</li>
+          <li style="height: 96px; background: #f3f5f5; border-radius: 0 16px 16px 0; display: flex; align-items: center; justify-content: center; color: #939393; font-size: 12px;">[AML]</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ROW: SECURITY / SUPPORT / FEES -->
+    <section style="display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 8px;">
+      <div style="grid-column: span 4; box-sizing: border-box; padding: 32px; border-radius: 32px; background: #000000; color: #f3f5f5; display: flex; flex-direction: column; gap: 16px; min-height: 420px;">
+        <h3 style="font-family: 'Space Grotesk', sans-serif; font-weight: 500; font-size: 36px; line-height: 36px; letter-spacing: -0.04em; font-feature-settings: 'ss07' on, 'ss04' on;">Безопасность<br>по умолчанию</h3>
+        <p style="font-size: 16px; line-height: 22px; letter-spacing: -0.01em; color: #939393;">Шифрование, двухфакторная аутентификация и мониторинг операций в реальном времени. Комплаенс по правилам AML — поэтому платежи проходят предсказуемо, а не на усмотрение банка.</p>
+        <div style="display: flex; gap: 8px; margin-top: 8px;">
+          <span style="width: 56px; height: 56px; border: 1px dashed #646464; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 10px; color: #939393;">ISO</span>
+          <span style="width: 56px; height: 56px; border: 1px dashed #646464; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 10px; color: #939393;">PCI</span>
+          <span style="width: 56px; height: 56px; border: 1px dashed #646464; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 10px; color: #939393;">GDPR</span>
+          <span style="width: 56px; height: 56px; border: 1px dashed #646464; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 10px; color: #939393;">SSL</span>
+        </div>
+        <a href="#security" style="margin-top: auto; align-self: flex-start; height: 56px; padding: 0 24px; border-radius: 12px; box-shadow: inset 0 0 0 1px #646464; color: #ffffff; font-size: 16px; line-height: 22px; font-weight: 500; display: flex; align-items: center;">Подробнее</a>
+      </div>
+
+      <div style="grid-column: span 4; box-sizing: border-box; padding: 32px; border-radius: 32px; background: #dae8ee; display: flex; flex-direction: column; gap: 16px; min-height: 420px;">
+        <h3 style="font-family: 'Space Grotesk', sans-serif; font-weight: 500; font-size: 36px; line-height: 36px; letter-spacing: -0.04em; font-feature-settings: 'ss07' on, 'ss04' on;">Отвечают живые люди. А бизнесу — персональный менеджер.</h3>
+        <div style="display: flex; margin-top: 8px;">
+          <span style="width: 64px; height: 64px; border-radius: 50%; background: #b6c1c6; margin-right: -16px;"></span>
+          <span style="width: 64px; height: 64px; border-radius: 50%; background: #c6d4da; margin-right: -16px;"></span>
+          <span style="width: 64px; height: 64px; border-radius: 50%; background: #b6c1c6; margin-right: -16px;"></span>
+          <span style="width: 64px; height: 64px; border-radius: 50%; background: #c6d4da;"></span>
+        </div>
+        <p style="margin-top: auto; font-size: 16px; line-height: 22px; letter-spacing: -0.01em; color: #646464;">Пишите в чат на своём языке: на той стороне человек, а не сценарий. Бизнесу помогает закреплённый менеджер — от первого платежа до регулярных выплат.</p>
+      </div>
+
+      <div style="grid-column: span 4; box-sizing: border-box; padding: 32px; border-radius: 32px; background: #ffffff; display: flex; flex-direction: column; gap: 16px; min-height: 420px;">
+        <h3 style="font-family: 'Space Grotesk', sans-serif; font-weight: 500; font-size: 36px; line-height: 36px; letter-spacing: -0.04em; font-feature-settings: 'ss07' on, 'ss04' on;">Комиссия видна<br>до подтверждения</h3>
+        <p style="font-size: 16px; line-height: 22px; letter-spacing: -0.01em; color: #646464;">Курс, близкий к рыночному, и понятная комиссия за операцию. Без наценки, спрятанной в курсе.</p>
+        <div style="margin-top: auto; display: flex; flex-direction: column; align-items: flex-start; gap: 12px;">
+          <a href="#fees-personal" style="font-size: 16px; line-height: 22px; font-weight: 500; border-bottom: 1px solid #e3e3e3;">Тарифы для частных лиц</a>
+          <a href="#fees-business" style="font-size: 16px; line-height: 22px; font-weight: 500; border-bottom: 1px solid #e3e3e3;">Тарифы для бизнеса</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- REFERRAL -->
+    <section style="box-sizing: border-box; border-radius: 32px; background: #000000; color: #f3f5f5; padding: 32px; display: flex; flex-direction: column; gap: 24px;">
+      <div style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 12px;">
+        <h2 style="font-family: 'Space Grotesk', sans-serif; font-weight: 500; font-size: 52px; line-height: 54px; letter-spacing: -0.06em; font-feature-settings: 'ss07' on, 'ss04' on;">Зарабатывайте с Balance Pay</h2>
+        <p style="font-size: 20px; line-height: 28px; letter-spacing: -0.01em; color: #939393; max-width: 760px;">Приводите компании и частных клиентов — и получайте долю их комиссий годами, а не разовый бонус за регистрацию.</p>
+      </div>
+      <div style="width: 100%; height: 180px; border: 1px dashed #646464; border-radius: 24px; display: flex; align-items: center; justify-content: center; color: #939393; font-size: 13px;">[referral.svg]</div>
+      <div style="display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 8px;">
+        <div style="grid-column: span 3; box-sizing: border-box; min-height: 100%; padding: 32px; border-radius: 32px; background: #141414; display: flex; flex-direction: column; gap: 16px;">
+          <span style="width: 56px; height: 56px; border: 1px dashed #646464; border-radius: 16px;"></span>
+          <p style="font-size: 16px; line-height: 22px; letter-spacing: -0.01em; color: #939393;">Подходит авторам, агентствам и профессиональным сообществам</p>
+        </div>
+        <div style="grid-column: span 3; box-sizing: border-box; min-height: 100%; padding: 32px; border-radius: 32px; background: #141414; display: flex; flex-direction: column; gap: 16px;">
+          <span style="width: 56px; height: 56px; border: 1px dashed #646464; border-radius: 16px;"></span>
+          <p style="font-size: 16px; line-height: 22px; letter-spacing: -0.01em; color: #939393;">Доход с обменов, выплат и карт ваших рефералов</p>
+        </div>
+        <div style="grid-column: span 3; box-sizing: border-box; min-height: 100%; padding: 32px; border-radius: 32px; background: #141414; display: flex; flex-direction: column; gap: 16px;">
+          <span style="width: 56px; height: 56px; border: 1px dashed #646464; border-radius: 16px;"></span>
+          <p style="font-size: 16px; line-height: 22px; letter-spacing: -0.01em; color: #939393;">Работает и для частных клиентов, и для мерчантов</p>
+        </div>
+        <div style="grid-column: span 3; box-sizing: border-box; padding: 32px; border-radius: 32px; background: #FFD400; color: #272727; display: flex; flex-direction: column; justify-content: space-between; gap: 16px;">
+          <h5 style="font-family: 'Space Grotesk', sans-serif; font-weight: 500; font-size: 24px; line-height: 28px; letter-spacing: -0.015em; font-feature-settings: 'ss07' on, 'ss04' on;">Все<br>преимущества</h5>
+          <a href="#affiliate" aria-label="Все преимущества" style="width: 56px; height: 56px; border-radius: 50%; background: #272727; color: #FFD400; display: flex; align-items: center; justify-content: center; align-self: flex-end;">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="M13 6l6 6-6 6"></path></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- BLOG -->
+    <section style="box-sizing: border-box; padding: 48px 0; display: flex; flex-direction: column; gap: 24px;">
+      <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 32px;">
+        <div style="display: flex; flex-direction: column; gap: 8px;">
+          <div style="display: flex; align-items: center; gap: 16px;">
+            <h2 style="font-family: 'Space Grotesk', sans-serif; font-weight: 500; font-size: 72px; line-height: 64px; letter-spacing: -0.06em; font-feature-settings: 'ss07' on;">Блог</h2>
+            <span style="width: 72px; height: 72px; border: 1px dashed #939393; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #939393; font-size: 11px;">[blog]</span>
+          </div>
+          <p style="font-size: 20px; line-height: 28px; letter-spacing: -0.01em; color: #646464;">Крипта и расчёты на практике: инвойсы, выплаты и разборы реальных кейсов.</p>
+        </div>
+        <a href="#blog" style="height: 56px; padding: 0 24px; border-radius: 12px; box-shadow: inset 0 0 0 1px #e3e3e3; color: #272727; font-size: 16px; line-height: 22px; font-weight: 500; display: flex; align-items: center;">Смотреть все статьи</a>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px;">
+        <article style="box-sizing: border-box; padding: 28px 32px 36px; border-radius: 32px; background: #ffffff; box-shadow: 0 1px 0 rgba(0,0,0,0.1); display: flex; flex-direction: column; gap: 10px;">
+          <h3 style="font-family: 'Space Grotesk', sans-serif; font-weight: 500; font-size: 32px; line-height: 36px; letter-spacing: -0.04em; font-feature-settings: 'ss07' on, 'ss04' on;">Калькулятор сбережений от платежей в стейблкоинах для бизнеса</h3>
+          <ul style="display: flex; font-size: 16px; line-height: 22px; color: #646464;"><li>Бизнес</li><li style="margin-left: 8px;">•&nbsp;&nbsp;11.08.2026</li></ul>
+          <div style="margin-top: 24px; width: 100%; height: 180px; border: 1px dashed #e3e3e3; border-radius: 16px; display: flex; align-items: center; justify-content: center; color: #939393; font-size: 12px;">[обложка статьи]</div>
+        </article>
+        <article style="box-sizing: border-box; padding: 28px 32px 36px; border-radius: 32px; background: #ffffff; box-shadow: 0 1px 0 rgba(0,0,0,0.1); display: flex; flex-direction: column; gap: 10px;">
+          <h3 style="font-family: 'Space Grotesk', sans-serif; font-weight: 500; font-size: 32px; line-height: 36px; letter-spacing: -0.04em; font-feature-settings: 'ss07' on, 'ss04' on;">3 основные преимущества Balance Pay</h3>
+          <ul style="display: flex; font-size: 16px; line-height: 22px; color: #646464;"><li>Новости Balance Pay</li><li style="margin-left: 8px;">•&nbsp;&nbsp;03.08.2026</li></ul>
+          <div style="margin-top: 24px; width: 100%; height: 180px; border: 1px dashed #e3e3e3; border-radius: 16px; display: flex; align-items: center; justify-content: center; color: #939393; font-size: 12px;">[обложка статьи]</div>
+        </article>
+        <article style="box-sizing: border-box; padding: 28px 32px 36px; border-radius: 32px; background: #ffffff; box-shadow: 0 1px 0 rgba(0,0,0,0.1); display: flex; flex-direction: column; gap: 10px;">
+          <h3 style="font-family: 'Space Grotesk', sans-serif; font-weight: 500; font-size: 32px; line-height: 36px; letter-spacing: -0.04em; font-feature-settings: 'ss07' on, 'ss04' on;">Апдейт платформы Balance Pay — вот что изменилось</h3>
+          <ul style="display: flex; font-size: 16px; line-height: 22px; color: #646464;"><li>Новости Balance Pay</li><li style="margin-left: 8px;">•&nbsp;&nbsp;09.07.2026</li></ul>
+          <div style="margin-top: 24px; width: 100%; height: 180px; border: 1px dashed #e3e3e3; border-radius: 16px; display: flex; align-items: center; justify-content: center; color: #939393; font-size: 12px;">[обложка статьи]</div>
+        </article>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section style="box-sizing: border-box; border-radius: 32px; background: #ffffff; display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 8px;">
+      <div style="grid-column: span 4; box-sizing: border-box; padding: 32px; display: flex; flex-direction: column; gap: 16px;">
+        <h2 style="font-family: 'Space Grotesk', sans-serif; font-weight: 500; font-size: 52px; line-height: 54px; letter-spacing: -0.06em; font-feature-settings: 'ss07' on, 'ss04' on;">Вопросы о счетах, обмене и выплатах</h2>
+        <p style="font-size: 20px; line-height: 28px; letter-spacing: -0.01em; color: #646464;">Короткие ответы на частые вопросы — или <a href="#contact" style="border-bottom: 1px solid #e3e3e3;">напишите нам</a> в любое время.</p>
+      </div>
+      <div style="grid-column: span 8; box-sizing: border-box; padding: 32px; display: flex; flex-direction: column; gap: 8px;">
+        <div style="display: flex; gap: 32px; padding: 24px; border-radius: 16px; background: #f3f5f5;">
+          <h5 style="flex-grow: 1; font-family: 'Space Grotesk', sans-serif; font-weight: 500; font-size: 24px; line-height: 28px; letter-spacing: -0.015em;">Как открыть счёт с IBAN на компанию?</h5>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#272727" stroke-width="2" stroke-linecap="round" aria-hidden="true" style="flex-shrink: 0; margin-top: 2px;"><path d="M12 5v14"></path><path d="M5 12h14"></path></svg>
+        </div>
+        <div style="display: flex; gap: 32px; padding: 24px; border-radius: 16px; background: #f3f5f5;">
+          <h5 style="flex-grow: 1; font-family: 'Space Grotesk', sans-serif; font-weight: 500; font-size: 24px; line-height: 28px; letter-spacing: -0.015em;">Принимаете ли вы переводы по SWIFT и SEPA?</h5>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#272727" stroke-width="2" stroke-linecap="round" aria-hidden="true" style="flex-shrink: 0; margin-top: 2px;"><path d="M12 5v14"></path><path d="M5 12h14"></path></svg>
+        </div>
+        <div style="display: flex; gap: 32px; padding: 24px; border-radius: 16px; background: #f3f5f5;">
+          <h5 style="flex-grow: 1; font-family: 'Space Grotesk', sans-serif; font-weight: 500; font-size: 24px; line-height: 28px; letter-spacing: -0.015em;">Что такое криптоинвойсинг и кому он нужен?</h5>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#272727" stroke-width="2" stroke-linecap="round" aria-hidden="true" style="flex-shrink: 0; margin-top: 2px;"><path d="M12 5v14"></path><path d="M5 12h14"></path></svg>
+        </div>
+        <div style="display: flex; gap: 32px; padding: 24px; border-radius: 16px; background: #f3f5f5;">
+          <h5 style="flex-grow: 1; font-family: 'Space Grotesk', sans-serif; font-weight: 500; font-size: 24px; line-height: 28px; letter-spacing: -0.015em;">Как поменять криптовалюту на фиат и вывести на счёт?</h5>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#272727" stroke-width="2" stroke-linecap="round" aria-hidden="true" style="flex-shrink: 0; margin-top: 2px;"><path d="M12 5v14"></path><path d="M5 12h14"></path></svg>
+        </div>
+        <div style="display: flex; gap: 32px; padding: 24px; border-radius: 16px; background: #f3f5f5;">
+          <h5 style="flex-grow: 1; font-family: 'Space Grotesk', sans-serif; font-weight: 500; font-size: 24px; line-height: 28px; letter-spacing: -0.015em;">Как устроены массовые выплаты контрагентам?</h5>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#272727" stroke-width="2" stroke-linecap="round" aria-hidden="true" style="flex-shrink: 0; margin-top: 2px;"><path d="M12 5v14"></path><path d="M5 12h14"></path></svg>
+        </div>
+        <div style="display: flex; gap: 32px; padding: 24px; border-radius: 16px; background: #f3f5f5;">
+          <h5 style="flex-grow: 1; font-family: 'Space Grotesk', sans-serif; font-weight: 500; font-size: 24px; line-height: 28px; letter-spacing: -0.015em;">В каких валютах можно держать баланс?</h5>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#272727" stroke-width="2" stroke-linecap="round" aria-hidden="true" style="flex-shrink: 0; margin-top: 2px;"><path d="M12 5v14"></path><path d="M5 12h14"></path></svg>
+        </div>
+        <div style="display: flex; gap: 32px; padding: 24px; border-radius: 16px; background: #f3f5f5;">
+          <h5 style="flex-grow: 1; font-family: 'Space Grotesk', sans-serif; font-weight: 500; font-size: 24px; line-height: 28px; letter-spacing: -0.015em;">Какие у вас лицензии и как устроен комплаенс?</h5>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#272727" stroke-width="2" stroke-linecap="round" aria-hidden="true" style="flex-shrink: 0; margin-top: 2px;"><path d="M12 5v14"></path><path d="M5 12h14"></path></svg>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 16px; padding: 24px; border-radius: 16px; background: #f3f5f5;">
+          <div style="display: flex; gap: 32px;">
+            <h5 style="flex-grow: 1; font-family: 'Space Grotesk', sans-serif; font-weight: 500; font-size: 24px; line-height: 28px; letter-spacing: -0.015em;">Чем Balance Pay отличается от банка и от криптобиржи?</h5>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#272727" stroke-width="2" stroke-linecap="round" aria-hidden="true" style="flex-shrink: 0; margin-top: 2px;"><path d="M5 12h14"></path></svg>
+          </div>
+          <p style="font-size: 16px; line-height: 22px; letter-spacing: -0.01em; color: #646464;">Банк откроет счёт, но не будет работать с криптовалютой. Биржа поменяет криптовалюту, но не заплатит вашим подрядчикам. Balance Pay закрывает всю цепочку: входящий перевод на счёт, обмен, выплаты контрагентам — одна верификация, одна выписка, одна поддержка.</p>
+        </div>
+        <div style="display: flex; gap: 32px; padding: 24px; border-radius: 16px; background: #f3f5f5;">
+          <h5 style="flex-grow: 1; font-family: 'Space Grotesk', sans-serif; font-weight: 500; font-size: 24px; line-height: 28px; letter-spacing: -0.015em;">Сколько занимает открытие аккаунта?</h5>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#272727" stroke-width="2" stroke-linecap="round" aria-hidden="true" style="flex-shrink: 0; margin-top: 2px;"><path d="M12 5v14"></path><path d="M5 12h14"></path></svg>
+        </div>
+        <div style="display: flex; gap: 32px; padding: 24px; border-radius: 16px; background: #f3f5f5;">
+          <h5 style="flex-grow: 1; font-family: 'Space Grotesk', sans-serif; font-weight: 500; font-size: 24px; line-height: 28px; letter-spacing: -0.015em;">Какие документы нужны бизнесу?</h5>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#272727" stroke-width="2" stroke-linecap="round" aria-hidden="true" style="flex-shrink: 0; margin-top: 2px;"><path d="M12 5v14"></path><path d="M5 12h14"></path></svg>
+        </div>
+        <div style="display: flex; gap: 32px; padding: 24px; border-radius: 16px; background: #f3f5f5;">
+          <h5 style="flex-grow: 1; font-family: 'Space Grotesk', sans-serif; font-weight: 500; font-size: 24px; line-height: 28px; letter-spacing: -0.015em;">Есть ли API для выплат и инвойсов?</h5>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#272727" stroke-width="2" stroke-linecap="round" aria-hidden="true" style="flex-shrink: 0; margin-top: 2px;"><path d="M12 5v14"></path><path d="M5 12h14"></path></svg>
+        </div>
+        <div style="display: flex; gap: 32px; padding: 24px; border-radius: 16px; background: #f3f5f5;">
+          <h5 style="flex-grow: 1; font-family: 'Space Grotesk', sans-serif; font-weight: 500; font-size: 24px; line-height: 28px; letter-spacing: -0.015em;">Сколько стоят обмен и выплаты?</h5>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#272727" stroke-width="2" stroke-linecap="round" aria-hidden="true" style="flex-shrink: 0; margin-top: 2px;"><path d="M12 5v14"></path><path d="M5 12h14"></path></svg>
+        </div>
+        <div style="display: flex; gap: 32px; padding: 24px; border-radius: 16px; background: #f3f5f5;">
+          <h5 style="flex-grow: 1; font-family: 'Space Grotesk', sans-serif; font-weight: 500; font-size: 24px; line-height: 28px; letter-spacing: -0.015em;">Можно ли платить подрядчикам в USDT и USDC?</h5>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#272727" stroke-width="2" stroke-linecap="round" aria-hidden="true" style="flex-shrink: 0; margin-top: 2px;"><path d="M12 5v14"></path><path d="M5 12h14"></path></svg>
+        </div>
+        <div style="display: flex; gap: 32px; padding: 24px; border-radius: 16px; background: #f3f5f5;">
+          <h5 style="flex-grow: 1; font-family: 'Space Grotesk', sans-serif; font-weight: 500; font-size: 24px; line-height: 28px; letter-spacing: -0.015em;">С какими странами и отраслями вы работаете?</h5>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#272727" stroke-width="2" stroke-linecap="round" aria-hidden="true" style="flex-shrink: 0; margin-top: 2px;"><path d="M12 5v14"></path><path d="M5 12h14"></path></svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section style="box-sizing: border-box; padding: 32px; border-radius: 32px; background: #ffffff; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 16px;">
+      <div style="width: 220px; height: 140px; border: 1px dashed #e3e3e3; border-radius: 24px; display: flex; align-items: center; justify-content: center; color: #939393; font-size: 12px;">[stargazing.svg]</div>
+      <h2 style="font-family: 'Space Grotesk', sans-serif; font-weight: 500; font-size: 52px; line-height: 54px; letter-spacing: -0.06em; font-feature-settings: 'ss07' on, 'ss04' on; max-width: 900px;">Откройте аккаунт Balance Pay сегодня</h2>
+      <p style="font-size: 20px; line-height: 28px; letter-spacing: -0.01em; color: #646464;">Счёт, обмен и выплаты — в одном месте. Первую операцию можно провести сегодня.</p>
+      <a href="#signup" style="height: 56px; padding: 0 24px; border-radius: 12px; background: #FFD400; color: #272727; font-size: 16px; line-height: 22px; font-weight: 500; display: flex; align-items: center;">Открыть аккаунт бесплатно</a>
+    </section>
+
+    <!-- FOOTER -->
+    <footer style="box-sizing: border-box; padding: 0 16px; display: flex; flex-direction: column; gap: 80px;">
+      <div style="display: flex; align-items: flex-start; justify-content: space-between; gap: 32px;">
+        <div style="display: grid; grid-template-columns: repeat(5, 1fr); align-items: start; flex-grow: 1; padding-top: 5px; gap: 28px;">
+          <dl style="display: grid; gap: 12px; font-size: 16px; line-height: 22px;">
+            <dt style="font-weight: 500;">Частным лицам</dt>
+            <dd style="color: #646464;"><a href="#f1">Обзор</a></dd>
+            <dd style="color: #646464;"><a href="#f2">Платежи</a></dd>
+            <dd style="color: #646464;"><a href="#f3">Пригласить друзей</a></dd>
+            <dd style="color: #646464;"><a href="#f4">Комиссии</a></dd>
+            <dt style="font-weight: 500; margin-top: 16px;">Обмен</dt>
+          </dl>
+          <dl style="display: grid; gap: 12px; font-size: 16px; line-height: 22px;">
+            <dt style="font-weight: 500;">Бизнесу</dt>
+            <dd style="color: #646464;"><a href="#f5">Обзор</a></dd>
+            <dd style="color: #646464;"><a href="#f6">Криптоплатёжный шлюз</a></dd>
+            <dd style="color: #646464;"><a href="#f7">Массовые выплаты</a></dd>
+            <dd style="color: #646464;"><a href="#f8">Платежи для бизнеса</a></dd>
+            <dd style="color: #646464;"><a href="#f9">Комиссии</a></dd>
+          </dl>
+          <dl style="display: grid; gap: 12px; font-size: 16px; line-height: 22px;">
+            <dt style="font-weight: 500;">Карты</dt>
+            <dd style="color: #646464;"><a href="#f10">Обзор</a></dd>
+            <dd style="color: #646464;"><a href="#f11">Asia-Pacific</a></dd>
+            <dd style="color: #646464;"><a href="#f12">Europe</a></dd>
+            <dd style="color: #646464;"><a href="#f13">Europe Virtual</a></dd>
+          </dl>
+          <dl style="display: grid; gap: 12px; font-size: 16px; line-height: 22px;">
+            <dt style="font-weight: 500;">Компания</dt>
+            <dd style="color: #646464;"><a href="#f14">О нас</a></dd>
+            <dd style="color: #646464;"><a href="#f15">Поддержка</a></dd>
+            <dd style="color: #646464;"><a href="#f16">Контакты</a></dd>
+            <dd style="color: #646464;"><a href="#f17">Брендбук</a></dd>
+            <dd style="color: #646464;"><a href="#f18">Безопасность</a></dd>
+            <dd style="color: #646464;"><a href="#f19">Блог</a></dd>
+          </dl>
+          <dl style="display: grid; gap: 12px; font-size: 16px; line-height: 22px;">
+            <dt style="font-weight: 500;">Разработчикам</dt>
+            <dd style="color: #646464;"><a href="#f20">API</a></dd>
+            <dd style="color: #646464;"><a href="#f21">Hosted Checkout</a></dd>
+            <dd style="color: #646464;"><a href="#f22">Плагины</a></dd>
+          </dl>
+        </div>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 24px;">
+        <div style="display: flex; gap: 32px; font-size: 16px; line-height: 22px; font-weight: 500;">
+          <button type="button" aria-current="true" style="font-family: 'Inter', sans-serif; font-size: 16px; font-weight: 500; border: none; background: none; color: #272727; cursor: pointer;">USD</button>
+          <button type="button" style="font-family: 'Inter', sans-serif; font-size: 16px; font-weight: 500; border: none; background: none; color: #939393; cursor: pointer;">EUR</button>
+        </div>
+        <div style="height: 1px; background: #e3e3e3;"></div>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start;">
+          <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+            <a href="#b-btc" style="padding: 10px 16px; border-radius: 8px; background: rgba(227,227,227,0.5); color: #939393; font-size: 16px;">Купить BTC</a>
+            <a href="#b-ltc" style="padding: 10px 16px; border-radius: 8px; background: rgba(227,227,227,0.5); color: #939393; font-size: 16px;">Купить LTC</a>
+            <a href="#b-eth" style="padding: 10px 16px; border-radius: 8px; background: rgba(227,227,227,0.5); color: #939393; font-size: 16px;">Купить ETH</a>
+            <a href="#b-xrp" style="padding: 10px 16px; border-radius: 8px; background: rgba(227,227,227,0.5); color: #939393; font-size: 16px;">Купить XRP</a>
+            <a href="#b-ton" style="padding: 10px 16px; border-radius: 8px; background: rgba(227,227,227,0.5); color: #939393; font-size: 16px;">Купить TON</a>
+            <a href="#b-trx" style="padding: 10px 16px; border-radius: 8px; background: rgba(227,227,227,0.5); color: #939393; font-size: 16px;">Купить TRX</a>
+            <a href="#b-bch" style="padding: 10px 16px; border-radius: 8px; background: rgba(227,227,227,0.5); color: #939393; font-size: 16px;">Купить BCH</a>
+            <a href="#b-pol" style="padding: 10px 16px; border-radius: 8px; background: rgba(227,227,227,0.5); color: #939393; font-size: 16px;">Купить POL</a>
+            <a href="#b-sol" style="padding: 10px 16px; border-radius: 8px; background: rgba(227,227,227,0.5); color: #939393; font-size: 16px;">Купить SOL</a>
+            <a href="#b-avax" style="padding: 10px 16px; border-radius: 8px; background: rgba(227,227,227,0.5); color: #939393; font-size: 16px;">Купить AVAX</a>
+            <a href="#b-bnb" style="padding: 10px 16px; border-radius: 8px; background: rgba(227,227,227,0.5); color: #939393; font-size: 16px;">Купить BNB</a>
+            <a href="#b-usdt" style="padding: 10px 16px; border-radius: 8px; background: rgba(227,227,227,0.5); color: #939393; font-size: 16px;">Купить USDT</a>
+            <a href="#b-usdc" style="padding: 10px 16px; border-radius: 8px; background: rgba(227,227,227,0.5); color: #939393; font-size: 16px;">Купить USDC</a>
+          </div>
+          <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+            <a href="#s-btc" style="padding: 10px 16px; border-radius: 8px; background: rgba(227,227,227,0.5); color: #939393; font-size: 16px;">Продать BTC</a>
+            <a href="#s-ltc" style="padding: 10px 16px; border-radius: 8px; background: rgba(227,227,227,0.5); color: #939393; font-size: 16px;">Продать LTC</a>
+            <a href="#s-eth" style="padding: 10px 16px; border-radius: 8px; background: rgba(227,227,227,0.5); color: #939393; font-size: 16px;">Продать ETH</a>
+            <a href="#s-xrp" style="padding: 10px 16px; border-radius: 8px; background: rgba(227,227,227,0.5); color: #939393; font-size: 16px;">Продать XRP</a>
+            <a href="#s-ton" style="padding: 10px 16px; border-radius: 8px; background: rgba(227,227,227,0.5); color: #939393; font-size: 16px;">Продать TON</a>
+            <a href="#s-trx" style="padding: 10px 16px; border-radius: 8px; background: rgba(227,227,227,0.5); color: #939393; font-size: 16px;">Продать TRX</a>
+            <a href="#s-bch" style="padding: 10px 16px; border-radius: 8px; background: rgba(227,227,227,0.5); color: #939393; font-size: 16px;">Продать BCH</a>
+            <a href="#s-pol" style="padding: 10px 16px; border-radius: 8px; background: rgba(227,227,227,0.5); color: #939393; font-size: 16px;">Продать POL</a>
+            <a href="#s-sol" style="padding: 10px 16px; border-radius: 8px; background: rgba(227,227,227,0.5); color: #939393; font-size: 16px;">Продать SOL</a>
+            <a href="#s-avax" style="padding: 10px 16px; border-radius: 8px; background: rgba(227,227,227,0.5); color: #939393; font-size: 16px;">Продать AVAX</a>
+            <a href="#s-bnb" style="padding: 10px 16px; border-radius: 8px; background: rgba(227,227,227,0.5); color: #939393; font-size: 16px;">Продать BNB</a>
+            <a href="#s-usdt" style="padding: 10px 16px; border-radius: 8px; background: rgba(227,227,227,0.5); color: #939393; font-size: 16px;">Продать USDT</a>
+            <a href="#s-usdc" style="padding: 10px 16px; border-radius: 8px; background: rgba(227,227,227,0.5); color: #939393; font-size: 16px;">Продать USDC</a>
+          </div>
+        </div>
+      </div>
+
+      <div style="border-top: 1px solid #e3e3e3; padding-top: 24px; display: flex; justify-content: space-between; gap: 32px;">
+        <div style="display: grid; gap: 28px; font-size: 14px; line-height: 20px;">
+          <nav style="display: flex; flex-wrap: wrap; gap: 16px 32px;">
+            <a href="#privacy">Уведомление о конфиденциальности</a>
+            <a href="#cookie">Политика cookie</a>
+            <a href="#aml">Политика AML</a>
+            <a href="#terms">Условия использования</a>
+            <a href="#dpa">DPA</a>
+          </nav>
+          <p style="color: #939393;">Copyright © 2026 Balance Pay · balancepay.org</p>
+          <ul style="display: flex; flex-wrap: wrap; gap: 8px;">
+            <li style="width: 56px; height: 36px; border-radius: 12px; background: #ebecec;"></li>
+            <li style="width: 56px; height: 36px; border-radius: 12px; background: #ebecec;"></li>
+            <li style="width: 56px; height: 36px; border-radius: 12px; background: #ebecec;"></li>
+            <li style="width: 56px; height: 36px; border-radius: 12px; background: #ebecec;"></li>
+            <li style="width: 56px; height: 36px; border-radius: 12px; background: #ebecec;"></li>
+            <li style="width: 56px; height: 36px; border-radius: 12px; background: #ebecec;"></li>
+            <li style="width: 56px; height: 36px; border-radius: 12px; background: #ebecec;"></li>
+            <li style="width: 56px; height: 36px; border-radius: 12px; background: #ebecec;"></li>
+          </ul>
+        </div>
+        <ul style="display: flex; gap: 16px; text-align: center;">
+          <li><a href="#tg" style="display: block; width: 56px; height: 56px; border-radius: 50%; background: rgba(227,227,227,0.5);"></a><span style="display: block; margin-top: 8px; font-size: 14px; line-height: 20px; color: #646464;">700K</span></li>
+          <li><a href="#x" style="display: block; width: 56px; height: 56px; border-radius: 50%; background: rgba(227,227,227,0.5);"></a><span style="display: block; margin-top: 8px; font-size: 14px; line-height: 20px; color: #646464;">19K</span></li>
+          <li><a href="#fb" style="display: block; width: 56px; height: 56px; border-radius: 50%; background: rgba(227,227,227,0.5);"></a><span style="display: block; margin-top: 8px; font-size: 14px; line-height: 20px; color: #646464;">6.7K</span></li>
+          <li><a href="#ig" style="display: block; width: 56px; height: 56px; border-radius: 50%; background: rgba(227,227,227,0.5);"></a><span style="display: block; margin-top: 8px; font-size: 14px; line-height: 20px; color: #646464;">4.2K</span></li>
+          <li><a href="#in" style="display: block; width: 56px; height: 56px; border-radius: 50%; background: rgba(227,227,227,0.5);"></a><span style="display: block; margin-top: 8px; font-size: 14px; line-height: 20px; color: #646464;">1.4K</span></li>
+        </ul>
+      </div>
+    </footer>
+
+  </main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1512,"height":8000}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return {};
+  }
+}
+</script>
+</body>
+</html>
