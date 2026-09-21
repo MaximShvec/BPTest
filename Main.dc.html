@@ -19,8 +19,13 @@ if (sessionStorage.getItem('bp_demo_session') !== '1') {
 <style>
 body{margin:0;font-family:'Inter',system-ui,sans-serif;background:#f3f5f5;color:#272727}
 #dc-root>.sc-host{display:flex;justify-content:center}
-a{color:#272727;text-decoration:none}
-a:hover{color:#C4A300}
+a{color:#272727;text-decoration:none;transition:color .15s ease,filter .15s ease,opacity .15s ease,box-shadow .15s ease}
+button{transition:color .15s ease,filter .15s ease,opacity .15s ease,box-shadow .15s ease}
+a:hover,button:hover{color:#C4A300!important}
+a[style*="background: #FFD400"]:hover{color:#272727!important;filter:brightness(.97)}
+a[style*="background: #272727"]:hover,a[style*="background: #000000"]:hover,a[style*="background: #141414"]:hover{color:#f3f5f5!important;filter:brightness(1.18)}
+a[style*="background: #272727"][style*="color: #FFD400"]:hover{color:#C4A300!important;filter:brightness(1.08)}
+button[style*="background: none"]:hover{filter:none}
 h1,h2,h3,h4,h5,p,dl,dd,dt{margin:0}
 ul,ol,li{margin:0;padding:0;list-style:none}
 </style>
