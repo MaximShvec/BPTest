@@ -11,14 +11,17 @@ if (sessionStorage.getItem('bp_demo_session') !== '1') {
 <script src="./vendor/react.js"></script>
 <script src="./vendor/react-dom.js"></script>
 <script src="./support.js"></script>
+<link rel="stylesheet" href="./header.css">
+<script src="./header.js" defer></script>
 </head>
 <body>
 <x-dc>
 <helmet>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500&amp;family=Space+Grotesk:wght@500&amp;display=swap">
+<link rel="stylesheet" href="./header.css">
 <style>
 body{margin:0;font-family:'Inter',system-ui,sans-serif;background:#f3f5f5;color:#272727}
-#dc-root>.sc-host{display:flex;justify-content:center}
+#dc-root>.sc-host{display:flex;justify-content:center;overflow:visible}
 a{color:#272727;text-decoration:none;transition:color .15s ease,filter .15s ease,opacity .15s ease,box-shadow .15s ease}
 button{transition:color .15s ease,filter .15s ease,opacity .15s ease,box-shadow .15s ease}
 a:hover,button:hover{color:#C4A300!important}
@@ -28,29 +31,179 @@ a[style*="background: #272727"][style*="color: #FFD400"]:hover{color:#C4A300!imp
 button[style*="background: none"]:hover{filter:none}
 h1,h2,h3,h4,h5,p,dl,dd,dt{margin:0}
 ul,ol,li{margin:0;padding:0;list-style:none}
+.bp-footer-name{display:block;width:calc(100% + 32px);height:auto;margin:-32px -16px -72px;opacity:.16;pointer-events:none;user-select:none}
+.bp-referral-video{display:block;width:100%;height:auto;border-radius:24px;object-fit:cover;background:#141414}
 </style>
 </helmet>
 
-<div style="width: 1512px; height: 8000px; flex-shrink: 0; box-sizing: border-box; display: flex; flex-direction: column; background: #f3f5f5; color: #272727; overflow: hidden; margin: 0 auto;">
+<div style="width: 1512px; min-height: 8000px; flex-shrink: 0; box-sizing: border-box; display: flex; flex-direction: column; background: #f3f5f5; color: #272727; overflow: visible; margin: 0 auto;">
 
   <!-- HEADER -->
-  <header style="height: 72px; box-sizing: border-box; padding: 0 64px; display: flex; align-items: center; justify-content: space-between; gap: 32px; background: rgba(243,245,245,0.8); box-shadow: inset 0 -1px #e3e3e3; flex-shrink: 0;">
-    <a href="#home" style="display: flex; align-items: center; gap: 12px; flex-shrink: 0;">
-      <span style="display: flex; align-items: center; justify-content: center; width: 121px; height: 34px; border: 1px dashed #939393; border-radius: 8px; font-size: 11px; color: #939393; letter-spacing: 0;">[ЛОГОТИП Balance Pay]</span>
-      <span style="font-family: 'Space Grotesk', sans-serif; font-weight: 500; font-size: 10px; line-height: 1; color: #272727;">Rockin’<br>since 2014</span>
-    </a>
-    <nav style="display: flex; align-items: center; justify-content: center; gap: 24px; flex-grow: 1;">
-      <a href="#personal" style="font-size: 16px; line-height: 22px; font-weight: 500; letter-spacing: -0.01em; color: #939393;">Частным лицам</a>
-      <a href="#business" style="font-size: 16px; line-height: 22px; font-weight: 500; letter-spacing: -0.01em; color: #939393;">Бизнесу</a>
-      <a href="#cards" style="font-size: 16px; line-height: 22px; font-weight: 500; letter-spacing: -0.01em; color: #939393;">Карты</a>
-      <a href="#exchange" style="font-size: 16px; line-height: 22px; font-weight: 500; letter-spacing: -0.01em; color: #939393;">Обмен</a>
-      <button type="button" style="font-family: 'Inter', sans-serif; font-size: 16px; line-height: 22px; font-weight: 500; letter-spacing: -0.01em; color: #939393; background: none; border: none; cursor: pointer;">Компания</button>
-      <button type="button" style="font-family: 'Inter', sans-serif; font-size: 16px; line-height: 22px; font-weight: 500; letter-spacing: -0.01em; color: #939393; background: none; border: none; cursor: pointer;">Разработчикам</button>
-    </nav>
-    <div style="display: flex; align-items: center; gap: 8px; flex-shrink: 0;">
-      <a href="./index.html" style="height: 40px; padding: 0 16px; border-radius: 8px; background: #272727; color: #f3f5f5; font-size: 14px; line-height: 20px; font-weight: 500; letter-spacing: -0.01em; display: flex; align-items: center;">Войти</a>
-      <a href="./index.html?mode=signup" style="height: 40px; padding: 0 16px; border-radius: 8px; background: #FFD400; color: #272727; font-size: 14px; line-height: 20px; font-weight: 500; letter-spacing: -0.01em; display: flex; align-items: center;">Попробовать бесплатно</a>
-      <button type="button" style="height: 40px; padding: 0 16px; border-radius: 8px; background: none; box-shadow: inset 0 0 0 1px #e3e3e3; color: #272727; font-family: 'Inter', sans-serif; font-size: 14px; line-height: 20px; font-weight: 500; cursor: pointer;">RU</button>
+  <header class="bp-header">
+    <div class="bp-header-inner">
+      <a class="bp-logo" href="#home" aria-label="Balance Pay">
+        <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M10.0005 3.8147e-06C15.523 3.8147e-06 20 4.47702 20 10.0005C20 13.7012 17.9891 16.9326 14.9997 18.6624V10.0085V10.0005C14.9997 7.23826 12.7617 5.00025 10.0005 5.00025C9.08909 5.00025 8.23571 5.24336 7.50038 5.66855V0.315146C8.29873 0.109053 9.13711 3.8147e-06 10.0005 3.8147e-06ZM5.00025 9.9915V10.0005V10.0085V10.0325C5.01726 12.7788 7.24926 14.9998 10.0005 14.9998C10.9109 14.9998 11.7643 14.7566 12.4996 14.3315V19.6849C11.7013 19.891 10.8629 20 10.0005 20C4.47701 20 0 15.523 0 10.0005C0 6.29884 2.0109 3.06738 5.00025 1.33861V9.9915Z"></path>
+        </svg>
+        <span>Rockin’<br>since 2014</span>
+      </a>
+
+      <nav class="bp-nav">
+        <div class="bp-nav-item">
+          <a class="bp-nav-handle" href="#personal">Частным лицам</a>
+          <div class="bp-drop bp-drop-wide">
+            <div class="bp-drop-cols" style="grid-template-columns:repeat(2, 1fr)">
+              <dl>
+                <dt>Продукты</dt>
+                <dd><a href="#personal">Обзор</a></dd>
+                <dd><a href="#f2">Платежи</a></dd>
+                <dd><a href="#cards">Карты</a></dd>
+              </dl>
+              <dl>
+                <dt> </dt>
+                <dd><a href="#fees-personal">Комиссии</a></dd>
+              </dl>
+            </div>
+            <div class="bp-drop-extra">
+              <div class="bp-extra">
+                <a href="#affiliate"></a>
+                <img src="./assets/header-referral.svg" alt="" width="44" height="44">
+                <div><b>Партнёрская программа</b><small>Зарабатывайте с нами</small></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bp-nav-item">
+          <a class="bp-nav-handle" href="#business">Бизнесу</a>
+          <div class="bp-drop bp-drop-wide">
+            <div class="bp-drop-cols" style="grid-template-columns:repeat(2, 1fr)">
+              <dl>
+                <dt>Продукты</dt>
+                <dd><a href="#business">Обзор</a></dd>
+                <dd><a href="#f6">Криптоплатёжный шлюз</a></dd>
+                <dd><a href="#f7">Массовые выплаты</a></dd>
+                <dd><a href="#f8">Платежи для бизнеса</a></dd>
+              </dl>
+              <dl>
+                <dt> </dt>
+                <dd><a href="#fees-business">Комиссии</a></dd>
+              </dl>
+            </div>
+          </div>
+        </div>
+
+        <div class="bp-nav-item">
+          <a class="bp-nav-handle" href="#cards">Карты</a>
+          <div class="bp-drop bp-drop-wide">
+            <div class="bp-drop-cols" style="grid-template-columns:repeat(2, 1fr)">
+              <dl>
+                <dt>Продукты</dt>
+                <dd><a href="#cards">Обзор</a></dd>
+                <dd><a href="#f11">Asia-Pacific</a></dd>
+              </dl>
+              <dl>
+                <dt> </dt>
+                <dd><a href="#f12">Europe</a></dd>
+                <dd><a href="#f13">Europe Virtual</a></dd>
+              </dl>
+            </div>
+          </div>
+        </div>
+
+        <div class="bp-nav-item">
+          <a class="bp-nav-handle" href="#exchange">Обмен</a>
+        </div>
+
+        <div class="bp-nav-item">
+          <button type="button" class="bp-nav-handle">Компания
+            <svg class="bp-nav-arrow" viewBox="0 0 10 10" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M5.00006 5.93192L8.46973 2.54688L9.53039 3.58167L5.00006 8.0015L0.469727 3.58167L1.53039 2.54688L5.00006 5.93192Z"></path></svg>
+          </button>
+          <div class="bp-drop bp-drop-wide">
+            <div class="bp-drop-cols" style="grid-template-columns:repeat(2, 1fr)">
+              <dl>
+                <dd><a href="#f14">О нас</a></dd>
+                <dd><a href="#security">Безопасность</a></dd>
+                <dd><a href="#f15">Поддержка</a></dd>
+              </dl>
+              <dl>
+                <dd><a href="#f17">Брендбук</a></dd>
+                <dd><a href="#f16">Связаться с отделом продаж</a></dd>
+                <dd><a href="#f16">Контакты</a></dd>
+              </dl>
+            </div>
+            <div class="bp-drop-extra">
+              <div class="bp-extra">
+                <a href="#blog"></a>
+                <img src="./assets/header-blog.svg" alt="" width="53" height="40">
+                <div><b>Блог</b><small>Полезные статьи от нашей команды</small></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bp-nav-item">
+          <button type="button" class="bp-nav-handle">Разработчикам
+            <svg class="bp-nav-arrow" viewBox="0 0 10 10" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M5.00006 5.93192L8.46973 2.54688L9.53039 3.58167L5.00006 8.0015L0.469727 3.58167L1.53039 2.54688L5.00006 5.93192Z"></path></svg>
+          </button>
+          <div class="bp-drop bp-drop-simple">
+            <div class="bp-drop-cols" style="grid-template-columns:1fr">
+              <dl>
+                <dd><a href="#f20">API</a></dd>
+                <dd><a href="#f21">Hosted Checkout</a></dd>
+                <dd><a href="#f22">Плагины</a></dd>
+              </dl>
+            </div>
+          </div>
+        </div>
+
+        <div class="bp-nav-item bp-lang">
+          <button type="button" class="bp-nav-handle" aria-label="Язык">
+            <svg class="bp-nav-globe" viewBox="0 0 24 24" aria-hidden="true"><path d="M12.0076 22.1497C10.6043 22.1497 9.28725 21.8841 8.05659 21.3527C6.82592 20.8214 5.74959 20.0947 4.82759 19.1727C3.90559 18.2507 3.17892 17.1741 2.64759 15.9427C2.11625 14.7114 1.85059 13.3933 1.85059 11.9885C1.85059 10.5838 2.11625 9.26548 2.64759 8.03348C3.17892 6.80164 3.90525 5.72881 4.82659 4.81498C5.74792 3.90098 6.82442 3.17748 8.05609 2.64448C9.28775 2.11131 10.6062 1.84473 12.0113 1.84473C13.4163 1.84473 14.7351 2.11114 15.9676 2.64398C17.1999 3.17681 18.2728 3.89989 19.1863 4.81323C20.1 5.72656 20.8233 6.80056 21.3561 8.03523C21.8891 9.26989 22.1556 10.5893 22.1556 11.9935C22.1556 13.3975 21.889 14.7147 21.3558 15.9452C20.8228 17.1759 20.0993 18.2505 19.1853 19.169C18.2715 20.0873 17.1976 20.8137 15.9636 21.3482C14.7296 21.8826 13.4109 22.1497 12.0076 22.1497ZM12.0001 20.4465C14.3053 20.4465 16.2653 19.6561 17.8803 18.0755C19.4953 16.4948 20.3387 14.5753 20.4103 12.317C20.4103 12.2743 20.4113 12.2384 20.4133 12.2092C20.4153 12.1802 20.4163 12.1477 20.4163 12.1117C20.2925 12.4972 20.0612 12.8169 19.7223 13.0707C19.3837 13.3244 18.9889 13.4512 18.5381 13.4512H16.5681C16.0033 13.4512 15.5198 13.25 15.1176 12.8475C14.7154 12.4448 14.5143 11.9608 14.5143 11.3955V10.3677H10.4066V8.35223C10.4066 7.78323 10.6079 7.29823 11.0106 6.89723C11.4131 6.49639 11.897 6.29598 12.4623 6.29598H13.4903V5.74598C13.4903 5.45798 13.6058 5.10731 13.8368 4.69398C14.0678 4.28081 14.3309 4.04048 14.6261 3.97298C14.2134 3.84548 13.789 3.74381 13.3528 3.66798C12.9168 3.59198 12.4667 3.55398 12.0023 3.55398C9.66284 3.55398 7.66984 4.37248 6.02334 6.00948C4.377 7.64631 3.55384 9.64323 3.55384 12.0002C3.55384 12.0162 3.55484 12.0311 3.55684 12.045C3.55884 12.059 3.55984 12.074 3.55984 12.09H7.03484C8.16667 12.09 9.13425 12.4916 9.93759 13.2947C10.7409 14.0981 11.1426 15.0646 11.1426 16.1945V17.2215H8.06484V19.5057C8.65534 19.8049 9.28092 20.0365 9.94159 20.2005C10.6024 20.3645 11.2886 20.4465 12.0001 20.4465Z"></path></svg>
+            <span class="bp-lang-label">Russian</span>
+            <svg class="bp-nav-arrow" viewBox="0 0 10 10" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M5.00006 5.93192L8.46973 2.54688L9.53039 3.58167L5.00006 8.0015L0.469727 3.58167L1.53039 2.54688L5.00006 5.93192Z"></path></svg>
+          </button>
+          <div class="bp-drop bp-drop-lang">
+            <div class="bp-drop-cols" style="grid-template-columns:repeat(4, 1fr)">
+              <dl>
+                <dd data-locale="ru" class="is-current"><a href="#lang-ru">Русский</a></dd>
+                <dd data-locale="en"><a href="#lang-en">English</a></dd>
+                <dd data-locale="es"><a href="#lang-es">Español</a></dd>
+                <dd data-locale="de"><a href="#lang-de">Deutsch</a></dd>
+                <dd data-locale="pt"><a href="#lang-pt">Português</a></dd>
+                <dd data-locale="fr"><a href="#lang-fr">Français</a></dd>
+              </dl>
+              <dl>
+                <dd data-locale="it"><a href="#lang-it">Italiano</a></dd>
+                <dd data-locale="pl"><a href="#lang-pl">Polski</a></dd>
+                <dd data-locale="uk"><a href="#lang-uk">Українська</a></dd>
+                <dd data-locale="cs"><a href="#lang-cs">Čeština</a></dd>
+                <dd data-locale="ro"><a href="#lang-ro">Română</a></dd>
+                <dd data-locale="zh"><a href="#lang-zh">中文</a></dd>
+              </dl>
+              <dl>
+                <dd data-locale="kk"><a href="#lang-kk">Қазақша</a></dd>
+                <dd data-locale="tr"><a href="#lang-tr">Türkçe</a></dd>
+                <dd data-locale="az"><a href="#lang-az">Azərbaycanca</a></dd>
+                <dd data-locale="ka"><a href="#lang-ka">ქართული</a></dd>
+                <dd data-locale="ar"><a href="#lang-ar">العربية</a></dd>
+                <dd data-locale="id"><a href="#lang-id">Bahasa Indonesia</a></dd>
+              </dl>
+              <dl>
+                <dd data-locale="ja"><a href="#lang-ja">日本語</a></dd>
+                <dd data-locale="th"><a href="#lang-th">ไทย</a></dd>
+                <dd data-locale="bn"><a href="#lang-bn">বাংলা</a></dd>
+                <dd data-locale="vi"><a href="#lang-vi">Tiếng Việt</a></dd>
+              </dl>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <div class="bp-actions">
+        <a class="bp-btn bp-btn-dark" href="./index.html">Войти</a>
+        <a class="bp-btn bp-btn-yellow" href="./index.html?mode=signup">Попробовать бесплатно</a>
+      </div>
     </div>
   </header>
 
@@ -201,7 +354,9 @@ ul,ol,li{margin:0;padding:0;list-style:none}
         <h2 style="font-family: 'Space Grotesk', sans-serif; font-weight: 500; font-size: 52px; line-height: 54px; letter-spacing: -0.06em; font-feature-settings: 'ss07' on, 'ss04' on;">Зарабатывайте с Balance Pay</h2>
         <p style="font-size: 20px; line-height: 28px; letter-spacing: -0.01em; color: #939393; max-width: 760px;">Приводите компании и частных клиентов — и получайте долю их комиссий годами, а не разовый бонус за регистрацию.</p>
       </div>
-      <div style="width: 100%; height: 180px; border: 1px dashed #646464; border-radius: 24px; display: flex; align-items: center; justify-content: center; color: #939393; font-size: 13px;">[referral.svg]</div>
+      <video class="bp-referral-video" autoplay="autoplay" muted="muted" loop="loop" playsinline="playsinline" volume="0">
+        <source src="./assets/video2.mp4" type="video/mp4">
+      </video>
       <div style="display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 8px;">
         <div style="grid-column: span 3; box-sizing: border-box; min-height: 100%; padding: 32px; border-radius: 32px; background: #141414; display: flex; flex-direction: column; gap: 16px;">
           <span style="width: 56px; height: 56px; border: 1px dashed #646464; border-radius: 16px;"></span>
@@ -446,6 +601,7 @@ ul,ol,li{margin:0;padding:0;list-style:none}
           <li><a href="#in" style="display: block; width: 56px; height: 56px; border-radius: 50%; background: rgba(227,227,227,0.5);"></a><span style="display: block; margin-top: 8px; font-size: 14px; line-height: 20px; color: #646464;">1.4K</span></li>
         </ul>
       </div>
+      <img class="bp-footer-name" src="./assets/footer-name.svg" alt="" width="1760" height="313" aria-hidden="true">
     </footer>
 
   </main>
