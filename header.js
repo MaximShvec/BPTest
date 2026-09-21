@@ -44,8 +44,8 @@
     }
   });
 
-  const prepReferralVideo = () => {
-    const videos = document.querySelectorAll(".bp-referral-video");
+  const prepLoopVideos = () => {
+    const videos = document.querySelectorAll(".bp-loop-video");
     if (!videos.length) return false;
     videos.forEach((v) => {
       v.muted = true;
@@ -59,6 +59,6 @@
   let tries = 0;
   const timer = setInterval(() => {
     tries += 1;
-    if (prepReferralVideo() || tries > 20) clearInterval(timer);
+    if (prepLoopVideos() || tries > 20) clearInterval(timer);
   }, 100);
 })();

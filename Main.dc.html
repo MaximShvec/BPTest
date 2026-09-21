@@ -34,6 +34,7 @@ ul,ol,li{margin:0;padding:0;list-style:none}
 .bp-footer-name{display:block;width:calc(100% + 32px);height:auto;margin:-32px -16px -72px;opacity:.16;pointer-events:none;user-select:none}
 .bp-referral-video-wrap{width:100%;height:400px;border-radius:24px;overflow:hidden;background:#141414}
 .bp-referral-video{display:block;width:100%;height:100%;object-fit:cover;object-position:center bottom}
+.bp-iban-video{width:320px;height:320px;flex-shrink:0;object-fit:cover;border-radius:24px;display:block;background:#f3f5f5}
 </style>
 </helmet>
 
@@ -222,7 +223,9 @@ ul,ol,li{margin:0;padding:0;list-style:none}
     <!-- ROW: CARDS + PAYOUTS -->
     <section style="display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 8px;">
       <div style="grid-column: span 8; box-sizing: border-box; padding: 32px; border-radius: 32px; background: #ffffff; display: flex; gap: 32px; align-items: center;">
-        <img src="./assets/670951e6e799e4a4fb190633ee6886d2.png" alt="Стеклянная карта и глобус с символами валют" style="width: 320px; height: 320px; flex-shrink: 0; object-fit: contain; display: block;">
+        <video class="bp-iban-video bp-loop-video" autoplay="autoplay" muted="muted" loop="loop" playsinline="playsinline" volume="0">
+          <source src="./assets/video3.mp4" type="video/mp4">
+        </video>
         <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 16px;">
           <h2 style="font-family: 'Space Grotesk', sans-serif; font-weight: 500; font-size: 52px; line-height: 54px; letter-spacing: -0.06em; font-feature-settings: 'ss07' on, 'ss04' on;">IBAN, который принимает SWIFT и SEPA</h2>
           <p style="font-size: 16px; line-height: 22px; letter-spacing: -0.01em; color: #646464; max-width: 480px;">Счёт на компанию с реквизитами для входящих переводов. Держите баланс в нужной валюте, выгружайте выписки для бухгалтерии и не объясняйте банку, откуда пришла криптовалюта.</p>
@@ -356,7 +359,7 @@ ul,ol,li{margin:0;padding:0;list-style:none}
         <p style="font-size: 20px; line-height: 28px; letter-spacing: -0.01em; color: #939393; max-width: 760px;">Приводите компании и частных клиентов — и получайте долю их комиссий годами, а не разовый бонус за регистрацию.</p>
       </div>
       <div class="bp-referral-video-wrap">
-        <video class="bp-referral-video" autoplay="autoplay" muted="muted" loop="loop" playsinline="playsinline" volume="0">
+        <video class="bp-referral-video bp-loop-video" autoplay="autoplay" muted="muted" loop="loop" playsinline="playsinline" volume="0">
           <source src="./assets/video2.mp4" type="video/mp4">
         </video>
       </div>
