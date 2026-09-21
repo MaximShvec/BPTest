@@ -409,10 +409,6 @@ const flags = { en: 'https://flagcdn.com/w40/gb.png', ru: 'https://flagcdn.com/w
 let lang = localStorage.getItem('bp_demo_lang') || 'en';
 let mode = new URLSearchParams(location.search).get('mode') === 'signup' ? 'signup' : 'signin';
 
-if (sessionStorage.getItem('bp_demo_session') === '1') {
-  location.replace('./Main.dc.html');
-}
-
 function applyCopy() {
   const t = i18n[lang];
   document.documentElement.lang = lang;
