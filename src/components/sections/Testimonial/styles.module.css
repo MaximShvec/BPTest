@@ -1,0 +1,63 @@
+.card {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  padding: 32px;
+  color: #f3f5f5;
+}
+
+.photo {
+  flex-shrink: 0;
+  letter-spacing: normal;
+  color: var(--gray300);
+  font-size: 13px;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.quote {
+  margin: 0;
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 40px;
+  letter-spacing: -0.04em;
+  font-feature-settings: normal;
+}
+
+.author {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.name,
+.role {
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: normal;
+}
+
+.name {
+  font-weight: 500;
+}
+
+.role {
+  color: var(--gray300);
+}
+
+@media (max-width: 767px) {
+  .card {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .quote {
+    font-size: 28px;
+    line-height: 32px;
+  }
+}

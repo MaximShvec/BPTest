@@ -7,7 +7,7 @@ export const faqSchema = z.object({
   theme: themeSchema.optional(),
   title: z.string(),
   lead: z.string(),
-  defaultOpen: z.number().optional(),
+  defaultOpen: z.number().nullable().optional(),
   items: z.array(
     z.object({
       q: z.string(),

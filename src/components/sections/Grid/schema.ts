@@ -9,6 +9,13 @@ export function bindNestedSection(schema: NestedSchema) {
   nestedSchema = schema;
 }
 
+export function nestedSection() {
+  return z.lazy(() => {
+    if (!nestedSchema) throw new Error("Nested section schema is not bound");
+    return nestedSchema;
+  });
+}
+
 export const gridSectionSchema = z.object({
   type: z.literal("grid"),
   id: z.string().optional(),
@@ -18,10 +25,7 @@ export const gridSectionSchema = z.object({
       span: z.number().optional(),
       spanTablet: z.number().optional(),
       spanMobile: z.number().optional(),
-      section: z.lazy(() => {
-        if (!nestedSchema) throw new Error("Nested section schema is not bound");
-        return nestedSchema;
-      }),
+      section: nestedSection(),
     }),
   ),
 });
