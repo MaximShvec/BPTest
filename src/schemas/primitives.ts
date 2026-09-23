@@ -7,6 +7,7 @@ export const linkSchema = z.object({
   note: z.string().optional(),
   noteTone: z.enum(["dirty", "muted", "gray"]).optional(),
   size: z.enum(["xl", "xl-text", "lg", "md"]).optional(),
+  ring: z.enum(["#646464", "#939393", "#8C6E00"]).optional(),
   external: z.boolean().optional(),
 });
 

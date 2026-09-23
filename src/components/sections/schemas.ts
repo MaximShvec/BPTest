@@ -12,11 +12,13 @@ import { faqSchema } from "./Faq/schema";
 import { featureTileSchema } from "./FeatureTile/schema";
 import { flowStepsSchema } from "./FlowSteps/schema";
 import { bindNestedSection, gridSectionSchema } from "./Grid/schema";
+import { heroMediaSchema } from "./HeroMedia/schema";
 import { heroConverterSchema } from "./HeroConverter/schema";
 import { heroCenteredSchema } from "./HeroCentered/schema";
 import { heroAsideSchema } from "./HeroAside/schema";
 import { heroPanelSchema } from "./HeroPanel/schema";
 import { heroSplitSchema } from "./HeroSplit/schema";
+import { infoCardsSchema } from "./InfoCards/schema";
 import { iconCardsSchema } from "./IconCards/schema";
 import { managerCardSchema } from "./ManagerCard/schema";
 import { mediaAsideSchema } from "./MediaAside/schema";
@@ -30,22 +32,27 @@ import { referralBannerSchema } from "./ReferralBanner/schema";
 import { ratesTableSchema } from "./RatesTable/schema";
 import { serviceCardsSchema } from "./ServiceCards/schema";
 import { specMediaSchema } from "./SpecMedia/schema";
+import { splitPromoSchema } from "./SplitPromo/schema";
 import { splitMediaCardSchema } from "./SplitMediaCard/schema";
 import { stepCardsSchema } from "./StepCards/schema";
 import { statPanelSchema } from "./StatPanel/schema";
+import { vacancyListSchema } from "./VacancyList/schema";
 import { testimonialSchema } from "./Testimonial/schema";
 import { textCardsSchema } from "./TextCards/schema";
 import { trustBlockSchema } from "./TrustBlock/schema";
+import { wideMediaSchema } from "./WideMedia/schema";
 import { trustStripSchema } from "./TrustStrip/schema";
 
 /** Schema-only registry. Component map lives in registry.ts so content checks do not load CSS modules. */
 export const sectionSchemas = [
   placeholderSectionSchema,
+  heroMediaSchema,
   heroConverterSchema,
   heroCenteredSchema,
   heroAsideSchema,
   heroPanelSchema,
   heroSplitSchema,
+  splitPromoSchema,
   specMediaSchema,
   splitMediaCardSchema,
   featureTileSchema,
@@ -66,11 +73,14 @@ export const sectionSchemas = [
   onboardingSchema,
   mediaRowSchema,
   trustBlockSchema,
+  wideMediaSchema,
   trustStripSchema,
   cardsRowSchema,
+  infoCardsSchema,
   iconCardsSchema,
   managerCardSchema,
   audienceCardsSchema,
+  vacancyListSchema,
   testimonialSchema,
   referralBannerSchema,
   blogPreviewSchema,

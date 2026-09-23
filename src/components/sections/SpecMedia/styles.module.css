@@ -17,6 +17,10 @@
   text-align: center;
 }
 
+.shotRoomy {
+  padding: 24px;
+}
+
 .aside {
   display: flex;
   flex-direction: column;
@@ -83,6 +87,25 @@
 
 .lime {
   color: #ffd400;
+}
+
+.light {
+  background: #fff;
+  color: #272727;
+}
+
+.light .text,
+.light .muted {
+  color: #646464;
+}
+
+.light .row {
+  border-bottom-color: #e3e3e3;
+}
+
+.light .emphasis {
+  font-weight: 500;
+  color: #272727;
 }
 
 @media (max-width: 1199px) {

@@ -1,0 +1,178 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 32px;
+  border-radius: 32px;
+  background: #fff;
+}
+
+.head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+.heading {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.aside {
+  font-size: 16px;
+  line-height: 22px;
+  color: #939393;
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.filter,
+.filterOn {
+  display: inline-flex;
+  align-items: center;
+  height: 44px;
+  padding: 0 20px;
+  border: 0;
+  border-radius: 12px;
+  font: inherit;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  cursor: pointer;
+}
+
+.filter {
+  background: transparent;
+  color: #646464;
+  box-shadow: inset 0 0 0 1px #e3e3e3;
+}
+
+.filterOn {
+  background: #272727;
+  color: #f3f5f5;
+}
+
+.table {
+  display: flex;
+  flex-direction: column;
+}
+
+.columns,
+.row {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.columns {
+  padding: 0 0 12px;
+  border-bottom: 1px solid #e3e3e3;
+  font-size: 10px;
+  line-height: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0;
+  color: #939393;
+}
+
+.row {
+  padding: 22px 0;
+  border-bottom: 1px solid #e3e3e3;
+  color: #272727;
+}
+
+.row:hover {
+  color: #272727;
+}
+
+.role,
+.roleTitle {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.team {
+  flex: 0 0 220px;
+}
+
+.place {
+  flex: 0 0 200px;
+}
+
+.format {
+  flex: 0 0 160px;
+}
+
+.arrowSpace {
+  flex: 0 0 24px;
+}
+
+.roleTitle {
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 500;
+}
+
+.row .team,
+.row .place {
+  font-size: 16px;
+  line-height: 22px;
+  color: #646464;
+}
+
+.row .format {
+  font-size: 16px;
+  line-height: 22px;
+  color: #939393;
+}
+
+.cards {
+  display: none;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 16px 0;
+  border-bottom: 1px solid #e3e3e3;
+  color: #272727;
+}
+
+.card:hover {
+  color: #272727;
+}
+
+.meta {
+  font-size: 16px;
+  line-height: 22px;
+  color: #646464;
+}
+
+@media (max-width: 1199px) {
+  .table {
+    display: none;
+  }
+
+  .cards {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 767px) {
+  .root {
+    padding: 20px;
+  }
+
+  .head {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

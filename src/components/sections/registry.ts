@@ -25,6 +25,8 @@ import { FlowSteps } from "./FlowSteps/Component";
 import { flowStepsSchema } from "./FlowSteps/schema";
 import { GridSection } from "./Grid/Component";
 import { gridSectionSchema } from "./Grid/schema";
+import { HeroMedia } from "./HeroMedia/Component";
+import { heroMediaSchema } from "./HeroMedia/schema";
 import { HeroConverter } from "./HeroConverter/Component";
 import { heroConverterSchema } from "./HeroConverter/schema";
 import { HeroAside } from "./HeroAside/Component";
@@ -35,6 +37,8 @@ import { HeroCentered } from "./HeroCentered/Component";
 import { heroCenteredSchema } from "./HeroCentered/schema";
 import { HeroSplit } from "./HeroSplit/Component";
 import { heroSplitSchema } from "./HeroSplit/schema";
+import { InfoCards } from "./InfoCards/Component";
+import { infoCardsSchema } from "./InfoCards/schema";
 import { IconCards } from "./IconCards/Component";
 import { iconCardsSchema } from "./IconCards/schema";
 import { ManagerCard } from "./ManagerCard/Component";
@@ -59,6 +63,8 @@ import { ReferralBanner } from "./ReferralBanner/Component";
 import { referralBannerSchema } from "./ReferralBanner/schema";
 import { ServiceCards } from "./ServiceCards/Component";
 import { serviceCardsSchema } from "./ServiceCards/schema";
+import { SplitPromo } from "./SplitPromo/Component";
+import { splitPromoSchema } from "./SplitPromo/schema";
 import { SpecMedia } from "./SpecMedia/Component";
 import { specMediaSchema } from "./SpecMedia/schema";
 import { SplitMediaCard } from "./SplitMediaCard/Component";
@@ -67,22 +73,28 @@ import { StepCards } from "./StepCards/Component";
 import { stepCardsSchema } from "./StepCards/schema";
 import { StatPanel } from "./StatPanel/Component";
 import { statPanelSchema } from "./StatPanel/schema";
+import { VacancyList } from "./VacancyList/Component";
+import { vacancyListSchema } from "./VacancyList/schema";
 import { Testimonial } from "./Testimonial/Component";
 import { testimonialSchema } from "./Testimonial/schema";
 import { TextCards } from "./TextCards/Component";
 import { textCardsSchema } from "./TextCards/schema";
 import { TrustBlock } from "./TrustBlock/Component";
 import { trustBlockSchema } from "./TrustBlock/schema";
+import { WideMedia } from "./WideMedia/Component";
+import { wideMediaSchema } from "./WideMedia/schema";
 import { TrustStrip } from "./TrustStrip/Component";
 import { trustStripSchema } from "./TrustStrip/schema";
 
 export const sectionRegistry = {
   placeholder: { schema: placeholderSectionSchema, Component: PlaceholderSection },
+  "hero-media": { schema: heroMediaSchema, Component: HeroMedia },
   "hero-converter": { schema: heroConverterSchema, Component: HeroConverter },
   "hero-panel": { schema: heroPanelSchema, Component: HeroPanel },
   "hero-aside": { schema: heroAsideSchema, Component: HeroAside },
   "hero-centered": { schema: heroCenteredSchema, Component: HeroCentered },
   "hero-split": { schema: heroSplitSchema, Component: HeroSplit },
+  "split-promo": { schema: splitPromoSchema, Component: SplitPromo },
   "spec-media": { schema: specMediaSchema, Component: SpecMedia },
   "split-media-card": { schema: splitMediaCardSchema, Component: SplitMediaCard },
   "feature-tile": { schema: featureTileSchema, Component: FeatureTile },
@@ -102,11 +114,14 @@ export const sectionRegistry = {
   onboarding: { schema: onboardingSchema, Component: Onboarding },
   "media-row": { schema: mediaRowSchema, Component: MediaRow },
   "trust-block": { schema: trustBlockSchema, Component: TrustBlock },
+  "wide-media": { schema: wideMediaSchema, Component: WideMedia },
   "trust-strip": { schema: trustStripSchema, Component: TrustStrip },
   "cards-row": { schema: cardsRowSchema, Component: CardsRow },
+  "info-cards": { schema: infoCardsSchema, Component: InfoCards },
   "icon-cards": { schema: iconCardsSchema, Component: IconCards },
   "manager-card": { schema: managerCardSchema, Component: ManagerCard },
   "audience-cards": { schema: audienceCardsSchema, Component: AudienceCards },
+  "vacancy-list": { schema: vacancyListSchema, Component: VacancyList },
   testimonial: { schema: testimonialSchema, Component: Testimonial },
   "rates-table": { schema: ratesTableSchema, Component: RatesTable },
   "referral-banner": { schema: referralBannerSchema, Component: ReferralBanner },

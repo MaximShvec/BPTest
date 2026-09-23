@@ -11,7 +11,7 @@ type CommonProps = {
   size?: ButtonSize;
   fullWidth?: boolean;
   spread?: boolean;
-  ring?: "#646464" | "#939393";
+  ring?: "#646464" | "#939393" | "#8C6E00";
   className?: string;
   children: ReactNode;
 };

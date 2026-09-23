@@ -1,0 +1,243 @@
+{
+  "meta": {
+    "title": "Balance Pay — О компании",
+    "description": "Balance Pay — международные платежи без сложностей."
+  },
+  "sections": [
+    {
+      "type": "hero-media",
+      "caption": "Компания",
+      "title": "Международные платежи — простыми. Для тех, кому доверяют суммы",
+      "lead": "Balance Pay основан в 2025 году и растёт каждый квартал. Мы соединяем банковские счета, криптовалюту и карты в одном кабинете — и сопровождаем каждого клиента лично, а не письмами из шаблонов.",
+      "actions": [
+        { "label": "Открытые позиции", "href": "/careers", "variant": "primary", "size": "lg" },
+        { "label": "Связаться с нами", "href": "/contacts", "variant": "outline", "size": "lg" }
+      ],
+      "mediaLabel": "[ФОТО 4:5 — команда или офис]",
+      "ratio": "4 / 5"
+    },
+    {
+      "type": "info-cards",
+      "theme": "dark",
+      "pad": "64",
+      "gap": "40",
+      "layout": "stack",
+      "caption": "Наша миссия",
+      "captionTone": "lime",
+      "title": "Сделать международные платежи простыми и удобными для самых важных клиентов — и остаться людьми, с которыми можно поговорить",
+      "titleMax": 1100,
+      "cardGap": "12",
+      "cards": [
+        {
+          "span": 4,
+          "spanTablet": 6,
+          "theme": "dark",
+          "caption": "Просто",
+          "title": "Одно окно вместо пяти сервисов",
+          "text": "Счёт с IBAN, обмен, карты и выплаты контрагентам — в одном кабинете, без переключений между банком, биржей и кошельком."
+        },
+        {
+          "span": 4,
+          "spanTablet": 6,
+          "theme": "dark",
+          "caption": "Понятно",
+          "title": "Курс и комиссия — до подтверждения",
+          "text": "Клиент видит итоговую сумму заранее. Никаких пересчётов задним числом и сюрпризов в выписке."
+        },
+        {
+          "span": 4,
+          "spanTablet": 6,
+          "theme": "dark",
+          "caption": "Лично",
+          "title": "За каждым счётом — конкретный человек",
+          "text": "Менеджер знает историю ваших операций и отвечает в том канале, который удобен вам."
+        }
+      ]
+    },
+    {
+      "type": "info-cards",
+      "layout": "head",
+      "title": "Растём каждый квартал",
+      "aside": "Молодая компания со взрослой инфраструктурой: счета, обмен, карты и выплаты контрагентам работают каждый день.",
+      "cardGap": "8",
+      "cards": [
+        { "span": 3, "spanTablet": 6, "spanMobile": 6, "theme": "white", "figure": "2014", "text": "Год основания" },
+        { "span": 3, "spanTablet": 6, "spanMobile": 6, "theme": "white", "figure": "72 ч", "text": "Среднее время первого ответа" },
+        { "span": 3, "spanTablet": 6, "spanMobile": 6, "theme": "white", "figure": "EN · ES", "text": "Языки поддержки" },
+        { "span": 3, "spanTablet": 6, "spanMobile": 6, "theme": "white", "figure": "Лимассол", "text": "Офис команды, остальные — удалённо" }
+      ]
+    },
+    {
+      "type": "spec-media",
+      "copyFirst": true,
+      "theme": "white",
+      "copySpan": 5,
+      "mediaSpan": 7,
+      "shot": "roomy",
+      "label": "[ВИДЕО 16:9 — команда поддержки за работой]",
+      "caption": "Живая поддержка",
+      "title": "Отвечает человек, а не автоответчик",
+      "text": "Мы не прячем поддержку за формой обратной связи. У вас есть имя, лицо и прямой контакт: пишите в мессенджер, звоните или назначайте звонок — и продолжайте разговор с того места, где закончили в прошлый раз.",
+      "rows": [
+        { "label": "Среднее время первого ответа", "value": "72 часа", "tone": "emphasis" },
+        { "label": "Языки поддержки", "value": "Английский, испанский", "tone": "muted" },
+        { "label": "Каналы", "value": "Чат, почта, телефон, звонок", "tone": "muted" }
+      ]
+    },
+    {
+      "type": "info-cards",
+      "theme": "black",
+      "pad": "32",
+      "gap": "32",
+      "layout": "stacked-head",
+      "caption": "Wealth management",
+      "captionTone": "lime",
+      "title": "Персональное сопровождение капитала",
+      "aside": "Для клиентов с крупными оборотами — выделенный менеджер, индивидуальные условия и сопровождение на всех этапах операции.",
+      "asideTone": "muted",
+      "cardGap": "12",
+      "cards": [
+        {
+          "span": 4,
+          "spanTablet": 6,
+          "theme": "ink",
+          "caption": "01",
+          "title": "Выделенный менеджер",
+          "text": "Один контакт на все вопросы — от открытия счёта до подтверждения крупного перевода. Доступен в рабочее время вашего часового пояса."
+        },
+        {
+          "span": 4,
+          "spanTablet": 6,
+          "theme": "ink",
+          "caption": "02",
+          "title": "Индивидуальные условия",
+          "text": "Персональный курс обмена и тарифы под ваш объём. Условия фиксируются заранее и подтверждаются менеджером."
+        },
+        {
+          "span": 4,
+          "spanTablet": 6,
+          "theme": "ink",
+          "caption": "03",
+          "title": "Сопровождение операций",
+          "text": "Подготовим документы по переводу, согласуем маршрут платежа и останемся на связи, пока деньги не дойдут до получателя."
+        }
+      ],
+      "actions": [
+        { "label": "Обсудить условия", "href": "/contacts", "variant": "primary", "size": "lg" },
+        { "label": "Как мы работаем", "href": "#how", "variant": "outline-dark", "size": "lg" }
+      ]
+    },
+    {
+      "type": "info-cards",
+      "id": "how",
+      "layout": "head",
+      "title": "Как мы работаем внутри",
+      "aside": "Четыре правила, по которым мы принимаем решения — и по которым нанимаем людей.",
+      "cardGap": "12",
+      "cards": [
+        { "span": 3, "spanTablet": 6, "spanMobile": 6, "theme": "white", "caption": "01", "title": "Клиент раньше релиза", "text": "Если функция усложняет жизнь клиенту, она не выходит — даже если её уже пообещали." },
+        { "span": 3, "spanTablet": 6, "spanMobile": 6, "theme": "white", "caption": "02", "title": "Решение за один разговор", "text": "Меньше согласований и передач между отделами: тот, кто взял вопрос, доводит его до конца." },
+        { "span": 3, "spanTablet": 6, "spanMobile": 6, "theme": "white", "caption": "03", "title": "Прозрачность по умолчанию", "text": "Цифры, комиссии и сроки говорим как есть — и внутри команды, и клиенту." },
+        { "span": 3, "spanTablet": 6, "spanMobile": 6, "theme": "white", "caption": "04", "title": "Внимание к деталям", "text": "Платежи не прощают приблизительности: перепроверяем реквизиты, тексты и интерфейсы." }
+      ]
+    },
+    {
+      "type": "vacancy-list",
+      "id": "jobs",
+      "caption": "Карьера",
+      "title": "Открытые позиции",
+      "aside": "5 вакансий · обновлено 23 сентября 2026",
+      "filters": [
+        { "id": "all", "label": "Все команды" },
+        { "id": "engineering", "label": "Инженерия" },
+        { "id": "support", "label": "Клиентский сервис" }
+      ],
+      "columns": { "role": "Роль", "team": "Команда", "location": "Локация", "employment": "Формат" },
+      "items": [
+        { "title": "React Front-end Engineer", "team": "Инженерия", "location": "Удалённо", "employment": "Частичная занятость", "slug": "react-front-end-engineer", "groups": ["all", "engineering"] },
+        { "title": "Vue Front-end Engineer", "team": "Инженерия", "location": "Лимассол", "employment": "Полная занятость", "slug": "vue-front-end-engineer", "groups": ["all", "engineering"] },
+        { "title": "PHP / Laravel Back-end Engineer", "team": "Инженерия", "location": "Лимассол", "employment": "Полная занятость", "slug": "php-laravel-back-end-engineer", "groups": ["all", "engineering"] },
+        { "title": "QA-тестировщик", "team": "Инженерия", "location": "Удалённо", "employment": "Частичная занятость", "slug": "qa-testirovshchik", "groups": ["all", "engineering"] },
+        { "title": "Ассистент службы поддержки", "team": "Клиентский сервис", "location": "Удалённо", "employment": "Частичная занятость", "slug": "assistent-sluzhby-podderzhki", "groups": ["all", "support"] }
+      ]
+    },
+    {
+      "type": "info-cards",
+      "layout": "head",
+      "title": "Отбор занимает не более 90 дней",
+      "aside": "Никаких тестовых на выходные и молчания по две недели: на каждом этапе говорим, что дальше и когда.",
+      "cardGap": "12",
+      "cards": [
+        { "span": 3, "spanTablet": 6, "spanMobile": 6, "theme": "white", "figure": "01", "figureTone": "lime", "title": "Отклик", "text": "Присылаете резюме и пару слов о себе. Отвечаем каждому — в том числе если ответ отрицательный." },
+        { "span": 3, "spanTablet": 6, "spanMobile": 6, "theme": "white", "figure": "02", "figureTone": "lime", "title": "Знакомство", "text": "Полчаса с рекрутером: чем занимается команда, чего ждём от роли и что важно вам." },
+        { "span": 3, "spanTablet": 6, "spanMobile": 6, "theme": "white", "figure": "03", "figureTone": "lime", "title": "Профессиональная встреча", "text": "Разбираем реальные задачи команды вместе с будущим руководителем. Без головоломок." },
+        { "span": 3, "spanTablet": 6, "spanMobile": 6, "theme": "white", "figure": "04", "figureTone": "lime", "title": "Оффер", "text": "Обсуждаем условия, дату старта и план первых недель. Технику и доступы готовим заранее." }
+      ]
+    },
+    {
+      "type": "info-cards",
+      "theme": "dark",
+      "pad": "32",
+      "gap": "24",
+      "layout": "head",
+      "title": "Что предлагаем",
+      "aside": "Условия одинаковые для офиса и удалёнки — разница только в том, где вы открываете ноутбук.",
+      "asideTone": "muted",
+      "cardGap": "12",
+      "cards": [
+        { "span": 4, "spanTablet": 6, "theme": "dark", "title": "Работа откуда удобно", "text": "Офис в Лимассоле и полноценная удалёнка — часть команды работает из дома, часть приходит в офис." },
+        { "span": 4, "spanTablet": 6, "theme": "dark", "title": "Оплата в валюте", "text": "Выплаты в евро, долларах или криптовалюте — через наш же продукт." },
+        { "span": 4, "spanTablet": 6, "theme": "dark", "title": "Отпуск и больничные", "text": "Оплачиваемый отпуск и больничные, гибкий график в пределах согласованных часов команды." },
+        { "span": 4, "spanTablet": 6, "theme": "dark", "title": "Бюджет на обучение", "text": "Курсы, конференции и сертификации — согласуем с руководителем, без защиты заявки на совете." },
+        { "span": 4, "spanTablet": 6, "theme": "dark", "title": "Техника и рабочее место", "text": "Ноутбук, монитор и всё нужное — либо компенсация, если пользуетесь своим." },
+        { "span": 4, "spanTablet": 6, "theme": "dark", "title": "Карта Balance Pay", "text": "Сотрудники получают карту и премиальные условия по всем продуктам компании." }
+      ]
+    },
+    {
+      "type": "wide-media",
+      "label": "[ФОТО 21:9 — офис или встреча команды]",
+      "ratio": "21 / 9"
+    },
+    {
+      "type": "split-promo",
+      "cards": [
+        {
+          "span": 7,
+          "theme": "white",
+          "caption": "Не нашли свою роль",
+          "captionTone": "muted",
+          "title": "Напишите — мы читаем все письма",
+          "text": "Если вы видите, чем можете быть полезны Balance Pay, расскажите об этом сами. Нескольких людей в команде мы наняли именно так — позиции под них не существовало.",
+          "actions": [
+            { "label": "Отправить резюме", "href": "/careers", "variant": "primary", "size": "lg" },
+            { "label": "Написать в Telegram", "href": "#tg", "variant": "outline", "size": "lg" }
+          ]
+        },
+        {
+          "span": 5,
+          "theme": "lime",
+          "caption": "Пресса и партнёрства",
+          "captionTone": "dirty",
+          "title": "Запросы для медиа",
+          "text": "Комментарии, интервью, логотипы и фактура о компании — пишите на press@balancepay.org.",
+          "pinAction": true,
+          "actions": [
+            { "label": "Скачать медиакит", "href": "/press", "variant": "dark", "size": "lg" }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "cta",
+      "theme": "lime",
+      "layout": "center",
+      "title": "Станьте клиентом или частью команды",
+      "lead": "Открыть счёт — несколько минут. Прислать резюме — одно письмо. И то и другое попадёт к живому человеку.",
+      "actionsOffset": true,
+      "buttons": [
+        { "label": "Открыть счёт", "href": "/signup", "variant": "dark", "size": "lg" },
+        { "label": "Смотреть вакансии", "href": "/careers", "variant": "outline", "size": "lg", "ring": "#8C6E00" }
+      ]
+    }
+  ]
+}

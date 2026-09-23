@@ -7,6 +7,11 @@ export const specMediaSchema = z.object({
   caption: z.string(),
   title: z.string(),
   text: z.string(),
+  copyFirst: z.boolean().optional(),
+  theme: z.enum(["dark", "white"]).optional(),
+  copySpan: z.number().optional(),
+  mediaSpan: z.number().optional(),
+  shot: z.enum(["plain", "roomy"]).optional(),
   rows: z.array(
     z.object({
       label: z.string(),

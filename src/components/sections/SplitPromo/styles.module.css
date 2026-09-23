@@ -1,0 +1,89 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  height: 100%;
+  padding: 32px;
+  border-radius: 32px;
+}
+
+.white {
+  background: #fff;
+  color: #272727;
+}
+
+.lime {
+  background: #ffd400;
+  color: #272727;
+}
+
+.card .muted {
+  color: #939393;
+}
+
+.card .dirty {
+  color: #8c6e00;
+}
+
+.white .text {
+  color: #646464;
+}
+
+.lime .text {
+  color: #272727;
+}
+
+.title {
+  margin: 0;
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 36px;
+  letter-spacing: -0.04em;
+  font-feature-settings: normal;
+}
+
+.text {
+  margin: 0;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.pin {
+  align-self: flex-start;
+  margin-top: auto;
+}
+
+@media (max-width: 1199px) {
+  .title {
+    font-size: 32px;
+    line-height: 32px;
+  }
+}
+
+@media (max-width: 767px) {
+  .card {
+    padding: 20px;
+  }
+
+  .title {
+    font-size: 28px;
+    line-height: 30px;
+  }
+
+  .actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .actions a {
+    width: 100%;
+  }
+}

@@ -1,0 +1,55 @@
+.copy {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  height: 100%;
+  padding: 32px;
+  border-radius: 32px;
+}
+
+.lead {
+  margin: 0;
+  color: #646464;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.shot {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  aspect-ratio: var(--shot-ratio, 4 / 5);
+  padding: 24px;
+  border: 1px dashed #939393;
+  border-radius: 32px;
+  background: #fff;
+  color: #939393;
+  font-size: 16px;
+  line-height: 22px;
+  text-align: center;
+}
+
+@media (max-width: 767px) {
+  .copy {
+    padding: 20px;
+  }
+
+  .actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .actions a {
+    width: 100%;
+  }
+
+  .shot {
+    aspect-ratio: 4 / 3;
+  }
+}
