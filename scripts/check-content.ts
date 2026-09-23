@@ -2,6 +2,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { z } from "zod";
 import { commonSchema } from "../src/schemas/common";
+import { navSchema } from "../src/schemas/nav";
 import { pageSchema } from "../src/schemas/page";
 
 const contentRoot = path.join(process.cwd(), "content");
@@ -20,7 +21,7 @@ function walk(dir: string): string[] {
 function schemaFor(filePath: string): z.ZodType {
   const rel = path.relative(contentRoot, filePath).replaceAll("\\", "/");
   if (rel.endsWith("/common.json") || rel === "common.json") return commonSchema;
-  if (rel.endsWith("/nav.json") || rel === "nav.json") return z.unknown();
+  if (rel.endsWith("/nav.json") || rel === "nav.json") return navSchema;
   if (rel.includes("/pages/")) return pageSchema;
   if (rel.includes("/collections/")) return z.unknown();
   throw new Error(`No schema for content file: ${rel}`);

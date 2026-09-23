@@ -34,3 +34,7 @@
 .media {
   max-width: 480px;
 }
+
+.tagline {
+  white-space: pre-line;
+}

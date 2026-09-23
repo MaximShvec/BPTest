@@ -20,7 +20,7 @@ export default function HomePage() {
   const common = getCommon();
 
   return (
-    <main className={styles.main}>
+    <div className={styles.main}>
       <Container>
         <div className={styles.block}>
           <p className="caption">UI kit</p>
@@ -152,6 +152,6 @@ export default function HomePage() {
       <Container>
         {renderSections([{ type: "placeholder", title: "Секция placeholder" }])}
       </Container>
-    </main>
+    </div>
   );
 }

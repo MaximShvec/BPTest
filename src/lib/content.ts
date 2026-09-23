@@ -2,6 +2,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { z } from "zod";
 import { commonSchema, type Common } from "@/schemas/common";
+import { navSchema, type Nav } from "@/schemas/nav";
 import { pageSchema, type Page } from "@/schemas/page";
 
 // TODO: здесь позже будет fetch к API админки с revalidate.
@@ -32,8 +33,8 @@ export function getCommon(locale = "ru"): Common {
   return load(contentFile(locale, "common.json"), commonSchema);
 }
 
-export function getNav(locale = "ru"): unknown {
-  return load(contentFile(locale, "nav.json"), z.unknown());
+export function getNav(locale = "ru"): Nav {
+  return load(contentFile(locale, "nav.json"), navSchema);
 }
 
 export function getPage(slug: string, locale = "ru"): Page {

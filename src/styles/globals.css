@@ -37,6 +37,7 @@ img {
 }
 
 body {
+  margin: 0;
   font-family: var(--font-text), system-ui, sans-serif;
   background: var(--gray100);
   color: var(--dark);
