@@ -16,6 +16,7 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 - Стек: Next.js App Router + TypeScript + CSS Modules. Без Tailwind и UI-библиотек. Новые зависимости не добавлять без явного указания.
 - Все тексты, ссылки, URL медиа — только из content/ru/**/*.json. В компонентах нет захардкоженных строк (кроме aria-label служебных элементов).
 - Страница = массив секций (sections[] с type). Новая секция = папка src/components/sections/<Name>/ с Component.tsx, schema.ts, styles.module.css и регистрацией в registry.ts.
+- Ритм страницы: один `Container` (max-width 1512, горизонтальный гаттер `--gutter`) на весь main. Внутри него колонка с `padding-top` 72px, `gap` 80px и таким же отступом перед футером (tablet 56/64, mobile 32/48). Секции сами гаттер не добавляют.
 - Тексты из исходных html переносить дословно, включая плейсхолдеры в квадратных скобках вида [ИМЯ], [СУММА].
 - Плейсхолдеры картинок вида [ФОТО ...] → в контенте media: {"placeholder":"ФОТО ...","ratio":"4/5"}.
 - Ссылки: внутренние начинаются с '/', используем карту маршрутов из F:\work\BPLandings\PLAN.md раздел 0.6. Заглушки #f1, #signup и т.п. заменять на реальные маршруты (#signup → /signup, #login → /login, #demo и #contact → /contacts, #blog → /blog, #security → /security, #fees-personal → /fees, #fees-business → /business-fees, #affiliate → /referral, #payouts → /business-payments, #cards → /cards, #personal → /personal, #business → /business, #exchange → /exchange). Якоря внутри страницы оставлять якорями.

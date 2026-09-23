@@ -1,40 +1,23 @@
-.main {
+.stack {
   display: flex;
   flex-direction: column;
-  gap: 48px;
-  padding: 48px 0 80px;
+  gap: 80px;
+  padding-top: 72px;
+  padding-bottom: 80px;
 }
 
-.block {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
+@media (max-width: 1199px) {
+  .stack {
+    gap: 64px;
+    padding-top: 56px;
+    padding-bottom: 64px;
+  }
 }
 
-.row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  align-items: center;
-}
-
-.icons {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 16px;
-  align-items: center;
-  color: var(--dark);
-}
-
-.block > a,
-.block > button {
-  align-self: flex-start;
-}
-
-.media {
-  max-width: 480px;
-}
-
-.tagline {
-  white-space: pre-line;
+@media (max-width: 767px) {
+  .stack {
+    gap: 48px;
+    padding-top: 32px;
+    padding-bottom: 48px;
+  }
 }

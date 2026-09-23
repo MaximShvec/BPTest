@@ -1,3 +1,4 @@
+import type { ComponentType } from "react";
 import type { Section } from "./schemas";
 import { sectionRegistry } from "./registry";
 
@@ -10,7 +11,7 @@ export function renderSections(sections: Section[]) {
       }
       return null;
     }
-    const Component = entry.Component;
-    return <Component key={section.id ?? index} {...section} />;
+    const Component = entry.Component as ComponentType<typeof section>;
+    return <Component key={section.id ?? `${section.type}-${index}`} {...section} />;
   });
 }

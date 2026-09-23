@@ -11,17 +11,19 @@
 }
 
 .trigger {
+  font-feature-settings: var(--acc-features, inherit);
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 16px;
-  min-height: 44px;
+  gap: var(--acc-gap, 16px);
+  min-height: var(--acc-min, 44px);
   padding: 0;
   border: none;
   background: none;
   color: inherit;
   font: inherit;
+  letter-spacing: inherit;
   text-align: left;
   cursor: pointer;
 }
@@ -45,5 +47,5 @@
 }
 
 .body {
-  padding-top: 12px;
+  padding-top: var(--acc-body, 12px);
 }

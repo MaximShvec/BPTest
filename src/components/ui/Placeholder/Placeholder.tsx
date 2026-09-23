@@ -4,18 +4,31 @@ import { cx } from "@/lib/cx";
 
 export function Placeholder({
   label,
-  ratio = "16/9",
+  ratio,
+  width,
+  height,
   className,
   radius,
+  borderColor,
 }: {
-  label: ReactNode;
+  label?: ReactNode;
   ratio?: string;
+  width?: number | string;
+  height?: number | string;
   className?: string;
   radius?: number | string;
+  borderColor?: string;
 }) {
+  const framed = width != null && height != null;
+  const frame = (value: number | string) => (typeof value === "number" ? value + 2 : `calc(${value} + 2px)`);
   const style = {
-    aspectRatio: ratio,
+    width: framed ? frame(width) : width,
+    height: framed ? frame(height) : height,
+    aspectRatio: framed ? undefined : (ratio ?? "16/9"),
     borderRadius: radius,
+    borderColor,
+    flexShrink: framed ? 0 : undefined,
+    padding: framed ? 0 : undefined,
   } as CSSProperties;
 
   return (

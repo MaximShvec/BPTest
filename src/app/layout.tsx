@@ -14,6 +14,7 @@ const spaceGrotesk = Space_Grotesk({
   weight: "500",
   variable: "--font-display",
   display: "swap",
+  adjustFontFallback: false,
 });
 
 export const metadata: Metadata = {

@@ -12,13 +12,19 @@ export function Card({
   radius = "card",
   children,
   className,
+  id,
 }: {
   theme?: Theme;
   padding?: CardPadding;
   radius?: CardRadius;
   children: ReactNode;
   className?: string;
+  id?: string;
 }) {
   const radiusClass = radius === "inner" ? styles.radiusInner : styles.radiusCard;
-  return <div className={cx(styles.card, styles[theme], styles[padding], radiusClass, className)}>{children}</div>;
+  return (
+    <div id={id} className={cx(styles.card, styles[theme], styles[padding], radiusClass, className)}>
+      {children}
+    </div>
+  );
 }
