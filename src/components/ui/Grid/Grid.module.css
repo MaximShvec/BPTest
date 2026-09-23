@@ -1,0 +1,22 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.item {
+  grid-column: span var(--span, 12);
+  min-width: 0;
+}
+
+@media (max-width: 1199px) {
+  .item {
+    grid-column: span var(--span-t, 6);
+  }
+}
+
+@media (max-width: 767px) {
+  .item {
+    grid-column: span var(--span-m, 12);
+  }
+}

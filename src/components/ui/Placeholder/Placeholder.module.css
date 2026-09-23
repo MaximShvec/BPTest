@@ -1,0 +1,32 @@
+.placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  border: 1px dashed #939393;
+  border-radius: 16px;
+  color: var(--gray300);
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: normal;
+  padding: 16px;
+}
+
+.bodyLabel {
+  font-size: 16px;
+  line-height: 22px;
+  padding: 20px;
+}
+
+.microLabel {
+  font-size: 10px;
+  line-height: 14px;
+  padding: 0;
+}
+
+.cardLabel {
+  font-size: 13px;
+  line-height: 18px;
+  padding: 12px;
+}

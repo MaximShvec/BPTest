@@ -1,0 +1,80 @@
+.card {
+  border-radius: 32px;
+}
+
+.center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 16px;
+  padding: 72px 32px;
+}
+
+.center .copy {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.center .copy h2 {
+  max-width: 900px;
+}
+
+.split {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 48px;
+  padding: 56px;
+}
+
+.split .copy {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  max-width: 700px;
+}
+
+.lead {
+  margin: 0;
+  font-size: 20px;
+  line-height: 28px;
+  letter-spacing: -0.01em;
+}
+
+.ink {
+  color: var(--dark);
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.actionsOffset {
+  margin-top: 8px;
+}
+
+@media (max-width: 767px) {
+  .split {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 32px;
+  }
+
+  .center {
+    padding: 48px 20px;
+  }
+
+  .actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .actions a {
+    width: 100%;
+  }
+}

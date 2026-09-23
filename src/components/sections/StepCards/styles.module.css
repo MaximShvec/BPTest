@@ -1,0 +1,174 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+.heading {
+  max-width: 860px;
+}
+
+.aside {
+  max-width: 380px;
+  margin: 0;
+  font-size: 16px;
+  line-height: 22px;
+  color: #646464;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  height: 100%;
+  padding: 32px;
+  border-radius: 32px;
+}
+
+.white {
+  background: #fff;
+  color: #272727;
+}
+
+.black {
+  background: #000;
+  color: #f3f5f5;
+}
+
+.ink {
+  background: #141414;
+  color: #f3f5f5;
+}
+
+.card .captionMuted {
+  color: #939393;
+}
+
+.card .captionLime {
+  color: #ffd400;
+}
+
+.title36,
+.title32 {
+  margin: 0;
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 500;
+  font-feature-settings: normal;
+}
+
+.title36 {
+  font-size: 36px;
+  line-height: 36px;
+  letter-spacing: -0.04em;
+}
+
+.title32 {
+  font-size: 32px;
+  line-height: 36px;
+  letter-spacing: -0.02em;
+}
+
+.text {
+  margin: 0;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.white .text {
+  color: #646464;
+}
+
+.black .text,
+.ink .text {
+  color: #939393;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+}
+
+.loose {
+  margin-top: 8px;
+}
+
+.tight {
+  margin-top: 4px;
+}
+
+.item {
+  display: flex;
+  gap: 12px;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.index {
+  flex: 0 0 auto;
+}
+
+.fixed .index {
+  flex: 0 0 20px;
+}
+
+.white .index {
+  color: #939393;
+}
+
+.black .index,
+.ink .index {
+  color: #646464;
+}
+
+.cta {
+  align-self: flex-start;
+  margin-top: auto;
+}
+
+@media (max-width: 1199px) {
+  .title36 {
+    font-size: 32px;
+    line-height: 32px;
+  }
+
+  .title32 {
+    font-size: 28px;
+    line-height: 30px;
+  }
+}
+
+@media (max-width: 767px) {
+  .head {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .heading,
+  .aside {
+    max-width: none;
+  }
+
+  .card {
+    padding: 20px;
+  }
+
+  .title36 {
+    font-size: 28px;
+    line-height: 30px;
+  }
+
+  .title32 {
+    font-size: 24px;
+    line-height: 28px;
+  }
+}

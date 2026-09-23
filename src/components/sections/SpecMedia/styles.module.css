@@ -1,0 +1,141 @@
+.shot {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  height: 100%;
+  min-height: 0;
+  aspect-ratio: 16 / 9;
+  padding: 16px;
+  border: 1px dashed #939393;
+  border-radius: 32px;
+  background: #fff;
+  color: #939393;
+  font-size: 16px;
+  line-height: 22px;
+  text-align: center;
+}
+
+.shotRoomy {
+  padding: 24px;
+}
+
+.aside {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  height: 100%;
+  padding: 32px;
+  border-radius: 32px;
+  background: #141414;
+  color: #f3f5f5;
+}
+
+.aside :global(.caption) {
+  color: #939393;
+}
+
+.title {
+  margin: 0;
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 36px;
+  letter-spacing: -0.04em;
+  font-feature-settings: normal;
+}
+
+.text {
+  margin: 0;
+  font-size: 16px;
+  line-height: 22px;
+  color: #939393;
+}
+
+.specs {
+  display: flex;
+  flex-direction: column;
+  margin-top: auto;
+}
+
+.row,
+.rowLast {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 14px 0;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.row {
+  border-bottom: 1px solid #272727;
+}
+
+.muted {
+  color: #939393;
+}
+
+.emphasis {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: -0.015em;
+  font-feature-settings: normal;
+}
+
+.lime {
+  color: #ffd400;
+}
+
+.light {
+  background: #fff;
+  color: #272727;
+}
+
+.light .text,
+.light .muted {
+  color: #646464;
+}
+
+.light .row {
+  border-bottom-color: #e3e3e3;
+}
+
+.light .emphasis {
+  font-weight: 500;
+  color: #272727;
+}
+
+@media (max-width: 1199px) {
+  .title {
+    font-size: 32px;
+    line-height: 32px;
+  }
+
+  .emphasis {
+    font-size: 22px;
+    line-height: 26px;
+  }
+}
+
+@media (max-width: 767px) {
+  .shot {
+    aspect-ratio: 4 / 3;
+  }
+
+  .aside {
+    padding: 20px;
+  }
+
+  .title {
+    font-size: 28px;
+    line-height: 30px;
+  }
+
+  .emphasis {
+    font-size: 20px;
+    line-height: 24px;
+  }
+}

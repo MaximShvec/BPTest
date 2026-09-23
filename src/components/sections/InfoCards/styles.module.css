@@ -1,0 +1,212 @@
+.root {
+  display: flex;
+  flex-direction: column;
+}
+
+.plain {
+  background: transparent;
+}
+
+.dark {
+  border-radius: 32px;
+  background: #141414;
+  color: #f3f5f5;
+}
+
+.black {
+  border-radius: 32px;
+  background: #000;
+  color: #f3f5f5;
+}
+
+.pad32 {
+  padding: 32px;
+}
+
+.pad64 {
+  padding: 64px 32px;
+}
+
+.gap24 {
+  gap: 24px;
+}
+
+.gap32 {
+  gap: 32px;
+}
+
+.gap40 {
+  gap: 40px;
+}
+
+.head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+.headingCol {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 860px;
+}
+
+.title {
+  max-width: 860px;
+}
+
+.aside,
+.asideMuted {
+  max-width: 380px;
+  margin: 0;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.aside {
+  color: #646464;
+}
+
+.asideMuted {
+  color: #939393;
+}
+
+.root .lime {
+  color: #ffd400;
+}
+
+.root .mutedCaption {
+  color: #939393;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 28px;
+  border-radius: 24px;
+}
+
+.cardGap8 {
+  gap: 8px;
+}
+
+.cardGap12 {
+  gap: 12px;
+}
+
+.cardWhite {
+  background: #fff;
+  color: #272727;
+}
+
+.cardDark {
+  background: #272727;
+  color: #f3f5f5;
+}
+
+.cardInk {
+  background: #141414;
+  color: #f3f5f5;
+}
+
+.cardWhite .text {
+  color: #646464;
+}
+
+.cardDark .text,
+.cardInk .text {
+  color: #939393;
+}
+
+.figure {
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 500;
+  font-size: 52px;
+  line-height: 54px;
+  letter-spacing: -0.06em;
+  font-feature-settings: normal;
+}
+
+.figureLime {
+  color: #ffd400;
+}
+
+.cardTitle {
+  margin: 0;
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 36px;
+  letter-spacing: -0.02em;
+  font-feature-settings: normal;
+}
+
+.text {
+  margin: 0;
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: normal;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+@media (max-width: 1199px) {
+  .figure {
+    font-size: 42px;
+    line-height: 44px;
+  }
+
+  .cardTitle {
+    font-size: 28px;
+    line-height: 30px;
+  }
+}
+
+@media (max-width: 767px) {
+  .head {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .headingCol,
+  .title,
+  .aside,
+  .asideMuted {
+    max-width: none;
+  }
+
+  .pad32,
+  .pad64 {
+    padding: 32px 20px;
+  }
+
+  .card {
+    padding: 20px;
+  }
+
+  .figure {
+    font-size: 32px;
+    line-height: 34px;
+  }
+
+  .cardTitle {
+    font-size: 24px;
+    line-height: 28px;
+  }
+
+  .actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .actions a {
+    width: 100%;
+  }
+}

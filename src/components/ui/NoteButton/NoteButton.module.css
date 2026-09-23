@@ -1,0 +1,25 @@
+.note {
+  flex-shrink: 0;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 500;
+}
+
+.dirty {
+  color: #8c6e00;
+}
+
+.muted {
+  color: #939393;
+}
+
+.gray {
+  color: #646464;
+}
+
+@media (max-width: 767px) {
+  .note {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}

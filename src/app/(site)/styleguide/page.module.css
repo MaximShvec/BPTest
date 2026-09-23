@@ -1,0 +1,40 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  padding: 48px 0 80px;
+}
+
+.block {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+
+.icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: center;
+  color: var(--dark);
+}
+
+.block > a,
+.block > button {
+  align-self: flex-start;
+}
+
+.media {
+  max-width: 480px;
+}
+
+.tagline {
+  white-space: pre-line;
+}

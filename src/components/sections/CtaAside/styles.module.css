@@ -1,0 +1,32 @@
+.root {
+  padding: 48px 40px;
+  border-radius: 40px;
+  background: #ffd400;
+  color: #272727;
+}
+
+.grid {
+  align-items: center;
+}
+
+.copy {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.lead {
+  color: #8c6e00;
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+@media (max-width: 767px) {
+  .root {
+    padding: 32px 20px;
+  }
+}

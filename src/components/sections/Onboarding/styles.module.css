@@ -1,0 +1,167 @@
+.main,
+.quote {
+  height: 100%;
+  box-sizing: border-box;
+  padding: 32px;
+  border-radius: 32px;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background: #fff;
+}
+
+.caption,
+.quoteCaption {
+  font-size: 10px;
+  line-height: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0;
+}
+
+.caption {
+  color: #939393;
+}
+
+.title {
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 36px;
+  letter-spacing: -0.04em;
+  font-feature-settings: normal;
+}
+
+.steps {
+  display: flex;
+  flex-direction: column;
+}
+
+.row,
+.rowLast {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 18px 0;
+}
+
+.row {
+  border-bottom: 1px solid #e3e3e3;
+}
+
+.label {
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 500;
+}
+
+.value {
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: -0.015em;
+  font-feature-settings: normal;
+  flex-shrink: 0;
+}
+
+.cta {
+  margin-top: auto;
+  align-self: flex-start;
+}
+
+.quote {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background: #dae8ee;
+}
+
+.quoteCaption {
+  color: #5d7580;
+}
+
+.quoteText {
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 36px;
+  letter-spacing: -0.02em;
+  font-feature-settings: normal;
+  color: #1f3a48;
+}
+
+.author {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.avatar {
+  color: #5d7580;
+}
+
+.person {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.name {
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 500;
+}
+
+.role {
+  font-size: 16px;
+  line-height: 22px;
+  color: #5d7580;
+}
+
+@media (max-width: 1199px) {
+  .title {
+    font-size: 32px;
+    line-height: 32px;
+  }
+
+  .quoteText {
+    font-size: 28px;
+    line-height: 30px;
+  }
+
+  .value {
+    font-size: 22px;
+    line-height: 26px;
+  }
+}
+
+@media (max-width: 767px) {
+  .main,
+  .quote {
+    padding: 20px;
+  }
+
+  .title {
+    font-size: 28px;
+    line-height: 30px;
+  }
+
+  .quoteText {
+    font-size: 24px;
+    line-height: 28px;
+  }
+
+  .value {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .row,
+  .rowLast {
+    flex-wrap: wrap;
+  }
+}

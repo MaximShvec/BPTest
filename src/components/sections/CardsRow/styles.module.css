@@ -1,0 +1,65 @@
+.card {
+  min-height: 420px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.badges {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.badges > div {
+  font-size: 10px;
+  color: var(--gray300);
+}
+
+.avatars {
+  display: flex;
+  margin-top: 8px;
+}
+
+.avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  margin-right: -16px;
+}
+
+.avatar:last-child {
+  margin-right: 0;
+}
+
+.bottom {
+  margin-top: auto;
+}
+
+.links {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.links a {
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  border-bottom: 1px solid #e3e3e3;
+}
+
+.cta {
+  margin-top: auto;
+  align-self: flex-start;
+}
+
+@media (max-width: 767px) {
+  .card {
+    min-height: 0;
+  }
+}

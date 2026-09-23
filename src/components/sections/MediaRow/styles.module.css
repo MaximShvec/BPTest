@@ -1,0 +1,17 @@
+.shot {
+  height: 380px;
+  background: #fff;
+  color: #939393;
+}
+
+.blue {
+  background: #dae8ee;
+  color: #5d7580;
+}
+
+@media (max-width: 767px) {
+  .shot {
+    height: auto;
+    aspect-ratio: 4 / 3;
+  }
+}

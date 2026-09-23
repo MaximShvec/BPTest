@@ -1,0 +1,20 @@
+.chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  background: rgba(227, 227, 227, 0.5);
+  color: var(--gray300);
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 22px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.chip:hover {
+  color: var(--gray300);
+}

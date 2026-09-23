@@ -1,0 +1,154 @@
+{
+  "meta": {
+    "title": "Balance Pay — Карты",
+    "description": "Виртуальные и металлические карты Balance Pay."
+  },
+  "sections": [
+    {
+      "type": "hero-panel",
+      "caption": "Карты Balance Pay",
+      "title": "Пополняете в крипте — платите как обычной картой",
+      "lead": "Три карты под разные сценарии: виртуальная в долларах, металлическая для крупных трат и европейская с криптокэшбеком. Apple Pay и Google Pay — с первого дня.",
+      "actions": [
+        { "label": "Заказать карту", "href": "/card-order", "variant": "primary", "size": "xl" },
+        { "label": "Сравнить карты", "href": "#compare", "variant": "outline-dark", "size": "xl" }
+      ],
+      "media": { "placeholder": "[СЪЁМКА 21:9 — три карты веером на тёмном фоне, крупный план металла]" },
+      "mediaNote": "Рендер или фото, без бликов на номерах"
+    },
+    {
+      "type": "card-showcase",
+      "items": [
+        {
+          "theme": "white",
+          "media": { "placeholder": "[КАРТА — USD Virtual]", "ratio": "1586/1000" },
+          "caption": "Виртуальная · VISA",
+          "title": "USD Virtual",
+          "text": "Пополняете в USDT — сети TRC и BEP, платите в долларах онлайн и в магазинах через Apple Pay и Google Pay.",
+          "price": { "value": "5 $", "note": "в месяц · выпуск [XX]" },
+          "button": { "label": "Подробнее", "href": "/card-usd", "variant": "primary", "size": "lg" }
+        },
+        {
+          "theme": "black",
+          "media": { "placeholder": "[КАРТА — Black Metal]", "ratio": "1586/1000" },
+          "caption": "Металл · VISA · премиум",
+          "title": "Black Metal",
+          "text": "Физическая карта из металла. Пополнение в USDT в сети TRC, премиальное обслуживание и повышенные лимиты.",
+          "price": { "value": "50 $", "note": "в месяц — или бесплатно при тратах от 10 000 $" },
+          "button": { "label": "Подробнее", "href": "/card-black", "variant": "primary", "size": "lg" }
+        },
+        {
+          "theme": "blue",
+          "media": { "placeholder": "[КАРТА — EUR Virtual]", "ratio": "1586/1000" },
+          "caption": "Виртуальная · EUR · кэшбек",
+          "title": "EUR Virtual",
+          "text": "Евровая карта с пополнением в EURC и кэшбеком 0,1% — реальными деньгами на баланс, а не баллами.",
+          "price": { "value": "10 €", "note": "в месяц — или бесплатно при тратах от 1 000 €" },
+          "button": { "label": "Подробнее", "href": "/card-eur", "variant": "dark", "size": "lg" }
+        }
+      ]
+    },
+    {
+      "type": "media-aside",
+      "media": { "placeholder": "[ВИДЕО 16:9 — карта в деле: пополнение в USDT, оплата телефоном, чек]" },
+      "icon": "play",
+      "title": "От USDT до кофе — за один вечер",
+      "text": "Пополнили карту в стейблкоинах, добавили в Apple Pay или Google Pay и расплатились. Без похода в банк и без объяснений, откуда деньги.",
+      "chips": ["Apple Pay", "Google Pay", "VISA"]
+    },
+    {
+      "type": "product-feature",
+      "id": "usd-virtual",
+      "theme": "white",
+      "caption": "01 · USD Virtual",
+      "title": "Доллары в телефоне за пару минут",
+      "text": "Выпускается мгновенно, работает онлайн и в офлайне через бесконтактную оплату. Подходит для подписок, поездок и повседневных покупок.",
+      "rows": [
+        { "label": "Пополнение", "value": "USDT · сети TRC и BEP" },
+        { "label": "Валюта карты", "value": "USD" },
+        { "label": "Выпуск", "value": "[XX]", "emphasis": true },
+        { "label": "Обслуживание", "value": "5 $ / мес", "emphasis": true }
+      ],
+      "button": { "label": "Выпустить карту", "href": "/card-order", "variant": "primary", "size": "lg" },
+      "media": { "placeholder": "[КАДР 3:2 — телефон с картой в кошельке, оплата на кассе]" }
+    },
+    {
+      "type": "product-feature",
+      "id": "black-metal",
+      "reverse": true,
+      "theme": "black",
+      "caption": "02 · Black Metal",
+      "title": "Металл, который замечают на кассе",
+      "text": "Физическая карта для крупных трат: повышенные лимиты, приоритетная поддержка и обслуживание, которое окупается оборотом.",
+      "rows": [
+        { "label": "Пополнение", "value": "USDT · сеть TRC" },
+        { "label": "Носитель", "value": "Металл, именная" },
+        { "label": "Обслуживание", "value": "50 $ / мес", "emphasis": true },
+        { "label": "Бесплатно при тратах", "value": "от 10 000 $ / мес", "emphasis": true, "tone": "lime" }
+      ],
+      "button": { "label": "Заказать Black Metal", "href": "/card-order", "variant": "primary", "size": "lg" },
+      "media": { "placeholder": "[КАДР 3:2 — металлическая карта, макросъёмка веса и фактуры]" }
+    },
+    {
+      "type": "product-feature",
+      "id": "eur-virtual",
+      "theme": "blue",
+      "caption": "03 · EUR Virtual",
+      "title": "Первая карта с криптокэшбеком в евро",
+      "text": "Пополняется в EURC, тратится в евро. За каждую покупку возвращается 0,1% — настоящими деньгами на баланс, без баллов и условий сгорания.",
+      "rows": [
+        { "label": "Пополнение", "value": "EURC" },
+        { "label": "Кэшбек", "value": "0,1% деньгами", "emphasis": true },
+        { "label": "Обслуживание", "value": "10 € / мес", "emphasis": true },
+        { "label": "Бесплатно при тратах", "value": "от 1 000 € / мес", "emphasis": true }
+      ],
+      "button": { "label": "Выпустить карту", "href": "/card-order", "variant": "dark", "size": "lg" },
+      "media": { "placeholder": "[КАДР 3:2 — покупка в европейском городе, карта в приложении]" }
+    },
+    {
+      "type": "app-block",
+      "caption": "Приложение",
+      "title": "Карта, счёт и обмен — в одном приложении",
+      "text": "Выпуск карты, пополнение в крипте, лимиты, заморозка и история трат. Реквизиты для Apple Pay и Google Pay добавляются в два касания.",
+      "badges": [
+        { "placeholder": "[БЕЙДЖ APP STORE]" },
+        { "placeholder": "[БЕЙДЖ GOOGLE PLAY]" }
+      ],
+      "screens": [
+        { "placeholder": "[СКРИН 9:16 — карта в приложении]", "ratio": "9/16" },
+        { "placeholder": "[СКРИН 9:16 — история трат]", "ratio": "9/16" }
+      ]
+    },
+    {
+      "type": "compare-table",
+      "id": "compare",
+      "title": "Сравнение карт",
+      "headerLabel": "Параметр",
+      "columns": ["USD Virtual", "Black Metal", "EUR Virtual"],
+      "rows": [
+        { "label": "Носитель", "values": ["Виртуальная", "Металл", "Виртуальная"] },
+        { "label": "Валюта", "values": ["USD", "USD", "EUR"] },
+        { "label": "Пополнение", "values": ["USDT · TRC, BEP", "USDT · TRC", "EURC"] },
+        {
+          "label": "Обслуживание",
+          "values": [
+            { "text": "5 $", "emphasis": true },
+            { "text": "50 $", "emphasis": true },
+            { "text": "10 €", "emphasis": true }
+          ]
+        },
+        { "label": "Бесплатно при тратах", "values": ["—", "от 10 000 $", "от 1 000 €"] },
+        { "label": "Кэшбек", "values": ["—", "[XX]", "0,1% деньгами"] }
+      ]
+    },
+    {
+      "type": "cta",
+      "id": "order",
+      "theme": "lime",
+      "layout": "center",
+      "title": "Выпустите карту сегодня",
+      "lead": "Виртуальная — за пару минут, металлическая — с доставкой. Пополнение в крипте, траты в обычных магазинах.",
+      "buttons": [{ "label": "Заказать карту", "href": "/signup", "variant": "dark", "size": "lg" }]
+    }
+  ]
+}

@@ -1,0 +1,252 @@
+{
+  "header": {
+    "items": [
+      {
+        "label": "Частным лицам",
+        "href": "/personal",
+        "dropdown": {
+          "caption": "Продукты",
+          "panel": "wide",
+          "columns": [
+            [
+              { "label": "Обзор", "href": "/personal" },
+              { "label": "Счета и переводы", "href": "/payments" },
+              { "label": "Обмен", "href": "/exchange" }
+            ],
+            [
+              { "label": "Карты", "href": "/cards" },
+              { "label": "Комиссии", "href": "/fees" }
+            ]
+          ],
+          "promo": {
+            "icon": "/media/header-referral.svg",
+            "iconWidth": 44,
+            "iconHeight": 44,
+            "title": "Партнёрская программа",
+            "subtitle": "Зарабатывайте с нами",
+            "href": "/referral"
+          }
+        }
+      },
+      {
+        "label": "Бизнесу",
+        "href": "/business",
+        "dropdown": {
+          "caption": "Продукты",
+          "panel": "wide",
+          "columns": [
+            [
+              { "label": "Обзор", "href": "/business" },
+              { "label": "Счета и платежи", "href": "/business-payments" },
+              { "label": "Криптосчета", "href": "/crypto" }
+            ],
+            [
+              { "label": "Криптоинвойсинг", "href": "/invoicing" },
+              { "label": "Комиссии", "href": "/business-fees" }
+            ]
+          ],
+          "promo": {
+            "title": "Разработчикам",
+            "subtitle": "API и white-label",
+            "href": "/developers"
+          }
+        }
+      },
+      {
+        "label": "Карты",
+        "href": "/cards",
+        "dropdown": {
+          "caption": "Продукты",
+          "panel": "wide",
+          "columns": [
+            [
+              { "label": "Обзор и сравнение", "href": "/cards" },
+              { "label": "USD Virtual", "href": "/card-usd" }
+            ],
+            [
+              { "label": "Black Physical", "href": "/card-black" },
+              { "label": "EUR Virtual", "href": "/card-eur" }
+            ]
+          ],
+          "promo": {
+            "title": "Заказать карту",
+            "subtitle": "Выпуск за минуты",
+            "href": "/card-order"
+          }
+        }
+      },
+      {
+        "label": "Обмен",
+        "href": "/exchange"
+      },
+      {
+        "label": "Компания",
+        "href": "/about",
+        "trigger": "button",
+        "dropdown": {
+          "panel": "wide",
+          "columns": [
+            [
+              { "label": "О компании", "href": "/about" },
+              { "label": "Работа у нас", "href": "/careers" },
+              { "label": "Поддержка", "href": "/support" },
+              { "label": "Контакты", "href": "/contacts" }
+            ],
+            [
+              { "label": "Безопасность", "href": "/security" },
+              { "label": "Пресса", "href": "/press" },
+              { "label": "Брендбук", "href": "/brand" }
+            ]
+          ],
+          "promo": {
+            "icon": "/media/header-blog.svg",
+            "iconWidth": 53,
+            "iconHeight": 40,
+            "title": "Блог",
+            "subtitle": "Полезные статьи от нашей команды",
+            "href": "/blog"
+          }
+        }
+      },
+      {
+        "label": "Разработчикам",
+        "href": "/developers",
+        "trigger": "button",
+        "dropdown": {
+          "panel": "wide",
+          "columns": [
+            [
+              { "label": "Обзор", "href": "/developers" },
+              { "label": "Документация API", "href": "/developers#api" },
+              { "label": "White-label", "href": "/developers#white-label" },
+              { "label": "Запросить доступ", "href": "/developers#access" }
+            ]
+          ],
+          "promo": {
+            "title": "Bug bounty",
+            "subtitle": "Открытые условия программы",
+            "href": "/bug-bounty"
+          }
+        }
+      }
+    ],
+    "languages": [
+      { "code": "ru", "label": "Русский", "active": true },
+      { "code": "en", "label": "English" },
+      { "code": "es", "label": "Español" },
+      { "code": "de", "label": "Deutsch" },
+      { "code": "pt", "label": "Português" },
+      { "code": "fr", "label": "Français" },
+      { "code": "it", "label": "Italiano" },
+      { "code": "pl", "label": "Polski" },
+      { "code": "uk", "label": "Українська" },
+      { "code": "cs", "label": "Čeština" },
+      { "code": "ro", "label": "Română" },
+      { "code": "zh", "label": "中文" },
+      { "code": "kk", "label": "Қазақша" },
+      { "code": "tr", "label": "Türkçe" },
+      { "code": "az", "label": "Azərbaycanca" },
+      { "code": "ka", "label": "ქართული" },
+      { "code": "ar", "label": "العربية" },
+      { "code": "id", "label": "Bahasa Indonesia" },
+      { "code": "ja", "label": "日本語" },
+      { "code": "th", "label": "ไทย" },
+      { "code": "bn", "label": "বাংলা" },
+      { "code": "vi", "label": "Tiếng Việt" }
+    ],
+    "actions": {
+      "login": { "label": "Войти", "href": "/login" },
+      "signup": { "label": "Попробовать бесплатно", "href": "/signup" }
+    }
+  },
+  "footer": {
+    "columns": [
+      {
+        "title": "Частным лицам",
+        "links": [
+          { "label": "Обзор", "href": "/personal" },
+          { "label": "Счета и переводы", "href": "/payments" },
+          { "label": "Обмен", "href": "/exchange" },
+          { "label": "Карты", "href": "/cards" },
+          { "label": "Комиссии", "href": "/fees" },
+          { "label": "Партнёрская программа", "href": "/referral" }
+        ]
+      },
+      {
+        "title": "Бизнесу",
+        "links": [
+          { "label": "Обзор", "href": "/business" },
+          { "label": "Счета и платежи", "href": "/business-payments" },
+          { "label": "Криптосчета", "href": "/crypto" },
+          { "label": "Криптоинвойсинг", "href": "/invoicing" },
+          { "label": "Комиссии для бизнеса", "href": "/business-fees" }
+        ]
+      },
+      {
+        "title": "Карты",
+        "links": [
+          { "label": "Обзор и сравнение", "href": "/cards" },
+          { "label": "USD Virtual", "href": "/card-usd" },
+          { "label": "Black Physical", "href": "/card-black" },
+          { "label": "EUR Virtual", "href": "/card-eur" },
+          { "label": "Заказ карты", "href": "/card-order" }
+        ]
+      },
+      {
+        "title": "Компания",
+        "links": [
+          { "label": "О компании", "href": "/about" },
+          { "label": "Работа у нас", "href": "/careers" },
+          { "label": "Поддержка", "href": "/support" },
+          { "label": "Контакты", "href": "/contacts" },
+          { "label": "Безопасность", "href": "/security" },
+          { "label": "Пресса", "href": "/press" },
+          { "label": "Брендбук", "href": "/brand" },
+          { "label": "Блог", "href": "/blog" }
+        ]
+      },
+      {
+        "title": "Разработчикам",
+        "links": [
+          { "label": "Обзор", "href": "/developers" },
+          { "label": "Документация API", "href": "/developers#api" },
+          { "label": "White-label", "href": "/developers#white-label" },
+          { "label": "Запросить доступ", "href": "/developers#access" }
+        ]
+      }
+    ],
+    "exchange": {
+      "tabs": ["USD", "EUR"],
+      "buyLabel": "Купить",
+      "sellLabel": "Продать",
+      "assets": ["BTC", "LTC", "ETH", "XRP", "TON", "TRX", "BCH", "POL", "SOL", "AVAX", "BNB", "USDT", "USDC"],
+      "hrefPattern": "/exchange?side={side}&asset={asset}"
+    },
+    "legalLinks": [
+      { "label": "Terms and Conditions", "href": "https://balancepay.org/en/terms-and-conditions", "external": true },
+      { "label": "Privacy Policy", "href": "https://balancepay.org/en/privacy-policy", "external": true },
+      { "label": "Cookie Policy", "href": "https://balancepay.org/en/cookie-policy", "external": true },
+      { "label": "Политика AML", "href": "/legal" },
+      { "label": "DPA", "href": "/legal" },
+      { "label": "Bug bounty", "href": "/bug-bounty" },
+      { "label": "Карта сайта", "href": "/sitemap" }
+    ],
+    "paymentBadges": [
+      { "placeholder": "VISA" },
+      { "placeholder": "Mastercard" },
+      { "placeholder": "МИР" },
+      { "placeholder": "UnionPay" },
+      { "placeholder": "Apple Pay" },
+      { "placeholder": "Google Pay" },
+      { "placeholder": "PayPal" },
+      { "placeholder": "SWIFT" }
+    ],
+    "socials": [
+      { "name": "Telegram", "href": "#", "count": "700K" },
+      { "name": "X", "href": "#", "count": "19K" },
+      { "name": "Facebook", "href": "#", "count": "6.7K" },
+      { "name": "Instagram", "href": "#", "count": "4.2K" },
+      { "name": "LinkedIn", "href": "#", "count": "1.4K" }
+    ]
+  }
+}

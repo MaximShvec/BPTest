@@ -1,0 +1,44 @@
+:root {
+  /* цвета */
+  --total-black: #000;
+  --black: #141414;
+  --dark: #272727;
+  --gray400: #646464;
+  --gray300: #939393;
+  --gray200: #e3e3e3;
+  --gray100: #f3f5f5;
+  --white: #fff;
+  --lime: #ffd400;
+  --lime-button-hover: #edc500;
+  --lime-link-hover: #c4a300;
+  --lime-dirty: #8c6e00;
+  --blue-light: #dae8ee;
+  --blue-dirty: #b6c1c6;
+  --teal: #03d9bf;
+  --red: #ff585d;
+  --green: #00a043;
+
+  /* радиусы */
+  --r-card: 32px;
+  --r-inner: 24px;
+  --r-block: 16px;
+  --r-btn: 12px;
+  --r-btn-sm: 8px;
+
+  /* контейнер */
+  --container: 1512px;
+  --gutter: 64px;
+}
+
+/* Брейкпоинты: mobile <768, tablet 768–1199, desktop >=1200 */
+@media (max-width: 1199px) {
+  :root {
+    --gutter: 32px;
+  }
+}
+
+@media (max-width: 767px) {
+  :root {
+    --gutter: 16px;
+  }
+}

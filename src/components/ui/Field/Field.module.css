@@ -1,0 +1,23 @@
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.control {
+  width: 100%;
+  height: 56px;
+  border: none;
+  border-radius: 12px;
+  background: #f3f5f5;
+  padding: 0 16px;
+  font: inherit;
+  color: inherit;
+}
+
+.textarea {
+  height: auto;
+  min-height: 120px;
+  padding: 16px;
+  resize: vertical;
+}

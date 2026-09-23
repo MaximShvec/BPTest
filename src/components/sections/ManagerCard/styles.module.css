@@ -1,0 +1,55 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: 100%;
+  padding: 28px;
+}
+
+.caption {
+  font-size: 10px;
+  line-height: 14px;
+  text-transform: uppercase;
+  letter-spacing: normal;
+  color: var(--lime);
+}
+
+.person {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.avatar {
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: normal;
+  color: var(--gray300);
+}
+
+.meta {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.name {
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: -0.015em;
+  font-feature-settings: normal;
+}
+
+.role,
+.text {
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: normal;
+  color: var(--gray300);
+}
+
+.text {
+  margin-top: auto;
+}

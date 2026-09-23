@@ -1,0 +1,58 @@
+.card {
+  color: var(--dark);
+}
+
+.white {
+  background: #fff;
+}
+
+.light {
+  background: #f3f5f5;
+}
+
+.dark {
+  background: #141414;
+  color: #f3f5f5;
+  --muted: #939393;
+}
+
+.black {
+  background: #000;
+  color: #f3f5f5;
+  --muted: #939393;
+}
+
+.lime {
+  background: #ffd400;
+}
+
+.blue {
+  background: #dae8ee;
+}
+
+.lg {
+  padding: 32px;
+}
+
+.md {
+  padding: 24px;
+}
+
+.none {
+  padding: 0;
+}
+
+.radiusCard {
+  border-radius: var(--r-card);
+}
+
+.radiusInner {
+  border-radius: var(--r-inner);
+}
+
+@media (max-width: 767px) {
+  .lg,
+  .md {
+    padding: 20px;
+  }
+}

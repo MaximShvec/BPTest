@@ -1,0 +1,113 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding: 40px;
+  border-radius: 40px;
+  background: #000;
+  color: #f3f5f5;
+}
+
+.head {
+  align-items: end;
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.caption {
+  font-size: 10px;
+  line-height: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0;
+  color: #ffd400;
+}
+
+.aside {
+  font-size: 16px;
+  line-height: 22px;
+  color: #939393;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 24px 0;
+  border-top: 1px solid #272727;
+}
+
+.value {
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 500;
+  font-size: 72px;
+  line-height: 64px;
+  letter-spacing: -0.06em;
+  font-feature-settings: normal;
+}
+
+.label {
+  font-size: 16px;
+  line-height: 22px;
+  color: #939393;
+}
+
+.card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 28px;
+  border-radius: 24px;
+  background: #141414;
+}
+
+.cardTitle {
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 36px;
+  letter-spacing: -0.02em;
+  font-feature-settings: normal;
+}
+
+.cardText {
+  font-size: 16px;
+  line-height: 22px;
+  color: #939393;
+}
+
+@media (max-width: 1199px) {
+  .value {
+    font-size: 56px;
+    line-height: 52px;
+  }
+
+  .cardTitle {
+    font-size: 28px;
+    line-height: 30px;
+  }
+}
+
+@media (max-width: 767px) {
+  .root {
+    padding: 32px 20px;
+  }
+
+  .value {
+    font-size: 38px;
+    line-height: 38px;
+  }
+
+  .cardTitle {
+    font-size: 24px;
+    line-height: 28px;
+  }
+
+  .card {
+    padding: 20px;
+  }
+}
