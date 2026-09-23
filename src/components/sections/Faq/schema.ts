@@ -8,6 +8,7 @@ export const faqSchema = z.object({
   title: z.string(),
   lead: z.string(),
   defaultOpen: z.number().nullable().optional(),
+  contentGap: z.number().optional(),
   items: z.array(
     z.object({
       q: z.string(),

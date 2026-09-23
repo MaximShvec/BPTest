@@ -5,7 +5,7 @@ import { Grid, GridItem } from "@/components/ui/Grid";
 import type { FaqData } from "./schema";
 import styles from "./styles.module.css";
 
-export function Faq({ title, lead, items, defaultOpen = 0 }: FaqData) {
+export function Faq({ title, lead, items, defaultOpen = 0, contentGap = 16 }: FaqData) {
   return (
     <Card theme="white" padding="none" className={styles.card}>
       <Grid>
@@ -20,7 +20,7 @@ export function Faq({ title, lead, items, defaultOpen = 0 }: FaqData) {
             <Accordion
               defaultOpen={defaultOpen}
               triggerGap={32}
-              contentGap={16}
+              contentGap={contentGap}
               triggerMinHeight={0}
               triggerFeatures="normal"
               items={items.map((item) => ({

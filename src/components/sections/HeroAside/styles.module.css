@@ -1,0 +1,58 @@
+.root {
+  padding: 56px 48px;
+  border-radius: 40px;
+  background: #141414;
+  color: #f3f5f5;
+}
+
+.grid {
+  align-items: end;
+}
+
+.copy {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.badge {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #ffd400;
+}
+
+.badgeText {
+  font-size: 10px;
+  line-height: 14px;
+  text-transform: uppercase;
+  color: #ffd400;
+  letter-spacing: 0;
+}
+
+.lead {
+  max-width: 660px;
+  color: #939393;
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+@media (max-width: 767px) {
+  .root {
+    padding: 32px 20px;
+  }
+
+  .lead {
+    max-width: none;
+  }
+}

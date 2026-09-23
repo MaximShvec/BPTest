@@ -3,19 +3,28 @@ import { audienceCardsSchema } from "./AudienceCards/schema";
 import { blogPreviewSchema } from "./BlogPreview/schema";
 import { cardsRowSchema } from "./CardsRow/schema";
 import { ctaSchema } from "./Cta/schema";
+import { ctaAsideSchema } from "./CtaAside/schema";
 import { ctaFinalSchema } from "./CtaFinal/schema";
 import { faqSchema } from "./Faq/schema";
 import { featureTileSchema } from "./FeatureTile/schema";
+import { flowStepsSchema } from "./FlowSteps/schema";
 import { bindNestedSection, gridSectionSchema } from "./Grid/schema";
 import { heroCenteredSchema } from "./HeroCentered/schema";
+import { heroAsideSchema } from "./HeroAside/schema";
 import { heroSplitSchema } from "./HeroSplit/schema";
 import { iconCardsSchema } from "./IconCards/schema";
 import { managerCardSchema } from "./ManagerCard/schema";
+import { mediaRowSchema } from "./MediaRow/schema";
+import { onboardingSchema } from "./Onboarding/schema";
 import { placeholderSectionSchema } from "./Placeholder/schema";
+import { productCardsSchema } from "./ProductCards/schema";
 import { productRowSchema } from "./ProductRow/schema";
 import { referralBannerSchema } from "./ReferralBanner/schema";
+import { serviceCardsSchema } from "./ServiceCards/schema";
 import { splitMediaCardSchema } from "./SplitMediaCard/schema";
+import { statPanelSchema } from "./StatPanel/schema";
 import { testimonialSchema } from "./Testimonial/schema";
+import { textCardsSchema } from "./TextCards/schema";
 import { trustBlockSchema } from "./TrustBlock/schema";
 import { trustStripSchema } from "./TrustStrip/schema";
 
@@ -23,11 +32,19 @@ import { trustStripSchema } from "./TrustStrip/schema";
 export const sectionSchemas = [
   placeholderSectionSchema,
   heroCenteredSchema,
+  heroAsideSchema,
   heroSplitSchema,
   splitMediaCardSchema,
   featureTileSchema,
   gridSectionSchema,
+  productCardsSchema,
   productRowSchema,
+  flowStepsSchema,
+  textCardsSchema,
+  statPanelSchema,
+  serviceCardsSchema,
+  onboardingSchema,
+  mediaRowSchema,
   trustBlockSchema,
   trustStripSchema,
   cardsRowSchema,
@@ -39,6 +56,7 @@ export const sectionSchemas = [
   blogPreviewSchema,
   faqSchema,
   ctaSchema,
+  ctaAsideSchema,
   ctaFinalSchema,
 ] as const;
 

@@ -28,18 +28,12 @@
   cursor: pointer;
 }
 
-.panel,
-.panelOpen {
-  display: grid;
-  transition: grid-template-rows 0.25s ease;
-}
-
 .panel {
-  grid-template-rows: 0fr;
+  display: none;
 }
 
 .panelOpen {
-  grid-template-rows: 1fr;
+  display: block;
 }
 
 .inner {

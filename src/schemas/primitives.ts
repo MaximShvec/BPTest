@@ -3,7 +3,9 @@ import { z } from "zod";
 export const linkSchema = z.object({
   label: z.string(),
   href: z.string(),
-  variant: z.enum(["primary", "dark", "outline", "outline-dark", "outline-ink", "ghost"]).optional(),
+  variant: z.enum(["primary", "dark", "outline", "outline-dark", "outline-ink", "ghost", "white"]).optional(),
+  note: z.string().optional(),
+  noteTone: z.enum(["dirty", "muted", "gray"]).optional(),
   size: z.enum(["xl", "xl-text", "lg", "md"]).optional(),
   external: z.boolean().optional(),
 });

@@ -52,6 +52,7 @@ export function Media({
   borderColor,
   width,
   height,
+  labelStyle,
 }: {
   media: MediaValue;
   className?: string;
@@ -59,6 +60,7 @@ export function Media({
   borderColor?: string;
   width?: number | string;
   height?: number | string;
+  labelStyle?: "body" | "micro";
 }) {
   const style = { borderRadius: radius } as CSSProperties;
 
@@ -72,6 +74,7 @@ export function Media({
         borderColor={borderColor}
         width={width}
         height={height}
+        labelStyle={labelStyle}
       />
     );
   }
