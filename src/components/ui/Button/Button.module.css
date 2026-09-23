@@ -1,0 +1,116 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  white-space: nowrap;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  font-family: inherit;
+  letter-spacing: -0.01em;
+  background: none;
+  color: inherit;
+}
+
+.button:hover {
+  text-decoration: none;
+}
+
+.fullWidth {
+  width: 100%;
+}
+
+.xl,
+.xlText {
+  height: 88px;
+  border-radius: 16px;
+  padding: 0 32px;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.xlText {
+  font-size: 20px;
+  line-height: 28px;
+}
+
+.lg {
+  height: 56px;
+  border-radius: 12px;
+  padding: 0 24px;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.md {
+  height: 40px;
+  border-radius: 8px;
+  padding: 0 16px;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.primary {
+  background: #ffd400;
+  color: #272727;
+}
+
+.primary:hover {
+  background: var(--lime-button-hover);
+  color: #272727;
+}
+
+.dark {
+  background: #272727;
+  color: #f3f5f5;
+}
+
+.dark:hover {
+  filter: brightness(1.18);
+  color: #f3f5f5;
+}
+
+.outline {
+  background: transparent;
+  box-shadow: inset 0 0 0 1px #e3e3e3;
+  color: #272727;
+}
+
+.outline:hover {
+  color: #272727;
+}
+
+.outlineDark {
+  background: transparent;
+  box-shadow: inset 0 0 0 1px var(--ring, #646464);
+  color: #fff;
+}
+
+.outlineDark:hover {
+  color: #fff;
+}
+
+.outlineInk {
+  background: transparent;
+  box-shadow: inset 0 0 0 1px #272727;
+  color: #272727;
+}
+
+.outlineInk:hover {
+  color: #272727;
+}
+
+.ghost {
+  background: transparent;
+  color: inherit;
+}
+
+@media (max-width: 767px) {
+  .xl,
+  .xlText {
+    height: 64px;
+    font-size: 16px;
+    line-height: 22px;
+  }
+}

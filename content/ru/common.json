@@ -1,0 +1,12 @@
+{
+  "brand": {
+    "name": "Balance Pay",
+    "tagline": "Rockin’\nsince 2014"
+  },
+  "copyright": "Copyright © {year} Balance Pay · balancepay.org",
+  "legalText": "Balance Pay, S.A. de C.V. — финтех-компания, зарегистрированная в Сальвадоре и работающая по местным и международным стандартам финансового комплаенса. Регистрационный номер 365214-6. Юридический адрес: Av. La Revolución #6, Apto. 23, Colonia San Benito, Presidente Plaza, San Salvador, 01101, El Salvador. Юридические вопросы — legal@balancepay.org.",
+  "cta": {
+    "login": "Войти",
+    "signup": "Попробовать бесплатно"
+  }
+}
