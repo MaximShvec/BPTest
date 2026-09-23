@@ -1,6 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { z } from "zod";
+import { authSchema } from "../src/schemas/auth";
 import { commonSchema } from "../src/schemas/common";
 import { navSchema } from "../src/schemas/nav";
 import { pageSchema } from "../src/schemas/page";
@@ -22,6 +23,7 @@ function schemaFor(filePath: string): z.ZodType {
   const rel = path.relative(contentRoot, filePath).replaceAll("\\", "/");
   if (rel.endsWith("/common.json") || rel === "common.json") return commonSchema;
   if (rel.endsWith("/nav.json") || rel === "nav.json") return navSchema;
+  if (rel.endsWith("/pages/auth.json")) return authSchema;
   if (rel.includes("/pages/")) return pageSchema;
   if (rel.includes("/collections/")) return z.unknown();
   throw new Error(`No schema for content file: ${rel}`);

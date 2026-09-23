@@ -3,6 +3,7 @@ import path from "node:path";
 import { z } from "zod";
 import { commonSchema, type Common } from "@/schemas/common";
 import { navSchema, type Nav } from "@/schemas/nav";
+import { authSchema, type Auth } from "@/schemas/auth";
 import { pageSchema, type Page } from "@/schemas/page";
 
 // TODO: здесь позже будет fetch к API админки с revalidate.
@@ -37,7 +38,12 @@ export function getNav(locale = "ru"): Nav {
   return load(contentFile(locale, "nav.json"), navSchema);
 }
 
-export function getPage(slug: string, locale = "ru"): Page {
+export function getPage(slug: "auth", locale?: string): Auth;
+export function getPage(slug: string, locale?: string): Page;
+export function getPage(slug: string, locale = "ru"): Page | Auth {
+  if (slug === "auth") {
+    return load(contentFile(locale, "pages", "auth.json"), authSchema);
+  }
   return load(contentFile(locale, "pages", `${slug}.json`), pageSchema);
 }
 
