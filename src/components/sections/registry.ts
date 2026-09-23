@@ -25,6 +25,8 @@ import { FlowSteps } from "./FlowSteps/Component";
 import { flowStepsSchema } from "./FlowSteps/schema";
 import { GridSection } from "./Grid/Component";
 import { gridSectionSchema } from "./Grid/schema";
+import { HeroConverter } from "./HeroConverter/Component";
+import { heroConverterSchema } from "./HeroConverter/schema";
 import { HeroAside } from "./HeroAside/Component";
 import { heroAsideSchema } from "./HeroAside/schema";
 import { HeroPanel } from "./HeroPanel/Component";
@@ -51,12 +53,18 @@ import { ProductFeature } from "./ProductFeature/Component";
 import { productFeatureSchema } from "./ProductFeature/schema";
 import { ProductRow } from "./ProductRow/Component";
 import { productRowSchema } from "./ProductRow/schema";
+import { RatesTable } from "./RatesTable/Component";
+import { ratesTableSchema } from "./RatesTable/schema";
 import { ReferralBanner } from "./ReferralBanner/Component";
 import { referralBannerSchema } from "./ReferralBanner/schema";
 import { ServiceCards } from "./ServiceCards/Component";
 import { serviceCardsSchema } from "./ServiceCards/schema";
+import { SpecMedia } from "./SpecMedia/Component";
+import { specMediaSchema } from "./SpecMedia/schema";
 import { SplitMediaCard } from "./SplitMediaCard/Component";
 import { splitMediaCardSchema } from "./SplitMediaCard/schema";
+import { StepCards } from "./StepCards/Component";
+import { stepCardsSchema } from "./StepCards/schema";
 import { StatPanel } from "./StatPanel/Component";
 import { statPanelSchema } from "./StatPanel/schema";
 import { Testimonial } from "./Testimonial/Component";
@@ -70,10 +78,12 @@ import { trustStripSchema } from "./TrustStrip/schema";
 
 export const sectionRegistry = {
   placeholder: { schema: placeholderSectionSchema, Component: PlaceholderSection },
+  "hero-converter": { schema: heroConverterSchema, Component: HeroConverter },
   "hero-panel": { schema: heroPanelSchema, Component: HeroPanel },
   "hero-aside": { schema: heroAsideSchema, Component: HeroAside },
   "hero-centered": { schema: heroCenteredSchema, Component: HeroCentered },
   "hero-split": { schema: heroSplitSchema, Component: HeroSplit },
+  "spec-media": { schema: specMediaSchema, Component: SpecMedia },
   "split-media-card": { schema: splitMediaCardSchema, Component: SplitMediaCard },
   "feature-tile": { schema: featureTileSchema, Component: FeatureTile },
   grid: { schema: gridSectionSchema, Component: GridSection },
@@ -86,6 +96,7 @@ export const sectionRegistry = {
   "product-row": { schema: productRowSchema, Component: ProductRow },
   "flow-steps": { schema: flowStepsSchema, Component: FlowSteps },
   "text-cards": { schema: textCardsSchema, Component: TextCards },
+  "step-cards": { schema: stepCardsSchema, Component: StepCards },
   "stat-panel": { schema: statPanelSchema, Component: StatPanel },
   "service-cards": { schema: serviceCardsSchema, Component: ServiceCards },
   onboarding: { schema: onboardingSchema, Component: Onboarding },
@@ -97,6 +108,7 @@ export const sectionRegistry = {
   "manager-card": { schema: managerCardSchema, Component: ManagerCard },
   "audience-cards": { schema: audienceCardsSchema, Component: AudienceCards },
   testimonial: { schema: testimonialSchema, Component: Testimonial },
+  "rates-table": { schema: ratesTableSchema, Component: RatesTable },
   "referral-banner": { schema: referralBannerSchema, Component: ReferralBanner },
   "blog-preview": { schema: blogPreviewSchema, Component: BlogPreview },
   faq: { schema: faqSchema, Component: Faq },

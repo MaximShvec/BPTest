@@ -59,7 +59,7 @@
 
 .headCell,
 .cell {
-  flex: 0 0 240px;
+  flex: 0 0 var(--col, 240px);
 }
 
 .label {
@@ -86,6 +86,18 @@
 
 .lime {
   color: #ffd400;
+}
+
+.muted {
+  color: #939393;
+}
+
+.ink {
+  color: #272727;
+}
+
+.tight .head {
+  padding: 0 0 12px;
 }
 
 .tabs {

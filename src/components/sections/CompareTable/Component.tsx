@@ -4,6 +4,7 @@ import { CheckIcon } from "@/components/icons/check";
 import { MinusIcon } from "@/components/icons/minus";
 import { Tabs } from "@/components/ui/Tabs";
 import { cx } from "@/lib/cx";
+import type { CSSProperties } from "react";
 import type { CompareCell, CompareTableData } from "./schema";
 import styles from "./styles.module.css";
 
@@ -12,12 +13,16 @@ function Cell({ value }: { value: CompareCell }) {
     return value ? <CheckIcon /> : <MinusIcon />;
   }
   if (typeof value === "string") return <span className={styles.plain}>{value}</span>;
-  return <span className={cx(styles.plain, value.emphasis && styles.emphasis, value.tone === "lime" && styles.lime)}>{value.text}</span>;
+  return (
+    <span className={cx(styles.plain, value.emphasis && styles.emphasis, value.tone === "lime" && styles.lime, value.tone === "muted" && styles.muted, value.tone === "ink" && styles.ink)}>
+      {value.text}
+    </span>
+  );
 }
 
-export function CompareTable({ id, title, headerLabel, columns, rows }: CompareTableData) {
+export function CompareTable({ id, title, headerLabel, columns, rows, columnWidth, tightHead }: CompareTableData) {
   return (
-    <section id={id} className={styles.root}>
+    <section id={id} className={cx(styles.root, tightHead && styles.tight)} style={{ "--col": `${columnWidth ?? 240}px` } as CSSProperties}>
       <h2 className={styles.title}>{title}</h2>
       <div className={styles.table}>
         <div className={styles.head}>

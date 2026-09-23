@@ -6,7 +6,7 @@ const cellSchema = z.union([
   z.object({
     text: z.string(),
     emphasis: z.boolean().optional(),
-    tone: z.enum(["lime"]).optional(),
+    tone: z.enum(["lime", "muted", "ink"]).optional(),
   }),
 ]);
 
@@ -16,6 +16,8 @@ export const compareTableSchema = z.object({
   title: z.string(),
   headerLabel: z.string(),
   columns: z.array(z.string()),
+  columnWidth: z.number().optional(),
+  tightHead: z.boolean().optional(),
   rows: z.array(
     z.object({
       label: z.string(),
