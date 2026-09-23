@@ -1,0 +1,115 @@
+.card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 32px;
+  border-radius: 32px;
+}
+
+.shot {
+  width: 100%;
+}
+
+.caption {
+  font-size: 10px;
+  line-height: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0;
+}
+
+.title,
+.value {
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 36px;
+  letter-spacing: -0.04em;
+  font-feature-settings: normal;
+}
+
+.text,
+.note {
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.price {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: 8px;
+}
+
+.button {
+  margin-top: auto;
+}
+
+.white {
+  background: #fff;
+  color: #272727;
+}
+
+.white .caption,
+.white .shot {
+  color: #939393;
+}
+
+.white .text,
+.white .note {
+  color: #646464;
+}
+
+.black {
+  background: #000;
+  color: #f3f5f5;
+}
+
+.black .caption {
+  color: #ffd400;
+}
+
+.black .text,
+.black .note,
+.black .shot {
+  color: #939393;
+}
+
+.blue {
+  background: #dae8ee;
+  color: #272727;
+}
+
+.blue .caption,
+.blue .text,
+.blue .note,
+.blue .shot {
+  color: #646464;
+}
+
+@media (max-width: 1199px) and (min-width: 768px) {
+  .shotWide {
+    max-width: 520px;
+    margin-inline: auto;
+  }
+}
+
+@media (max-width: 1199px) {
+  .title,
+  .value {
+    font-size: 32px;
+    line-height: 32px;
+  }
+}
+
+@media (max-width: 767px) {
+  .card {
+    padding: 20px;
+  }
+
+  .title,
+  .value {
+    font-size: 28px;
+    line-height: 30px;
+  }
+}

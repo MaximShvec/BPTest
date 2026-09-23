@@ -1,10 +1,16 @@
 import type { ComponentType } from "react";
+import { AppBlock } from "./AppBlock/Component";
+import { appBlockSchema } from "./AppBlock/schema";
 import { AudienceCards } from "./AudienceCards/Component";
 import { audienceCardsSchema } from "./AudienceCards/schema";
 import { BlogPreview } from "./BlogPreview/Component";
 import { blogPreviewSchema } from "./BlogPreview/schema";
+import { CardShowcase } from "./CardShowcase/Component";
+import { cardShowcaseSchema } from "./CardShowcase/schema";
 import { CardsRow } from "./CardsRow/Component";
 import { cardsRowSchema } from "./CardsRow/schema";
+import { CompareTable } from "./CompareTable/Component";
+import { compareTableSchema } from "./CompareTable/schema";
 import { Cta } from "./Cta/Component";
 import { ctaSchema } from "./Cta/schema";
 import { CtaAside } from "./CtaAside/Component";
@@ -21,6 +27,8 @@ import { GridSection } from "./Grid/Component";
 import { gridSectionSchema } from "./Grid/schema";
 import { HeroAside } from "./HeroAside/Component";
 import { heroAsideSchema } from "./HeroAside/schema";
+import { HeroPanel } from "./HeroPanel/Component";
+import { heroPanelSchema } from "./HeroPanel/schema";
 import { HeroCentered } from "./HeroCentered/Component";
 import { heroCenteredSchema } from "./HeroCentered/schema";
 import { HeroSplit } from "./HeroSplit/Component";
@@ -29,6 +37,8 @@ import { IconCards } from "./IconCards/Component";
 import { iconCardsSchema } from "./IconCards/schema";
 import { ManagerCard } from "./ManagerCard/Component";
 import { managerCardSchema } from "./ManagerCard/schema";
+import { MediaAside } from "./MediaAside/Component";
+import { mediaAsideSchema } from "./MediaAside/schema";
 import { MediaRow } from "./MediaRow/Component";
 import { mediaRowSchema } from "./MediaRow/schema";
 import { Onboarding } from "./Onboarding/Component";
@@ -37,6 +47,8 @@ import { PlaceholderSection } from "./Placeholder/Component";
 import { placeholderSectionSchema } from "./Placeholder/schema";
 import { ProductCards } from "./ProductCards/Component";
 import { productCardsSchema } from "./ProductCards/schema";
+import { ProductFeature } from "./ProductFeature/Component";
+import { productFeatureSchema } from "./ProductFeature/schema";
 import { ProductRow } from "./ProductRow/Component";
 import { productRowSchema } from "./ProductRow/schema";
 import { ReferralBanner } from "./ReferralBanner/Component";
@@ -58,13 +70,19 @@ import { trustStripSchema } from "./TrustStrip/schema";
 
 export const sectionRegistry = {
   placeholder: { schema: placeholderSectionSchema, Component: PlaceholderSection },
+  "hero-panel": { schema: heroPanelSchema, Component: HeroPanel },
   "hero-aside": { schema: heroAsideSchema, Component: HeroAside },
   "hero-centered": { schema: heroCenteredSchema, Component: HeroCentered },
   "hero-split": { schema: heroSplitSchema, Component: HeroSplit },
   "split-media-card": { schema: splitMediaCardSchema, Component: SplitMediaCard },
   "feature-tile": { schema: featureTileSchema, Component: FeatureTile },
   grid: { schema: gridSectionSchema, Component: GridSection },
+  "card-showcase": { schema: cardShowcaseSchema, Component: CardShowcase },
   "product-cards": { schema: productCardsSchema, Component: ProductCards },
+  "product-feature": { schema: productFeatureSchema, Component: ProductFeature },
+  "media-aside": { schema: mediaAsideSchema, Component: MediaAside },
+  "app-block": { schema: appBlockSchema, Component: AppBlock },
+  "compare-table": { schema: compareTableSchema, Component: CompareTable },
   "product-row": { schema: productRowSchema, Component: ProductRow },
   "flow-steps": { schema: flowStepsSchema, Component: FlowSteps },
   "text-cards": { schema: textCardsSchema, Component: TextCards },

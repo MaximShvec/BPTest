@@ -16,6 +16,9 @@
   flex-direction: column;
   align-items: center;
   gap: 16px;
+}
+
+.center .copy h2 {
   max-width: 900px;
 }
 

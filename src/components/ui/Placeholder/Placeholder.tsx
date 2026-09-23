@@ -19,7 +19,7 @@ export function Placeholder({
   className?: string;
   radius?: number | string;
   borderColor?: string;
-  labelStyle?: "body" | "micro";
+  labelStyle?: "body" | "micro" | "card";
 }) {
   const framed = width != null && height != null;
   const frame = (value: number | string) => (typeof value === "number" ? value + 2 : `calc(${value} + 2px)`);
@@ -35,7 +35,13 @@ export function Placeholder({
 
   return (
     <div
-      className={cx(styles.placeholder, labelStyle === "body" && styles.bodyLabel, labelStyle === "micro" && styles.microLabel, className)}
+      className={cx(
+        styles.placeholder,
+        labelStyle === "body" && styles.bodyLabel,
+        labelStyle === "micro" && styles.microLabel,
+        labelStyle === "card" && styles.cardLabel,
+        className,
+      )}
       style={style}
     >
       {label}

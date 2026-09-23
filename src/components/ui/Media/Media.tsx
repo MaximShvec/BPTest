@@ -60,7 +60,7 @@ export function Media({
   borderColor?: string;
   width?: number | string;
   height?: number | string;
-  labelStyle?: "body" | "micro";
+  labelStyle?: "body" | "micro" | "card";
 }) {
   const style = { borderRadius: radius } as CSSProperties;
 
