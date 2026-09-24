@@ -1,0 +1,102 @@
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  padding: 32px;
+  border-radius: 32px;
+  background: #fff;
+}
+
+.head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+.title {
+  margin: 0;
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 36px;
+  letter-spacing: -0.04em;
+  font-feature-settings: normal;
+}
+
+.aside {
+  font-size: 16px;
+  line-height: 22px;
+  color: #939393;
+}
+
+.track {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.step {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.line {
+  position: absolute;
+  top: 7px;
+  left: 24px;
+  right: -8px;
+  height: 1px;
+  background: #e3e3e3;
+}
+
+.dot {
+  position: relative;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #ffd400;
+}
+
+.muted {
+  background: #b6c1c6;
+}
+
+.stepTitle {
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 500;
+}
+
+.stepText {
+  font-size: 14px;
+  line-height: 20px;
+  color: #939393;
+}
+
+@media (max-width: 1199px) {
+  .track {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 767px) {
+  .section {
+    padding: 20px;
+  }
+
+  .head {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .track {
+    grid-template-columns: 1fr;
+  }
+
+  .line {
+    display: none;
+  }
+}

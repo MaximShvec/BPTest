@@ -10,6 +10,7 @@ export const headCardsSchema = z.object({
   items: z.array(
     z.object({
       span: z.number().optional(),
+      index: z.string().optional(),
       caption: z.string().optional(),
       title: z.string(),
       text: z.string(),

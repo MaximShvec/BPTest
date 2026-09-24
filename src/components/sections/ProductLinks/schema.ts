@@ -6,7 +6,7 @@ export const productLinksSchema = z.object({
   id: z.string().optional(),
   items: z.array(
     z.object({
-      theme: z.enum(["blue", "ink"]),
+      theme: z.enum(["blue", "ink", "white"]),
       caption: z.string(),
       title: z.string(),
       text: z.string(),

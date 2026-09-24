@@ -1,0 +1,226 @@
+.hero {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 8px;
+  align-items: stretch;
+}
+
+.copy {
+  grid-column: span 7;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 48px 40px;
+  border-radius: 40px;
+  background: #000;
+  color: #f3f5f5;
+}
+
+.kicker {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #ffd400;
+}
+
+.caption {
+  font-size: 10px;
+  line-height: 14px;
+  text-transform: uppercase;
+  color: #ffd400;
+}
+
+.lead {
+  margin: 0;
+  max-width: 560px;
+  font-size: 20px;
+  line-height: 28px;
+  letter-spacing: -0.01em;
+  color: #939393;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.stats {
+  margin-top: auto;
+  padding-top: 24px;
+  border-top: 1px solid #272727;
+  display: flex;
+  gap: 40px;
+}
+
+.stats > div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.statValue {
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 500;
+  font-size: 52px;
+  line-height: 54px;
+  letter-spacing: -0.06em;
+  font-feature-settings: normal;
+}
+
+.statLabel {
+  font-size: 14px;
+  line-height: 20px;
+  color: #939393;
+}
+
+.aside {
+  grid-column: span 5;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 32px;
+  border-radius: 32px;
+  background: #fff;
+  box-shadow: 0 24px 48px rgba(20, 20, 20, 0.1);
+}
+
+.cardHead {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.cardHead > div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.cardCaption {
+  font-size: 10px;
+  line-height: 14px;
+  text-transform: uppercase;
+  color: #939393;
+}
+
+.cardTitle {
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 36px;
+  letter-spacing: -0.02em;
+  font-feature-settings: normal;
+}
+
+.badge {
+  height: 32px;
+  padding: 0 14px;
+  border-radius: 8px;
+  background: #ffd400;
+  color: #272727;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+}
+
+.row,
+.rowLast {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 12px 0;
+  font-size: 16px;
+  line-height: 22px;
+  color: #939393;
+}
+
+.row {
+  border-bottom: 1px dashed #e3e3e3;
+}
+
+.rowValue {
+  font-weight: 500;
+  color: #272727;
+}
+
+.tools {
+  display: flex;
+  gap: 8px;
+}
+
+.link,
+.qr {
+  height: 48px;
+  border-radius: 12px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.link {
+  flex: 1 1 auto;
+  background: #141414;
+  color: #f3f5f5;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.qr {
+  width: 48px;
+  box-shadow: inset 0 0 0 1px #e3e3e3;
+  color: #939393;
+  font-size: 10px;
+}
+
+.shot {
+  flex-grow: 1;
+  min-height: 180px;
+  border: 1px dashed #939393;
+  border-radius: 32px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  color: #939393;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+@media (max-width: 1199px) {
+  .copy,
+  .aside {
+    grid-column: span 12;
+  }
+}
+
+@media (max-width: 767px) {
+  .copy,
+  .card {
+    padding: 20px;
+  }
+
+  .actions,
+  .stats {
+    flex-direction: column;
+  }
+}

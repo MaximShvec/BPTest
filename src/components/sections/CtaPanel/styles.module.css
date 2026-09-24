@@ -31,6 +31,14 @@
   gap: 8px;
 }
 
+.inkBtn {
+  background: #141414;
+}
+
+.inkText {
+  color: #141414;
+}
+
 .blue {
   background: #dae8ee;
   color: #1f3a48;

@@ -12,6 +12,14 @@ import { ctaPanelSchema } from "./CtaPanel/schema";
 import { headCardsSchema } from "./HeadCards/schema";
 import { ioColumnsSchema } from "./IoColumns/schema";
 import { payoutBlockSchema } from "./PayoutBlock/schema";
+import { bindPanelSchema } from "./BindPanel/schema";
+import { codeBlockSchema } from "./CodeBlock/schema";
+import { featureShotsSchema } from "./FeatureShots/schema";
+import { invoiceHeroSchema } from "./InvoiceHero/schema";
+import { settleRouteSchema } from "./SettleRoute/schema";
+import { shotCaptionsSchema } from "./ShotCaptions/schema";
+import { statusTrackSchema } from "./StatusTrack/schema";
+import { tablePreviewSchema } from "./TablePreview/schema";
 import { productLinksSchema } from "./ProductLinks/schema";
 import { riskSplitSchema } from "./RiskSplit/schema";
 import { swapPanelSchema } from "./SwapPanel/schema";
@@ -158,6 +166,14 @@ export const sectionSchemas = [
   riskSplitSchema,
   copyShotSchema,
   productLinksSchema,
+  invoiceHeroSchema,
+  statusTrackSchema,
+  settleRouteSchema,
+  featureShotsSchema,
+  shotCaptionsSchema,
+  bindPanelSchema,
+  tablePreviewSchema,
+  codeBlockSchema,
 ] as const;
 
 export const sectionSchema = z.discriminatedUnion("type", sectionSchemas);

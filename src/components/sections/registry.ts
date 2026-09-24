@@ -23,6 +23,22 @@ import { IoColumns } from "./IoColumns/Component";
 import { ioColumnsSchema } from "./IoColumns/schema";
 import { PayoutBlock } from "./PayoutBlock/Component";
 import { payoutBlockSchema } from "./PayoutBlock/schema";
+import { BindPanel } from "./BindPanel/Component";
+import { bindPanelSchema } from "./BindPanel/schema";
+import { CodeBlock } from "./CodeBlock/Component";
+import { codeBlockSchema } from "./CodeBlock/schema";
+import { FeatureShots } from "./FeatureShots/Component";
+import { featureShotsSchema } from "./FeatureShots/schema";
+import { InvoiceHero } from "./InvoiceHero/Component";
+import { invoiceHeroSchema } from "./InvoiceHero/schema";
+import { SettleRoute } from "./SettleRoute/Component";
+import { settleRouteSchema } from "./SettleRoute/schema";
+import { ShotCaptions } from "./ShotCaptions/Component";
+import { shotCaptionsSchema } from "./ShotCaptions/schema";
+import { StatusTrack } from "./StatusTrack/Component";
+import { statusTrackSchema } from "./StatusTrack/schema";
+import { TablePreview } from "./TablePreview/Component";
+import { tablePreviewSchema } from "./TablePreview/schema";
 import { ProductLinks } from "./ProductLinks/Component";
 import { productLinksSchema } from "./ProductLinks/schema";
 import { RiskSplit } from "./RiskSplit/Component";
@@ -235,4 +251,12 @@ export const sectionRegistry = {
   "risk-split": { schema: riskSplitSchema, Component: RiskSplit },
   "copy-shot": { schema: copyShotSchema, Component: CopyShot },
   "product-links": { schema: productLinksSchema, Component: ProductLinks },
+  "invoice-hero": { schema: invoiceHeroSchema, Component: InvoiceHero },
+  "status-track": { schema: statusTrackSchema, Component: StatusTrack },
+  "settle-route": { schema: settleRouteSchema, Component: SettleRoute },
+  "feature-shots": { schema: featureShotsSchema, Component: FeatureShots },
+  "shot-captions": { schema: shotCaptionsSchema, Component: ShotCaptions },
+  "bind-panel": { schema: bindPanelSchema, Component: BindPanel },
+  "table-preview": { schema: tablePreviewSchema, Component: TablePreview },
+  "code-block": { schema: codeBlockSchema, Component: CodeBlock },
 } satisfies Record<string, { schema: unknown; Component: ComponentType<never> }>;

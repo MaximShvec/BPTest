@@ -1,7 +1,7 @@
 .section {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 8px;
 }
 
 .head {
@@ -9,6 +9,7 @@
   align-items: flex-end;
   justify-content: space-between;
   gap: 32px;
+  padding: 0 32px 16px;
 }
 
 .head h2 {
@@ -23,30 +24,25 @@
   color: #646464;
 }
 
-.grid {
+.row,
+.flip {
   display: grid;
-  grid-template-columns: repeat(12, minmax(0, 1fr));
+  grid-template-columns: 1fr 1fr;
   gap: 8px;
+  align-items: stretch;
+}
+
+.flip .shot {
+  order: -1;
 }
 
 .card {
-  grid-column: span var(--span);
   display: flex;
   flex-direction: column;
-  gap: var(--gap);
-  padding: var(--pad);
-  border-radius: 24px;
+  gap: 16px;
+  padding: 32px;
+  border-radius: 32px;
   background: #fff;
-}
-
-.index {
-  font-family: "Space Grotesk", sans-serif;
-  font-weight: 500;
-  font-size: 52px;
-  line-height: 54px;
-  letter-spacing: -0.06em;
-  color: #ffd400;
-  font-feature-settings: normal;
 }
 
 .caption {
@@ -60,9 +56,9 @@
   margin: 0;
   font-family: "Space Grotesk", sans-serif;
   font-weight: 500;
-  font-size: 32px;
+  font-size: 36px;
   line-height: 36px;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.04em;
   font-feature-settings: normal;
 }
 
@@ -71,12 +67,46 @@
   font-size: 16px;
   line-height: 22px;
   color: #646464;
-  letter-spacing: normal;
+}
+
+.card ul {
+  display: flex;
+  flex-direction: column;
+  margin: auto 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.card li {
+  font-size: 16px;
+  line-height: 22px;
+  color: #646464;
+  padding: 10px 0;
+  border-bottom: 1px solid #e3e3e3;
+}
+
+.shot {
+  border: 1px dashed #939393;
+  border-radius: 32px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  color: #939393;
+  font-size: 16px;
+  line-height: 22px;
 }
 
 @media (max-width: 1199px) {
-  .card {
-    grid-column: span 6;
+  .row,
+  .flip {
+    grid-template-columns: 1fr;
+  }
+
+  .flip .shot {
+    order: 0;
   }
 }
 
@@ -84,10 +114,15 @@
   .head {
     flex-direction: column;
     align-items: flex-start;
+    padding: 0 0 8px;
   }
 
   .card {
-    grid-column: span 12;
     padding: 20px;
+  }
+
+  .shot {
+    height: auto;
+    min-height: 160px;
   }
 }
