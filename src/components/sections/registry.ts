@@ -23,6 +23,16 @@ import { IoColumns } from "./IoColumns/Component";
 import { ioColumnsSchema } from "./IoColumns/schema";
 import { PayoutBlock } from "./PayoutBlock/Component";
 import { payoutBlockSchema } from "./PayoutBlock/schema";
+import { CardHero } from "./CardHero/Component";
+import { cardHeroSchema } from "./CardHero/schema";
+import { LimitSplit } from "./LimitSplit/Component";
+import { limitSplitSchema } from "./LimitSplit/schema";
+import { OtherCards } from "./OtherCards/Component";
+import { otherCardsSchema } from "./OtherCards/schema";
+import { StatTiles } from "./StatTiles/Component";
+import { statTilesSchema } from "./StatTiles/schema";
+import { WalletPanel } from "./WalletPanel/Component";
+import { walletPanelSchema } from "./WalletPanel/schema";
 import { AbsentList } from "./AbsentList/Component";
 import { absentListSchema } from "./AbsentList/schema";
 import { BizFeeHero } from "./BizFeeHero/Component";
@@ -274,4 +284,9 @@ export const sectionRegistry = {
   "fee-group": { schema: feeGroupSchema, Component: FeeGroup },
   "fee-calculator": { schema: feeCalculatorSchema, Component: FeeCalculator },
   "absent-list": { schema: absentListSchema, Component: AbsentList },
+  "card-hero": { schema: cardHeroSchema, Component: CardHero },
+  "stat-tiles": { schema: statTilesSchema, Component: StatTiles },
+  "limit-split": { schema: limitSplitSchema, Component: LimitSplit },
+  "wallet-panel": { schema: walletPanelSchema, Component: WalletPanel },
+  "other-cards": { schema: otherCardsSchema, Component: OtherCards },
 } satisfies Record<string, { schema: unknown; Component: ComponentType<never> }>;

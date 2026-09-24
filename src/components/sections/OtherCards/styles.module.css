@@ -1,0 +1,91 @@
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.ink,
+.blue {
+  grid-column: span 6;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 32px;
+  border-radius: 32px;
+  text-decoration: none;
+}
+
+.ink {
+  background: #141414;
+  color: #f3f5f5;
+}
+
+.blue {
+  background: #dae8ee;
+  color: #1f3a48;
+}
+
+.caption {
+  font-size: 10px;
+  line-height: 14px;
+  text-transform: uppercase;
+}
+
+.ink .caption {
+  color: #ffd400;
+}
+
+.blue .caption {
+  color: #5d7580;
+}
+
+.title {
+  margin: 0;
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 36px;
+  letter-spacing: -0.04em;
+  font-feature-settings: normal;
+}
+
+.text {
+  margin: 0;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.ink .text {
+  color: #939393;
+}
+
+.blue .text {
+  color: #3f5560;
+}
+
+.more {
+  margin-top: 8px;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 500;
+}
+
+@media (max-width: 1199px) {
+  .ink,
+  .blue {
+    grid-column: span 12;
+  }
+}
+
+@media (max-width: 767px) {
+  .ink,
+  .blue {
+    padding: 20px;
+  }
+}

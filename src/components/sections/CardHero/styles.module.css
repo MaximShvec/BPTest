@@ -1,0 +1,90 @@
+.hero {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 8px;
+  align-items: center;
+  padding: 48px 40px;
+  border-radius: 40px;
+  background: #dae8ee;
+  color: #1f3a48;
+}
+
+.copy {
+  grid-column: span 6;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.kicker {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #272727;
+}
+
+.caption {
+  font-size: 10px;
+  line-height: 14px;
+  text-transform: uppercase;
+  color: #5d7580;
+}
+
+.lead {
+  margin: 0;
+  max-width: 540px;
+  font-size: 20px;
+  line-height: 28px;
+  letter-spacing: -0.01em;
+  color: #3f5560;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.ink {
+  background: #141414;
+}
+
+.shot {
+  grid-column: span 6;
+  aspect-ratio: 1586 / 1000;
+  border: 1px dashed #939393;
+  border-radius: 32px;
+  background: rgba(255, 255, 255, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 24px;
+  color: #646464;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+@media (max-width: 1199px) {
+  .copy,
+  .shot {
+    grid-column: span 12;
+  }
+}
+
+@media (max-width: 767px) {
+  .hero {
+    padding: 20px;
+  }
+
+  .actions {
+    flex-direction: column;
+  }
+}

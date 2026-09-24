@@ -1,0 +1,93 @@
+.section {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 8px;
+  align-items: stretch;
+}
+
+.shot {
+  grid-column: span 7;
+  height: 340px;
+  border: 1px dashed #939393;
+  border-radius: 32px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  color: #939393;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.copy {
+  grid-column: span 5;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 32px;
+  border-radius: 32px;
+  background: #dae8ee;
+}
+
+.caption {
+  font-size: 10px;
+  line-height: 14px;
+  text-transform: uppercase;
+  color: #5d7580;
+}
+
+.title {
+  margin: 0;
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 36px;
+  letter-spacing: -0.04em;
+  font-feature-settings: normal;
+}
+
+.text {
+  margin: 0;
+  font-size: 16px;
+  line-height: 22px;
+  color: #3f5560;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: auto;
+}
+
+.chips span {
+  height: 44px;
+  padding: 0 16px;
+  border-radius: 12px;
+  background: #fff;
+  color: #3f5560;
+  font-size: 16px;
+  line-height: 22px;
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 1199px) {
+  .shot,
+  .copy {
+    grid-column: span 12;
+  }
+}
+
+@media (max-width: 767px) {
+  .shot {
+    height: auto;
+    min-height: 180px;
+  }
+
+  .copy {
+    padding: 20px;
+  }
+}

@@ -18,7 +18,7 @@ export function CtaPanel({ theme = "dark", inkButton, title, lead, actions }: Ct
       </div>
       <div className={styles.actions}>
         {actions.map((action, index) => (
-          <Button key={action.label} href={action.href} variant={action.variant ?? "primary"} size={action.size ?? "xl-text"} spread className={cx(theme === "dark" && index === 1 && styles.blue, inkButton && index === 0 && styles.inkBtn, inkButton && index === 1 && styles.inkText)}>
+          <Button key={action.label} href={action.href} variant={action.variant ?? "primary"} size={action.size ?? "xl-text"} spread className={cx(theme === "dark" && index === 1 && styles.blue, inkButton && index === 0 && styles.inkBtn, inkButton && index === 1 && Boolean(action.note) && styles.inkText)}>
             <span>{action.label}</span>
             {action.note ? (
               <span className={cx(styles.note, theme === "lime" ? noteTone[action.noteTone ?? "muted"] : index === 1 ? styles.noteBlue : styles.noteDirty)}>

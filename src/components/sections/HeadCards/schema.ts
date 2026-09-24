@@ -4,7 +4,7 @@ export const headCardsSchema = z.object({
   type: z.literal("head-cards"),
   id: z.string().optional(),
   title: z.string(),
-  aside: z.string(),
+  aside: z.string().optional(),
   pad: z.number().optional(),
   gap: z.number().optional(),
   items: z.array(

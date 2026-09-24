@@ -7,7 +7,7 @@ export function HeadCards({ id, title, aside, pad = 28, gap = 12, items }: HeadC
     <section id={id} className={styles.section}>
       <div className={styles.head}>
         <h2 className="h2">{title}</h2>
-        <p className={styles.aside}>{aside}</p>
+        {aside ? <p className={styles.aside}>{aside}</p> : null}
       </div>
       <div className={styles.grid}>
         {items.map((item) => (
