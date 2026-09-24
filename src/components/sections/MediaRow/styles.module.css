@@ -1,5 +1,5 @@
 .shot {
-  height: 380px;
+  height: var(--shot-h, 380px);
   background: #fff;
   color: #939393;
 }

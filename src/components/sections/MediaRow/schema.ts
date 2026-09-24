@@ -4,6 +4,7 @@ import { mediaSchema } from "@/schemas/primitives";
 export const mediaRowSchema = z.object({
   type: z.literal("media-row"),
   id: z.string().optional(),
+  height: z.number().optional(),
   items: z.array(
     z.object({
       span: z.number(),

@@ -1,0 +1,64 @@
+.section {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 8px;
+  align-items: center;
+  padding: 48px 40px;
+  border-radius: 40px;
+  background: #141414;
+  color: #f3f5f5;
+}
+
+.copy {
+  grid-column: span 7;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.lead {
+  margin: 0;
+  font-size: 20px;
+  line-height: 28px;
+  letter-spacing: -0.01em;
+  color: #939393;
+}
+
+.actions {
+  grid-column: span 5;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.blue {
+  background: #dae8ee;
+  color: #1f3a48;
+}
+
+.blue:hover {
+  color: #1f3a48;
+}
+
+.note {
+  font-size: 16px;
+  line-height: 22px;
+  color: #8c6e00;
+}
+
+.noteBlue {
+  color: #5d7580;
+}
+
+@media (max-width: 1199px) {
+  .copy,
+  .actions {
+    grid-column: span 12;
+  }
+}
+
+@media (max-width: 767px) {
+  .section {
+    padding: 20px;
+  }
+}

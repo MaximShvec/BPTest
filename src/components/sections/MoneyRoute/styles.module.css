@@ -1,0 +1,99 @@
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 40px 32px;
+  border-radius: 40px;
+  background: #000;
+  color: #f3f5f5;
+}
+
+.head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+.copy {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 860px;
+}
+
+.caption {
+  font-size: 10px;
+  line-height: 14px;
+  text-transform: uppercase;
+  color: #ffd400;
+}
+
+.aside {
+  margin: 0;
+  max-width: 340px;
+  font-size: 16px;
+  line-height: 22px;
+  color: #939393;
+  letter-spacing: normal;
+}
+
+.diagram {
+  width: 100%;
+  height: auto;
+}
+
+.diagram text {
+  font-family: Inter, sans-serif;
+}
+
+.list {
+  display: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@media (max-width: 767px) {
+  .section {
+    padding: 20px;
+  }
+
+  .head {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .diagram {
+    display: none;
+  }
+
+  .list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .list li {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 16px;
+    border-radius: 16px;
+    background: #141414;
+    font-family: "Space Grotesk", sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .list span {
+    font-family: Inter, sans-serif;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #939393;
+  }
+}

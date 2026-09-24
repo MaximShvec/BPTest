@@ -1,7 +1,17 @@
 import { z } from "zod";
 import { accountHeroSchema } from "./AccountHero/schema";
 import { anchorNavSchema } from "./AnchorNav/schema";
+import { beforeAfterSchema } from "./BeforeAfter/schema";
+import { casePathSchema } from "./CasePath/schema";
+import { channelBoardSchema } from "./ChannelBoard/schema";
+import { ctaPanelSchema } from "./CtaPanel/schema";
+import { featureRowsSchema } from "./FeatureRows/schema";
 import { feeTableSchema } from "./FeeTable/schema";
+import { kybPanelSchema } from "./KybPanel/schema";
+import { mediaQuoteSchema } from "./MediaQuote/schema";
+import { moneyRouteSchema } from "./MoneyRoute/schema";
+import { payHeroSchema } from "./PayHero/schema";
+import { scenarioCardsSchema } from "./ScenarioCards/schema";
 import { heroIntroSchema } from "./HeroIntro/schema";
 import { heroStatsSchema } from "./HeroStats/schema";
 import { levelChainSchema } from "./LevelChain/schema";
@@ -118,6 +128,16 @@ export const sectionSchemas = [
   referralCalculatorSchema,
   partnerDeskSchema,
   mediaKitSchema,
+  payHeroSchema,
+  moneyRouteSchema,
+  casePathSchema,
+  beforeAfterSchema,
+  featureRowsSchema,
+  channelBoardSchema,
+  scenarioCardsSchema,
+  kybPanelSchema,
+  mediaQuoteSchema,
+  ctaPanelSchema,
 ] as const;
 
 export const sectionSchema = z.discriminatedUnion("type", sectionSchemas);

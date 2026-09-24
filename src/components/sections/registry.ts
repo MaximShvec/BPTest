@@ -2,7 +2,27 @@ import type { ComponentType } from "react";
 import { AccountHero } from "./AccountHero/Component";
 import { AnchorNav } from "./AnchorNav/Component";
 import { anchorNavSchema } from "./AnchorNav/schema";
+import { BeforeAfter } from "./BeforeAfter/Component";
+import { beforeAfterSchema } from "./BeforeAfter/schema";
+import { CasePath } from "./CasePath/Component";
+import { casePathSchema } from "./CasePath/schema";
+import { ChannelBoard } from "./ChannelBoard/Component";
+import { channelBoardSchema } from "./ChannelBoard/schema";
+import { CtaPanel } from "./CtaPanel/Component";
+import { ctaPanelSchema } from "./CtaPanel/schema";
+import { FeatureRows } from "./FeatureRows/Component";
+import { featureRowsSchema } from "./FeatureRows/schema";
 import { FeeTable } from "./FeeTable/Component";
+import { KybPanel } from "./KybPanel/Component";
+import { kybPanelSchema } from "./KybPanel/schema";
+import { MediaQuote } from "./MediaQuote/Component";
+import { mediaQuoteSchema } from "./MediaQuote/schema";
+import { MoneyRoute } from "./MoneyRoute/Component";
+import { moneyRouteSchema } from "./MoneyRoute/schema";
+import { PayHero } from "./PayHero/Component";
+import { payHeroSchema } from "./PayHero/schema";
+import { ScenarioCards } from "./ScenarioCards/Component";
+import { scenarioCardsSchema } from "./ScenarioCards/schema";
 import { feeTableSchema } from "./FeeTable/schema";
 import { HeroIntro } from "./HeroIntro/Component";
 import { heroIntroSchema } from "./HeroIntro/schema";
@@ -175,4 +195,14 @@ export const sectionRegistry = {
   "referral-calculator": { schema: referralCalculatorSchema, Component: ReferralCalculator },
   "partner-desk": { schema: partnerDeskSchema, Component: PartnerDesk },
   "media-kit": { schema: mediaKitSchema, Component: MediaKit },
+  "pay-hero": { schema: payHeroSchema, Component: PayHero },
+  "money-route": { schema: moneyRouteSchema, Component: MoneyRoute },
+  "case-path": { schema: casePathSchema, Component: CasePath },
+  "before-after": { schema: beforeAfterSchema, Component: BeforeAfter },
+  "feature-rows": { schema: featureRowsSchema, Component: FeatureRows },
+  "channel-board": { schema: channelBoardSchema, Component: ChannelBoard },
+  "scenario-cards": { schema: scenarioCardsSchema, Component: ScenarioCards },
+  "kyb-panel": { schema: kybPanelSchema, Component: KybPanel },
+  "media-quote": { schema: mediaQuoteSchema, Component: MediaQuote },
+  "cta-panel": { schema: ctaPanelSchema, Component: CtaPanel },
 } satisfies Record<string, { schema: unknown; Component: ComponentType<never> }>;

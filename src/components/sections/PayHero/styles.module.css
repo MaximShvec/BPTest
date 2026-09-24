@@ -1,0 +1,249 @@
+.hero {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 8px;
+  align-items: start;
+  padding: 48px 40px;
+  border-radius: 40px;
+  background: #dae8ee;
+}
+
+.copy {
+  grid-column: span 7;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.kicker {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #ffd400;
+}
+
+.caption {
+  font-size: 10px;
+  line-height: 14px;
+  text-transform: uppercase;
+  color: #5d7580;
+}
+
+.title {
+  white-space: pre-line;
+}
+
+.lead {
+  margin: 0;
+  max-width: 620px;
+  font-size: 20px;
+  line-height: 28px;
+  letter-spacing: -0.01em;
+  color: #3f5560;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.ink {
+  background: #141414;
+}
+
+.outline {
+  --ring: #b6c1c6;
+}
+
+.stats {
+  display: flex;
+  gap: 40px;
+  margin-top: 16px;
+  padding-top: 24px;
+  border-top: 1px solid #b6c1c6;
+}
+
+.stats > div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.statValue {
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 500;
+  font-size: 52px;
+  line-height: 54px;
+  letter-spacing: -0.06em;
+  font-feature-settings: normal;
+}
+
+.statLabel {
+  font-size: 14px;
+  line-height: 20px;
+  color: #5d7580;
+}
+
+.aside {
+  grid-column: span 5;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-left: 24px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 28px;
+  border-radius: 24px;
+  background: #fff;
+  box-shadow: 0 24px 48px rgba(31, 58, 72, 0.12);
+  transform: rotate(-1.5deg);
+}
+
+.cardHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cardCaption,
+.receiptCaption {
+  font-size: 10px;
+  line-height: 14px;
+  text-transform: uppercase;
+}
+
+.cardCaption {
+  color: #939393;
+}
+
+.badge {
+  height: 28px;
+  padding: 0 12px;
+  border-radius: 8px;
+  background: #dae8ee;
+  color: #3f5560;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+}
+
+.row,
+.rowLast {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 12px 0;
+  font-size: 16px;
+  line-height: 22px;
+  color: #939393;
+}
+
+.row {
+  border-bottom: 1px solid #e3e3e3;
+}
+
+.rowValue {
+  font-weight: 500;
+  color: #272727;
+}
+
+.receipt {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-left: 24px;
+  padding: 24px 28px;
+  border-radius: 24px;
+  background: #141414;
+  color: #f3f5f5;
+  transform: rotate(1deg);
+}
+
+.receipt > div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.receiptCaption {
+  color: #ffd400;
+}
+
+.amount {
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 36px;
+  letter-spacing: -0.02em;
+  font-feature-settings: normal;
+}
+
+.receiptNote {
+  font-size: 14px;
+  line-height: 20px;
+  color: #939393;
+  text-align: right;
+  white-space: pre-line;
+}
+
+.photo {
+  flex-grow: 1;
+  min-height: 200px;
+  border: 1px dashed #b6c1c6;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  color: #5d7580;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+@media (max-width: 1199px) {
+  .copy,
+  .aside {
+    grid-column: span 12;
+  }
+
+  .aside {
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .hero {
+    padding: 20px;
+  }
+
+  .actions,
+  .stats {
+    flex-direction: column;
+  }
+
+  .receipt {
+    margin-left: 0;
+  }
+
+  .card,
+  .receipt {
+    transform: none;
+  }
+}

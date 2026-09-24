@@ -1,0 +1,23 @@
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
+  padding-top: 56px;
+  padding-bottom: 8px;
+}
+
+@media (max-width: 1199px) {
+  .stack {
+    gap: 64px;
+    padding-top: 56px;
+    padding-bottom: 56px;
+  }
+}
+
+@media (max-width: 767px) {
+  .stack {
+    gap: 48px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+}

@@ -1,0 +1,192 @@
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 40px;
+  border-radius: 40px;
+  background: #dae8ee;
+}
+
+.head,
+.steps,
+.bottom {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.head {
+  align-items: end;
+}
+
+.copy {
+  grid-column: span 8;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.caption,
+.noteCaption {
+  font-size: 10px;
+  line-height: 14px;
+  text-transform: uppercase;
+}
+
+.caption {
+  color: #5d7580;
+}
+
+.aside {
+  grid-column: span 4;
+  margin: 0;
+  font-size: 16px;
+  line-height: 22px;
+  color: #3f5560;
+  letter-spacing: normal;
+}
+
+.step {
+  position: relative;
+  grid-column: span 3;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.line {
+  position: absolute;
+  top: 20px;
+  left: 56px;
+  right: -8px;
+  height: 1px;
+  background: #b6c1c6;
+}
+
+.num {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #141414;
+  color: #fff;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stepTitle {
+  margin: 0;
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 36px;
+  letter-spacing: -0.02em;
+  font-feature-settings: normal;
+}
+
+.stepText {
+  margin: 0;
+  font-size: 16px;
+  line-height: 22px;
+  color: #3f5560;
+  letter-spacing: normal;
+}
+
+.shot {
+  grid-column: span 8;
+  height: 220px;
+  border: 1px dashed #b6c1c6;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 24px;
+  color: #5d7580;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.note {
+  grid-column: span 4;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 28px;
+  border-radius: 24px;
+  background: #fff;
+}
+
+.noteCaption {
+  color: #939393;
+}
+
+.note ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 16px;
+  line-height: 22px;
+  color: #3f5560;
+}
+
+.note li {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e3e3e3;
+}
+
+.noteLast {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.note a {
+  margin-top: auto;
+  align-self: flex-start;
+}
+
+@media (max-width: 1199px) {
+  .copy,
+  .aside,
+  .step,
+  .shot,
+  .note {
+    grid-column: span 6;
+  }
+
+  .copy,
+  .shot {
+    grid-column: span 12;
+  }
+
+  .line {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .section {
+    padding: 20px;
+  }
+
+  .copy,
+  .aside,
+  .step,
+  .shot,
+  .note {
+    grid-column: span 12;
+  }
+
+  .shot {
+    height: auto;
+    min-height: 160px;
+  }
+}
