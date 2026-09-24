@@ -4,6 +4,7 @@ import { linkSchema } from "@/schemas/primitives";
 export const ctaPanelSchema = z.object({
   type: z.literal("cta-panel"),
   id: z.string().optional(),
+  theme: z.enum(["dark", "lime"]).optional(),
   title: z.string(),
   lead: z.string(),
   actions: z.array(linkSchema),

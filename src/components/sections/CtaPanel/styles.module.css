@@ -40,10 +40,28 @@
   color: #1f3a48;
 }
 
-.note {
+.lime {
+  background: #ffd400;
+  color: #272727;
+}
+
+.lime .lead {
+  color: #8c6e00;
+}
+
+.note,
+.noteDirty {
   font-size: 16px;
   line-height: 22px;
   color: #8c6e00;
+}
+
+.noteMuted {
+  color: #939393;
+}
+
+.noteGray {
+  color: #646464;
 }
 
 .noteBlue {

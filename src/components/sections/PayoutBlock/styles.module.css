@@ -1,0 +1,148 @@
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding: 40px;
+  border-radius: 40px;
+  background: #000;
+  color: #f3f5f5;
+}
+
+.head,
+.steps,
+.bottom {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.head {
+  align-items: end;
+}
+
+.copy {
+  grid-column: span 7;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.caption,
+.stepCaption,
+.noteCaption {
+  font-size: 10px;
+  line-height: 14px;
+  text-transform: uppercase;
+}
+
+.caption {
+  color: #ffd400;
+}
+
+.aside {
+  grid-column: span 5;
+  margin: 0;
+  font-size: 16px;
+  line-height: 22px;
+  color: #939393;
+  letter-spacing: normal;
+}
+
+.step {
+  grid-column: span 4;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 28px;
+  border-radius: 24px;
+  background: #141414;
+}
+
+.stepCaption {
+  color: #939393;
+}
+
+.stepTitle,
+.noteTitle {
+  margin: 0;
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 36px;
+  letter-spacing: -0.02em;
+  font-feature-settings: normal;
+}
+
+.stepText {
+  margin: 0;
+  font-size: 16px;
+  line-height: 22px;
+  color: #939393;
+  letter-spacing: normal;
+}
+
+.shot {
+  grid-column: span 8;
+  height: 300px;
+  border: 1px dashed #646464;
+  border-radius: 32px;
+  background: #141414;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  color: #939393;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.note {
+  grid-column: span 4;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 28px;
+  border-radius: 24px;
+  background: #ffd400;
+  color: #272727;
+}
+
+.noteCaption {
+  color: #8c6e00;
+}
+
+.noteText {
+  margin: 0;
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: normal;
+}
+
+@media (max-width: 1199px) {
+  .copy,
+  .aside,
+  .shot,
+  .note {
+    grid-column: span 12;
+  }
+
+  .step {
+    grid-column: span 6;
+  }
+}
+
+@media (max-width: 767px) {
+  .section {
+    padding: 20px;
+  }
+
+  .step {
+    grid-column: span 12;
+  }
+
+  .shot {
+    height: auto;
+    min-height: 160px;
+  }
+}

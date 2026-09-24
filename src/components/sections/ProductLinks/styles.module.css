@@ -1,0 +1,80 @@
+.section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 32px;
+  border-radius: 32px;
+}
+
+.blue {
+  background: #dae8ee;
+}
+
+.ink {
+  background: #141414;
+  color: #f3f5f5;
+}
+
+.caption {
+  font-size: 10px;
+  line-height: 14px;
+  text-transform: uppercase;
+}
+
+.blue .caption {
+  color: #5d7580;
+}
+
+.ink .caption {
+  color: #ffd400;
+}
+
+.title {
+  margin: 0;
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 36px;
+  letter-spacing: -0.04em;
+  font-feature-settings: normal;
+}
+
+.text {
+  margin: 0;
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: normal;
+}
+
+.blue .text {
+  color: #3f5560;
+}
+
+.ink .text {
+  color: #939393;
+}
+
+.card a {
+  margin-top: auto;
+  align-self: flex-start;
+}
+
+.inkButton {
+  background: #141414;
+}
+
+@media (max-width: 767px) {
+  .section {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    padding: 20px;
+  }
+}

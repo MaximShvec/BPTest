@@ -1,0 +1,96 @@
+.section {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 8px;
+  align-items: stretch;
+  padding: 40px;
+  border-radius: 40px;
+  background: #dae8ee;
+}
+
+.copy,
+.card {
+  grid-column: span 4;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.caption,
+.cardCaption {
+  font-size: 10px;
+  line-height: 14px;
+  text-transform: uppercase;
+}
+
+.caption {
+  color: #5d7580;
+}
+
+.text {
+  margin: 0;
+  font-size: 16px;
+  line-height: 22px;
+  color: #3f5560;
+  letter-spacing: normal;
+}
+
+.button {
+  margin-top: auto;
+  align-self: flex-start;
+  background: #141414;
+}
+
+.card {
+  padding: 28px;
+  border-radius: 24px;
+  background: #fff;
+}
+
+.cardCaption {
+  color: #939393;
+}
+
+.cardTitle {
+  margin: 0;
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 36px;
+  letter-spacing: -0.02em;
+  font-feature-settings: normal;
+}
+
+.card ul {
+  display: flex;
+  flex-direction: column;
+  margin: auto 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.card li {
+  font-size: 16px;
+  line-height: 22px;
+  color: #646464;
+  padding: 10px 0;
+  border-bottom: 1px solid #e3e3e3;
+  letter-spacing: normal;
+}
+
+.last {
+  border-bottom: 0;
+}
+
+@media (max-width: 1199px) {
+  .copy,
+  .card {
+    grid-column: span 12;
+  }
+}
+
+@media (max-width: 767px) {
+  .section {
+    padding: 20px;
+  }
+}

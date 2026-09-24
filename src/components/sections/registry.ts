@@ -8,7 +8,27 @@ import { CasePath } from "./CasePath/Component";
 import { casePathSchema } from "./CasePath/schema";
 import { ChannelBoard } from "./ChannelBoard/Component";
 import { channelBoardSchema } from "./ChannelBoard/schema";
+import { AccountPair } from "./AccountPair/Component";
+import { accountPairSchema } from "./AccountPair/schema";
+import { AssetGrid } from "./AssetGrid/Component";
+import { assetGridSchema } from "./AssetGrid/schema";
+import { CopyShot } from "./CopyShot/Component";
+import { copyShotSchema } from "./CopyShot/schema";
+import { CryptoHero } from "./CryptoHero/Component";
+import { cryptoHeroSchema } from "./CryptoHero/schema";
 import { CtaPanel } from "./CtaPanel/Component";
+import { HeadCards } from "./HeadCards/Component";
+import { headCardsSchema } from "./HeadCards/schema";
+import { IoColumns } from "./IoColumns/Component";
+import { ioColumnsSchema } from "./IoColumns/schema";
+import { PayoutBlock } from "./PayoutBlock/Component";
+import { payoutBlockSchema } from "./PayoutBlock/schema";
+import { ProductLinks } from "./ProductLinks/Component";
+import { productLinksSchema } from "./ProductLinks/schema";
+import { RiskSplit } from "./RiskSplit/Component";
+import { riskSplitSchema } from "./RiskSplit/schema";
+import { SwapPanel } from "./SwapPanel/Component";
+import { swapPanelSchema } from "./SwapPanel/schema";
 import { ctaPanelSchema } from "./CtaPanel/schema";
 import { FeatureRows } from "./FeatureRows/Component";
 import { featureRowsSchema } from "./FeatureRows/schema";
@@ -205,4 +225,14 @@ export const sectionRegistry = {
   "kyb-panel": { schema: kybPanelSchema, Component: KybPanel },
   "media-quote": { schema: mediaQuoteSchema, Component: MediaQuote },
   "cta-panel": { schema: ctaPanelSchema, Component: CtaPanel },
+  "crypto-hero": { schema: cryptoHeroSchema, Component: CryptoHero },
+  "head-cards": { schema: headCardsSchema, Component: HeadCards },
+  "account-pair": { schema: accountPairSchema, Component: AccountPair },
+  "asset-grid": { schema: assetGridSchema, Component: AssetGrid },
+  "io-columns": { schema: ioColumnsSchema, Component: IoColumns },
+  "payout-block": { schema: payoutBlockSchema, Component: PayoutBlock },
+  "swap-panel": { schema: swapPanelSchema, Component: SwapPanel },
+  "risk-split": { schema: riskSplitSchema, Component: RiskSplit },
+  "copy-shot": { schema: copyShotSchema, Component: CopyShot },
+  "product-links": { schema: productLinksSchema, Component: ProductLinks },
 } satisfies Record<string, { schema: unknown; Component: ComponentType<never> }>;

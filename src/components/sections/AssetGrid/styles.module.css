@@ -1,0 +1,185 @@
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 32px;
+  border-radius: 32px;
+  background: #fff;
+}
+
+.head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+.head > div {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.caption {
+  font-size: 10px;
+  line-height: 14px;
+  text-transform: uppercase;
+  color: #939393;
+}
+
+.title {
+  margin: 0;
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 36px;
+  letter-spacing: -0.04em;
+  font-feature-settings: normal;
+}
+
+.aside {
+  font-size: 16px;
+  line-height: 22px;
+  color: #939393;
+}
+
+.cols,
+.row {
+  display: flex;
+  gap: 24px;
+}
+
+.cols {
+  padding: 0 0 12px;
+  border-bottom: 1px solid #e3e3e3;
+  font-size: 10px;
+  line-height: 14px;
+  text-transform: uppercase;
+  color: #939393;
+}
+
+.cols span:nth-child(1),
+.ticker {
+  flex: 0 0 160px;
+}
+
+.cols span:nth-child(2),
+.networks {
+  flex: 1 1 auto;
+}
+
+.cols span:nth-child(3),
+.meta {
+  flex: 0 0 160px;
+}
+
+.cols span:nth-child(4),
+.confirms {
+  flex: 0 0 180px;
+}
+
+.colFee,
+.fee {
+  flex: 0 0 160px;
+  text-align: right;
+}
+
+.row {
+  align-items: baseline;
+  padding: 18px 0;
+  border-bottom: 1px solid #e3e3e3;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.ticker {
+  font-weight: 500;
+}
+
+.networks {
+  color: #646464;
+}
+
+.meta,
+.confirms {
+  color: #939393;
+}
+
+.fee {
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: -0.015em;
+  color: #272727;
+  font-feature-settings: normal;
+}
+
+.notes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding-top: 8px;
+}
+
+.notes span {
+  height: 36px;
+  padding: 0 14px;
+  border-radius: 8px;
+  background: #f3f5f5;
+  color: #646464;
+  font-size: 14px;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 767px) {
+  .section {
+    padding: 20px;
+  }
+
+  .head {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .cols {
+    display: none;
+  }
+
+  .row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    margin-top: 8px;
+    padding: 16px;
+    border: 1px solid #e3e3e3;
+    border-radius: 16px;
+  }
+
+  .ticker,
+  .networks,
+  .meta,
+  .confirms,
+  .fee {
+    flex-basis: auto;
+    text-align: left;
+  }
+
+  .ticker::before,
+  .networks::before,
+  .meta::before,
+  .confirms::before,
+  .fee::before {
+    content: attr(data-label);
+    display: block;
+    font-family: Inter, sans-serif;
+    font-size: 10px;
+    line-height: 14px;
+    font-weight: 400;
+    letter-spacing: 0;
+    text-transform: uppercase;
+    color: #939393;
+  }
+}
