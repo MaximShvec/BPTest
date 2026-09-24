@@ -12,6 +12,11 @@ import { ctaPanelSchema } from "./CtaPanel/schema";
 import { headCardsSchema } from "./HeadCards/schema";
 import { ioColumnsSchema } from "./IoColumns/schema";
 import { payoutBlockSchema } from "./PayoutBlock/schema";
+import { absentListSchema } from "./AbsentList/schema";
+import { bizFeeHeroSchema } from "./BizFeeHero/schema";
+import { feeCalculatorSchema } from "./FeeCalculator/schema";
+import { feeGroupSchema } from "./FeeGroup/schema";
+import { freeAlwaysSchema } from "./FreeAlways/schema";
 import { bindPanelSchema } from "./BindPanel/schema";
 import { codeBlockSchema } from "./CodeBlock/schema";
 import { featureShotsSchema } from "./FeatureShots/schema";
@@ -174,6 +179,11 @@ export const sectionSchemas = [
   bindPanelSchema,
   tablePreviewSchema,
   codeBlockSchema,
+  bizFeeHeroSchema,
+  freeAlwaysSchema,
+  feeGroupSchema,
+  feeCalculatorSchema,
+  absentListSchema,
 ] as const;
 
 export const sectionSchema = z.discriminatedUnion("type", sectionSchemas);

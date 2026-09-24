@@ -23,6 +23,16 @@ import { IoColumns } from "./IoColumns/Component";
 import { ioColumnsSchema } from "./IoColumns/schema";
 import { PayoutBlock } from "./PayoutBlock/Component";
 import { payoutBlockSchema } from "./PayoutBlock/schema";
+import { AbsentList } from "./AbsentList/Component";
+import { absentListSchema } from "./AbsentList/schema";
+import { BizFeeHero } from "./BizFeeHero/Component";
+import { bizFeeHeroSchema } from "./BizFeeHero/schema";
+import { FeeCalculator } from "./FeeCalculator/Component";
+import { feeCalculatorSchema } from "./FeeCalculator/schema";
+import { FeeGroup } from "./FeeGroup/Component";
+import { feeGroupSchema } from "./FeeGroup/schema";
+import { FreeAlways } from "./FreeAlways/Component";
+import { freeAlwaysSchema } from "./FreeAlways/schema";
 import { BindPanel } from "./BindPanel/Component";
 import { bindPanelSchema } from "./BindPanel/schema";
 import { CodeBlock } from "./CodeBlock/Component";
@@ -259,4 +269,9 @@ export const sectionRegistry = {
   "bind-panel": { schema: bindPanelSchema, Component: BindPanel },
   "table-preview": { schema: tablePreviewSchema, Component: TablePreview },
   "code-block": { schema: codeBlockSchema, Component: CodeBlock },
+  "biz-fee-hero": { schema: bizFeeHeroSchema, Component: BizFeeHero },
+  "free-always": { schema: freeAlwaysSchema, Component: FreeAlways },
+  "fee-group": { schema: feeGroupSchema, Component: FeeGroup },
+  "fee-calculator": { schema: feeCalculatorSchema, Component: FeeCalculator },
+  "absent-list": { schema: absentListSchema, Component: AbsentList },
 } satisfies Record<string, { schema: unknown; Component: ComponentType<never> }>;

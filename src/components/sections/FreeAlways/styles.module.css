@@ -1,0 +1,119 @@
+.section {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 8px;
+  align-items: stretch;
+  padding: 32px;
+  border-radius: 40px;
+  background: #141414;
+  color: #f3f5f5;
+}
+
+.copy {
+  grid-column: span 3;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.kicker {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.caption {
+  font-size: 10px;
+  line-height: 14px;
+  text-transform: uppercase;
+  color: #ffd400;
+}
+
+.value {
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 500;
+  font-size: 140px;
+  line-height: 112px;
+  letter-spacing: -0.06em;
+  color: #ffd400;
+  font-feature-settings: normal;
+}
+
+.lead {
+  margin: 0;
+  font-size: 16px;
+  line-height: 22px;
+  color: #939393;
+}
+
+.list {
+  grid-column: span 5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.row,
+.rowLast {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  padding: 14px 0;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.row {
+  border-bottom: 1px solid #272727;
+}
+
+.index {
+  flex: 0 0 24px;
+  font-size: 14px;
+  line-height: 20px;
+  color: #646464;
+}
+
+.shot {
+  grid-column: span 4;
+  min-height: 300px;
+  border: 1px dashed #646464;
+  border-radius: 24px;
+  background: #0d0d0d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  color: #939393;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.note {
+  grid-column: span 12;
+  margin: 0;
+  padding-top: 8px;
+  font-size: 14px;
+  line-height: 20px;
+  color: #646464;
+}
+
+@media (max-width: 1199px) {
+  .copy,
+  .list,
+  .shot {
+    grid-column: span 12;
+  }
+}
+
+@media (max-width: 767px) {
+  .section {
+    padding: 20px;
+  }
+
+  .value {
+    font-size: 96px;
+    line-height: 80px;
+  }
+}

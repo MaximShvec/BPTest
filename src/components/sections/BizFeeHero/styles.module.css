@@ -1,0 +1,145 @@
+.hero {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 8px;
+  align-items: stretch;
+}
+
+.copy {
+  grid-column: span 7;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 24px 32px 24px 0;
+}
+
+.kicker {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #ffd400;
+}
+
+.caption {
+  font-size: 10px;
+  line-height: 14px;
+  text-transform: uppercase;
+  color: #939393;
+}
+
+.lead {
+  margin: 0;
+  max-width: 600px;
+  font-size: 20px;
+  line-height: 28px;
+  letter-spacing: -0.01em;
+  color: #646464;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: auto;
+}
+
+.tiles {
+  grid-column: span 5;
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 8px;
+  align-content: stretch;
+}
+
+.tile {
+  grid-column: span 6;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 24px;
+  border-radius: 24px;
+}
+
+.lime {
+  background: #ffd400;
+  color: #272727;
+}
+
+.white {
+  background: #fff;
+  color: #272727;
+}
+
+.blue {
+  background: #dae8ee;
+  color: #1f3a48;
+}
+
+.tileCaption,
+.tileNote {
+  font-size: 10px;
+  line-height: 14px;
+  text-transform: uppercase;
+}
+
+.lime .tileCaption,
+.lime .tileNote {
+  color: #8c6e00;
+  text-transform: uppercase;
+}
+
+.tileNote {
+  margin-top: auto;
+  font-size: 14px;
+  line-height: 20px;
+  text-transform: none;
+}
+
+.white .tileCaption,
+.white .tileNote {
+  color: #939393;
+}
+
+.blue .tileCaption {
+  color: #5d7580;
+}
+
+.blue .tileNote {
+  color: #3f5560;
+}
+
+.tileValue {
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 500;
+  font-size: 52px;
+  line-height: 54px;
+  letter-spacing: -0.06em;
+  font-feature-settings: normal;
+}
+
+@media (max-width: 1199px) {
+  .copy,
+  .tiles {
+    grid-column: span 12;
+  }
+
+  .copy {
+    padding: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .tile {
+    grid-column: span 12;
+  }
+
+  .actions {
+    flex-direction: column;
+  }
+}

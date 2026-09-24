@@ -1,0 +1,114 @@
+.section {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 8px;
+  align-items: start;
+}
+
+.copy {
+  grid-column: span 4;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 32px 0;
+}
+
+.index {
+  font-size: 10px;
+  line-height: 14px;
+  text-transform: uppercase;
+  color: #939393;
+}
+
+.title {
+  margin: 0;
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 36px;
+  letter-spacing: -0.04em;
+  font-feature-settings: normal;
+}
+
+.text {
+  margin: 0;
+  font-size: 16px;
+  line-height: 22px;
+  color: #646464;
+}
+
+.table {
+  grid-column: span 8;
+  display: flex;
+  flex-direction: column;
+  padding: 24px 32px;
+  border-radius: 32px;
+  background: #fff;
+}
+
+.row,
+.rowLast {
+  display: flex;
+  align-items: baseline;
+  gap: 24px;
+  padding: 20px 0;
+}
+
+.row {
+  border-bottom: 1px solid #e3e3e3;
+}
+
+.name,
+.note {
+  flex: 1 1 auto;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.name {
+  font-weight: 500;
+}
+
+.note {
+  color: #939393;
+}
+
+.value {
+  flex: 0 0 200px;
+  text-align: right;
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: -0.015em;
+  font-feature-settings: normal;
+}
+
+@media (max-width: 1199px) {
+  .copy,
+  .table {
+    grid-column: span 12;
+  }
+
+  .copy {
+    padding: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .table {
+    padding: 16px;
+  }
+
+  .row,
+  .rowLast {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  .value {
+    flex-basis: auto;
+    text-align: left;
+  }
+}

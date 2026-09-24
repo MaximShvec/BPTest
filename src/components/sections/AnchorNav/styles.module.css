@@ -27,6 +27,14 @@
   color: var(--lime-link-hover);
 }
 
+.compact .chip {
+  height: 44px;
+}
+
+.muted {
+  color: #646464;
+}
+
 .dark {
   background: #272727;
   color: #f3f5f5;
