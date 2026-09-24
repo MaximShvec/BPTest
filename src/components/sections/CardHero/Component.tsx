@@ -1,10 +1,11 @@
 import { Button } from "@/components/ui/Button";
+import { cx } from "@/lib/cx";
 import type { CardHeroData } from "./schema";
 import styles from "./styles.module.css";
 
-export function CardHero({ caption, title, lead, actions, shot }: CardHeroData) {
+export function CardHero({ theme = "blue", caption, title, lead, actions, shot }: CardHeroData) {
   return (
-    <section className={styles.hero}>
+    <section className={cx(styles.hero, theme === "lime" && styles.lime)}>
       <div className={styles.copy}>
         <div className={styles.kicker}>
           <span className={styles.dot} aria-hidden="true" />

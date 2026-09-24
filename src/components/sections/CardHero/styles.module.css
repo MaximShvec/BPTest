@@ -56,6 +56,16 @@
   background: #141414;
 }
 
+.lime {
+  background: #ffd400;
+  color: #272727;
+}
+
+.lime .caption,
+.lime .lead {
+  color: #8c6e00;
+}
+
 .shot {
   grid-column: span 6;
   aspect-ratio: 1586 / 1000;

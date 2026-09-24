@@ -7,7 +7,7 @@ export const otherCardsSchema = z.object({
   title: z.string(),
   items: z.array(
     z.object({
-      theme: z.enum(["ink", "blue"]),
+      theme: z.enum(["ink", "blue", "white"]),
       caption: z.string(),
       title: z.string(),
       text: z.string(),

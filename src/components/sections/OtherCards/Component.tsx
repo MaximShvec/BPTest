@@ -7,7 +7,7 @@ export function OtherCards({ title, items }: OtherCardsData) {
       <h2 className="h2">{title}</h2>
       <div className={styles.grid}>
         {items.map((item) => (
-          <a key={item.title} href={item.action.href} className={item.theme === "ink" ? styles.ink : styles.blue}>
+          <a key={item.title} href={item.action.href} className={styles[item.theme]}>
             <span className={styles.caption}>{item.caption}</span>
             <h3 className={styles.title}>{item.title}</h3>
             <p className={styles.text}>{item.text}</p>
