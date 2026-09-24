@@ -10,6 +10,7 @@ export const testimonialSchema = z.object({
   name: z.string(),
   role: z.string(),
   media: mediaSchema.optional(),
+  photoSize: z.number().optional(),
 });
 
 export type TestimonialData = z.infer<typeof testimonialSchema>;

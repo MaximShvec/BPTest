@@ -1,0 +1,172 @@
+.root {
+  align-items: stretch;
+}
+
+.copy {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  height: 100%;
+  padding: 24px 32px 24px 0;
+}
+
+.kicker {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--lime);
+}
+
+.lead {
+  margin: 0;
+  max-width: 600px;
+  font-size: 20px;
+  line-height: 28px;
+  letter-spacing: -0.01em;
+  color: #646464;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.chip {
+  height: 40px;
+  padding: 0 16px;
+  border-radius: 8px;
+  background: #fff;
+  color: #646464;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: auto;
+}
+
+.side {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  height: 100%;
+}
+
+.shot {
+  flex: 1 1 auto;
+  min-height: 260px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  border: 1px dashed #939393;
+  border-radius: 32px;
+  background: #fff;
+  color: #939393;
+  font-size: 16px;
+  line-height: 22px;
+  text-align: center;
+  letter-spacing: normal;
+}
+
+.balances {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.balance {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 20px;
+  border-radius: 20px;
+  background: #fff;
+}
+
+.blue {
+  background: #dae8ee;
+}
+
+.blueLabel {
+  color: #5d7580;
+}
+
+.figure {
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 36px;
+  letter-spacing: -0.02em;
+  font-feature-settings: normal;
+}
+
+.receipt {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 24px;
+  border-radius: 24px;
+  background: #141414;
+  color: #f3f5f5;
+}
+
+.receiptCopy {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.receiptCaption {
+  font-size: 10px;
+  line-height: 14px;
+  text-transform: uppercase;
+  color: var(--lime);
+  letter-spacing: 0;
+}
+
+.receiptNote {
+  font-size: 14px;
+  line-height: 20px;
+  color: #939393;
+  text-align: right;
+  letter-spacing: normal;
+  white-space: pre-line;
+}
+
+@media (max-width: 767px) {
+  .copy {
+    padding: 0;
+  }
+
+  .actions {
+    flex-direction: column;
+  }
+
+  .actions a {
+    width: 100%;
+  }
+
+  .figure {
+    font-size: 24px;
+    line-height: 28px;
+  }
+
+  .balance {
+    padding: 12px;
+  }
+}

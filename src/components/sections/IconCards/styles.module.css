@@ -21,6 +21,10 @@
   border-radius: 24px;
 }
 
+.spaced {
+  gap: 16px;
+}
+
 .white {
   background: #fff;
   color: var(--dark);
@@ -78,6 +82,11 @@
   font-size: 32px;
   line-height: 36px;
   letter-spacing: -0.04em;
+}
+
+.title36 {
+  font-size: 36px;
+  line-height: 36px;
 }
 
 .compactTitle {

@@ -87,6 +87,36 @@ export function ShieldIcon(props: SVGProps<SVGSVGElement>) {
   );
 }
 
+export function InIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <LineIcon {...props}>
+      <path d="M12 4v12" />
+      <path d="M7 11l5 5 5-5" />
+      <path d="M4 20h16" />
+    </LineIcon>
+  );
+}
+
+export function OutIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <LineIcon {...props}>
+      <path d="M12 20V8" />
+      <path d="M7 13l5-5 5 5" />
+      <path d="M4 4h16" />
+    </LineIcon>
+  );
+}
+
+export function PayIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <LineIcon {...props}>
+      <path d="M4 9h13" />
+      <path d="M13 4l5 5-5 5" />
+      <path d="M20 15H7" />
+    </LineIcon>
+  );
+}
+
 export function ChatIcon(props: SVGProps<SVGSVGElement>) {
   return (
     <LineIcon {...props}>

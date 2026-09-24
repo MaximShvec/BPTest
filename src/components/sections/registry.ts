@@ -1,5 +1,17 @@
 import type { ComponentType } from "react";
+import { AccountHero } from "./AccountHero/Component";
+import { accountHeroSchema } from "./AccountHero/schema";
 import { AppBlock } from "./AppBlock/Component";
+import { CaseStudy } from "./CaseStudy/Component";
+import { caseStudySchema } from "./CaseStudy/schema";
+import { MediaBlock } from "./MediaBlock/Component";
+import { mediaBlockSchema } from "./MediaBlock/schema";
+import { MetricBar } from "./MetricBar/Component";
+import { metricBarSchema } from "./MetricBar/schema";
+import { SystemCards } from "./SystemCards/Component";
+import { systemCardsSchema } from "./SystemCards/schema";
+import { TextTiles } from "./TextTiles/Component";
+import { textTilesSchema } from "./TextTiles/schema";
 import { appBlockSchema } from "./AppBlock/schema";
 import { AudienceCards } from "./AudienceCards/Component";
 import { audienceCardsSchema } from "./AudienceCards/schema";
@@ -130,4 +142,10 @@ export const sectionRegistry = {
   cta: { schema: ctaSchema, Component: Cta },
   "cta-aside": { schema: ctaAsideSchema, Component: CtaAside },
   "cta-final": { schema: ctaFinalSchema, Component: CtaFinal },
+  "account-hero": { schema: accountHeroSchema, Component: AccountHero },
+  "metric-bar": { schema: metricBarSchema, Component: MetricBar },
+  "media-block": { schema: mediaBlockSchema, Component: MediaBlock },
+  "system-cards": { schema: systemCardsSchema, Component: SystemCards },
+  "text-tiles": { schema: textTilesSchema, Component: TextTiles },
+  "case-study": { schema: caseStudySchema, Component: CaseStudy },
 } satisfies Record<string, { schema: unknown; Component: ComponentType<never> }>;

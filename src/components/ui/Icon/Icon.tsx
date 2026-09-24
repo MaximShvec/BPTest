@@ -3,7 +3,7 @@ import { ArrowRightIcon } from "@/components/icons/arrow-right";
 import { ChevronDownIcon } from "@/components/icons/chevron-down";
 import { ChevronSmallIcon } from "@/components/icons/chevron-small";
 import { GlobeIcon } from "@/components/icons/globe";
-import { AssetIcon, BracketsIcon, ChatIcon, PayCardIcon, ShieldIcon, SwapIcon, TrendIcon, WalletIcon } from "@/components/icons/line";
+import { AssetIcon, BracketsIcon, ChatIcon, InIcon, OutIcon, PayCardIcon, PayIcon, ShieldIcon, SwapIcon, TrendIcon, WalletIcon } from "@/components/icons/line";
 import { LockIcon } from "@/components/icons/lock";
 import { MailIcon } from "@/components/icons/mail";
 import { MinusIcon } from "@/components/icons/minus";
@@ -26,6 +26,9 @@ const icons = {
   brackets: BracketsIcon,
   shield: ShieldIcon,
   chat: ChatIcon,
+  in: InIcon,
+  out: OutIcon,
+  pay: PayIcon,
 } satisfies Record<string, (props: SVGProps<SVGSVGElement>) => ReactElement>;
 
 export type IconName = keyof typeof icons;

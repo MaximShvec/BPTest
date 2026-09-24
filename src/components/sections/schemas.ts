@@ -1,5 +1,11 @@
 import { z } from "zod";
+import { accountHeroSchema } from "./AccountHero/schema";
 import { audienceCardsSchema } from "./AudienceCards/schema";
+import { caseStudySchema } from "./CaseStudy/schema";
+import { mediaBlockSchema } from "./MediaBlock/schema";
+import { metricBarSchema } from "./MetricBar/schema";
+import { systemCardsSchema } from "./SystemCards/schema";
+import { textTilesSchema } from "./TextTiles/schema";
 import { blogPreviewSchema } from "./BlogPreview/schema";
 import { appBlockSchema } from "./AppBlock/schema";
 import { cardsRowSchema } from "./CardsRow/schema";
@@ -88,6 +94,12 @@ export const sectionSchemas = [
   ctaSchema,
   ctaAsideSchema,
   ctaFinalSchema,
+  accountHeroSchema,
+  metricBarSchema,
+  mediaBlockSchema,
+  systemCardsSchema,
+  textTilesSchema,
+  caseStudySchema,
 ] as const;
 
 export const sectionSchema = z.discriminatedUnion("type", sectionSchemas);

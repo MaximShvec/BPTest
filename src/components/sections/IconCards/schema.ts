@@ -9,6 +9,8 @@ export const iconCardsSchema = z.object({
   theme: themeSchema.optional(),
   title: z.string().optional(),
   compact: z.boolean().optional(),
+  titleSize: z.enum(["32", "36"]).optional(),
+  spaced: z.boolean().optional(),
   items: z.array(
     z.object({
       span: z.number().optional(),
