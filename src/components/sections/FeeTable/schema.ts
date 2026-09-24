@@ -5,6 +5,7 @@ export const feeTableSchema = z.object({
   id: z.string().optional(),
   title: z.string(),
   aside: z.string().optional(),
+  valueWidth: z.number().optional(),
   rows: z.array(
     z.object({
       name: z.string(),

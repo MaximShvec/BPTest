@@ -1,0 +1,157 @@
+.section {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.copy {
+  grid-column: span 4;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 32px;
+  border-radius: 32px;
+  background: #fff;
+}
+
+.caption {
+  font-size: 10px;
+  line-height: 14px;
+  text-transform: uppercase;
+  color: #939393;
+}
+
+.title {
+  margin: 0;
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 36px;
+  letter-spacing: -0.04em;
+  font-feature-settings: normal;
+}
+
+.text {
+  margin: 0;
+  font-size: 16px;
+  line-height: 22px;
+  color: #646464;
+  letter-spacing: normal;
+}
+
+.copy a {
+  margin-top: auto;
+  align-self: flex-start;
+}
+
+.chain {
+  grid-column: span 8;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 32px;
+  border-radius: 32px;
+  background: #141414;
+  color: #f3f5f5;
+}
+
+.slot {
+  flex: 1 1 0;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  min-width: 0;
+}
+
+.slot:first-child {
+  gap: 0;
+}
+
+.arrow {
+  flex-shrink: 0;
+}
+
+.level {
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-height: 240px;
+  min-width: 0;
+  padding: 24px;
+  border-radius: 24px;
+}
+
+.lime {
+  background: #ffd400;
+  color: #272727;
+}
+
+.ink {
+  background: #272727;
+}
+
+.levelCaption {
+  font-size: 10px;
+  line-height: 14px;
+  text-transform: uppercase;
+}
+
+.ink .levelCaption,
+.ink .levelText {
+  color: #939393;
+}
+
+.value {
+  margin-top: auto;
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 500;
+  font-size: 52px;
+  line-height: 54px;
+  letter-spacing: -0.06em;
+  font-feature-settings: normal;
+}
+
+.levelText {
+  font-size: 16px;
+  line-height: 22px;
+}
+
+@media (max-width: 1199px) {
+  .copy,
+  .chain {
+    grid-column: span 12;
+  }
+
+  .chain {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .slot {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .arrow {
+    align-self: center;
+    transform: rotate(90deg);
+  }
+}
+
+@media (max-width: 767px) {
+  .copy,
+  .chain,
+  .level {
+    padding: 20px;
+  }
+
+  .level {
+    min-height: 0;
+  }
+
+  .value {
+    font-size: 40px;
+    line-height: 42px;
+  }
+}

@@ -6,6 +6,18 @@ import { FeeTable } from "./FeeTable/Component";
 import { feeTableSchema } from "./FeeTable/schema";
 import { HeroIntro } from "./HeroIntro/Component";
 import { heroIntroSchema } from "./HeroIntro/schema";
+import { HeroStats } from "./HeroStats/Component";
+import { heroStatsSchema } from "./HeroStats/schema";
+import { LevelChain } from "./LevelChain/Component";
+import { levelChainSchema } from "./LevelChain/schema";
+import { MediaKit } from "./MediaKit/Component";
+import { mediaKitSchema } from "./MediaKit/schema";
+import { PartnerDesk } from "./PartnerDesk/Component";
+import { partnerDeskSchema } from "./PartnerDesk/schema";
+import { ReferralCalculator } from "./ReferralCalculator/Component";
+import { referralCalculatorSchema } from "./ReferralCalculator/schema";
+import { TileRow } from "./TileRow/Component";
+import { tileRowSchema } from "./TileRow/schema";
 import { accountHeroSchema } from "./AccountHero/schema";
 import { AppBlock } from "./AppBlock/Component";
 import { CaseStudy } from "./CaseStudy/Component";
@@ -157,4 +169,10 @@ export const sectionRegistry = {
   "hero-intro": { schema: heroIntroSchema, Component: HeroIntro },
   "anchor-nav": { schema: anchorNavSchema, Component: AnchorNav },
   "fee-table": { schema: feeTableSchema, Component: FeeTable },
+  "hero-stats": { schema: heroStatsSchema, Component: HeroStats },
+  "level-chain": { schema: levelChainSchema, Component: LevelChain },
+  "tile-row": { schema: tileRowSchema, Component: TileRow },
+  "referral-calculator": { schema: referralCalculatorSchema, Component: ReferralCalculator },
+  "partner-desk": { schema: partnerDeskSchema, Component: PartnerDesk },
+  "media-kit": { schema: mediaKitSchema, Component: MediaKit },
 } satisfies Record<string, { schema: unknown; Component: ComponentType<never> }>;

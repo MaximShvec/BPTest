@@ -6,6 +6,18 @@
   color: #f3f5f5;
 }
 
+.ink {
+  color: #272727;
+}
+
+.ink :global(.caption) {
+  color: #646464;
+}
+
+.ink .role {
+  color: #646464;
+}
+
 .photo {
   flex-shrink: 0;
   letter-spacing: normal;

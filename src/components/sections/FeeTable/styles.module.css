@@ -64,7 +64,7 @@
 }
 
 .value {
-  flex: 0 0 200px;
+  flex: 0 0 var(--value-w, 200px);
   text-align: right;
   font-family: "Space Grotesk", sans-serif;
   font-weight: 500;

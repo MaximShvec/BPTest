@@ -1,0 +1,273 @@
+.section {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.copy {
+  grid-column: span 4;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 32px;
+  border-radius: 32px;
+  background: #fff;
+}
+
+.caption,
+.tierName,
+.totalLabel {
+  font-size: 10px;
+  line-height: 14px;
+  text-transform: uppercase;
+  color: #939393;
+}
+
+.title {
+  margin: 0;
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 36px;
+  letter-spacing: -0.04em;
+  font-feature-settings: normal;
+}
+
+.text {
+  margin: 0;
+  font-size: 16px;
+  line-height: 22px;
+  color: #646464;
+  letter-spacing: normal;
+}
+
+.copy a {
+  margin-top: auto;
+  align-self: flex-start;
+}
+
+.panel {
+  grid-column: span 8;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 32px;
+  border-radius: 32px;
+  background: #141414;
+  color: #f3f5f5;
+}
+
+.presets {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.chip {
+  height: 44px;
+  padding: 0 20px;
+  border: 0;
+  border-radius: 12px;
+  box-shadow: inset 0 0 0 1px #646464;
+  background: transparent;
+  color: #939393;
+  font: inherit;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.chipOn {
+  box-shadow: none;
+  background: #ffd400;
+  color: #272727;
+}
+
+.sliders {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.slider {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sliderHead,
+.bounds {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.sliderLabel {
+  font-size: 16px;
+  line-height: 22px;
+  color: #939393;
+}
+
+.sliderValue,
+.tierValue,
+.month {
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 500;
+  font-feature-settings: normal;
+}
+
+.sliderValue {
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: -0.015em;
+}
+
+.track {
+  position: relative;
+  height: 6px;
+}
+
+.track::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 6px;
+  border-radius: 999px;
+  background: #272727;
+}
+
+.fill {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 6px;
+  border-radius: 999px;
+  background: #ffd400;
+}
+
+.thumb {
+  position: absolute;
+  top: 50%;
+  width: 24px;
+  height: 24px;
+  margin: -12px 0 0 -12px;
+  border-radius: 50%;
+  background: #ffd400;
+}
+
+.track input {
+  position: absolute;
+  left: 0;
+  top: -12px;
+  width: 100%;
+  height: 30px;
+  margin: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.bounds {
+  font-size: 16px;
+  line-height: 22px;
+  color: #646464;
+}
+
+.tiers {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.tier {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 20px;
+  border-radius: 20px;
+  background: #272727;
+}
+
+.tierValue {
+  font-size: 32px;
+  line-height: 36px;
+  letter-spacing: -0.04em;
+}
+
+.totals {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  padding-top: 20px;
+  border-top: 1px solid #272727;
+}
+
+.totals > div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.month {
+  font-size: 36px;
+  line-height: 36px;
+  letter-spacing: -0.04em;
+}
+
+.yearBlock {
+  text-align: right;
+}
+
+.year {
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 500;
+  font-size: 52px;
+  line-height: 54px;
+  letter-spacing: -0.06em;
+  color: #ffd400;
+  font-feature-settings: normal;
+}
+
+.note {
+  margin: 0;
+  font-size: 16px;
+  line-height: 22px;
+  color: #646464;
+  letter-spacing: normal;
+}
+
+@media (max-width: 1199px) {
+  .copy,
+  .panel {
+    grid-column: span 12;
+  }
+}
+
+@media (max-width: 767px) {
+  .copy,
+  .panel {
+    padding: 20px;
+  }
+
+  .sliders,
+  .tiers {
+    grid-template-columns: 1fr;
+  }
+
+  .totals {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .yearBlock {
+    text-align: left;
+  }
+
+  .year {
+    font-size: 40px;
+    line-height: 42px;
+  }
+}

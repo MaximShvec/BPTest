@@ -21,6 +21,7 @@ export function TextTiles({ title, frame = "plain", card = "roomy", minHeight, i
               className={cx(styles.card, card === "tight" && styles.tight, themeClass[item.theme ?? "white"])}
               style={{ "--min": minHeight ? `${minHeight}px` : "0px" } as CSSProperties}
             >
+              {item.badge ? <span className={styles.badge}>{item.badge}</span> : null}
               {item.caption ? <span className={cx("caption", item.captionTone === "gray" && styles.captionGray)}>{item.caption}</span> : null}
               <h3 className={styles.title}>{item.title}</h3>
               <p className={styles.text}>{item.text}</p>

@@ -13,6 +13,7 @@ export const textTilesSchema = z.object({
       theme: z.enum(["white", "blue", "gray"]).optional(),
       caption: z.string().optional(),
       captionTone: z.enum(["muted", "gray"]).optional(),
+      badge: z.string().optional(),
       title: z.string(),
       text: z.string(),
     }),

@@ -3,6 +3,12 @@ import { accountHeroSchema } from "./AccountHero/schema";
 import { anchorNavSchema } from "./AnchorNav/schema";
 import { feeTableSchema } from "./FeeTable/schema";
 import { heroIntroSchema } from "./HeroIntro/schema";
+import { heroStatsSchema } from "./HeroStats/schema";
+import { levelChainSchema } from "./LevelChain/schema";
+import { mediaKitSchema } from "./MediaKit/schema";
+import { partnerDeskSchema } from "./PartnerDesk/schema";
+import { referralCalculatorSchema } from "./ReferralCalculator/schema";
+import { tileRowSchema } from "./TileRow/schema";
 import { audienceCardsSchema } from "./AudienceCards/schema";
 import { caseStudySchema } from "./CaseStudy/schema";
 import { mediaBlockSchema } from "./MediaBlock/schema";
@@ -106,6 +112,12 @@ export const sectionSchemas = [
   heroIntroSchema,
   anchorNavSchema,
   feeTableSchema,
+  heroStatsSchema,
+  levelChainSchema,
+  tileRowSchema,
+  referralCalculatorSchema,
+  partnerDeskSchema,
+  mediaKitSchema,
 ] as const;
 
 export const sectionSchema = z.discriminatedUnion("type", sectionSchemas);
