@@ -13,7 +13,7 @@ const themeClass = {
 export function TextTiles({ title, frame = "plain", card = "roomy", minHeight, items }: TextTilesData) {
   return (
     <section className={cx(styles.section, frame === "white" && styles.framed)}>
-      <h2 className="h2">{title}</h2>
+      {title ? <h2 className="h2">{title}</h2> : null}
       <Grid>
         {items.map((item) => (
           <GridItem key={item.title} span={item.span ?? 3} spanMobile={12}>

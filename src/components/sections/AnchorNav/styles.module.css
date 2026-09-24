@@ -1,0 +1,51 @@
+.nav {
+  position: sticky;
+  top: 72px;
+  z-index: 5;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  background: var(--gray100);
+}
+
+.chip {
+  height: 48px;
+  padding: 0 20px;
+  border-radius: 12px;
+  background: #fff;
+  color: #272727;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.chip:hover {
+  color: var(--lime-link-hover);
+}
+
+.dark {
+  background: #272727;
+  color: #f3f5f5;
+}
+
+.dark:hover {
+  color: #f3f5f5;
+}
+
+@media (max-width: 767px) {
+  .nav {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    margin-inline: calc(var(--gutter) * -1);
+    padding-inline: var(--gutter);
+  }
+
+  .chip {
+    scroll-snap-align: start;
+  }
+}

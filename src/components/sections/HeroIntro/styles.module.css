@@ -1,0 +1,41 @@
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  padding: 32px;
+  border-radius: 32px;
+  text-align: center;
+}
+
+.title {
+  max-width: 1080px;
+}
+
+.lead {
+  margin: 0;
+  max-width: 780px;
+  font-size: 20px;
+  line-height: 28px;
+  letter-spacing: -0.01em;
+  color: #646464;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+}
+
+@media (max-width: 767px) {
+  .hero {
+    padding: 20px;
+  }
+
+  .actions {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+  }
+}

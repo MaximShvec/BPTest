@@ -1,5 +1,11 @@
 import type { ComponentType } from "react";
 import { AccountHero } from "./AccountHero/Component";
+import { AnchorNav } from "./AnchorNav/Component";
+import { anchorNavSchema } from "./AnchorNav/schema";
+import { FeeTable } from "./FeeTable/Component";
+import { feeTableSchema } from "./FeeTable/schema";
+import { HeroIntro } from "./HeroIntro/Component";
+import { heroIntroSchema } from "./HeroIntro/schema";
 import { accountHeroSchema } from "./AccountHero/schema";
 import { AppBlock } from "./AppBlock/Component";
 import { CaseStudy } from "./CaseStudy/Component";
@@ -148,4 +154,7 @@ export const sectionRegistry = {
   "system-cards": { schema: systemCardsSchema, Component: SystemCards },
   "text-tiles": { schema: textTilesSchema, Component: TextTiles },
   "case-study": { schema: caseStudySchema, Component: CaseStudy },
+  "hero-intro": { schema: heroIntroSchema, Component: HeroIntro },
+  "anchor-nav": { schema: anchorNavSchema, Component: AnchorNav },
+  "fee-table": { schema: feeTableSchema, Component: FeeTable },
 } satisfies Record<string, { schema: unknown; Component: ComponentType<never> }>;

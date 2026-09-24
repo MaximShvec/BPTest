@@ -10,6 +10,7 @@ export const ctaSchema = z.object({
   lead: z.string().optional(),
   buttons: z.array(linkSchema),
   actionsOffset: z.boolean().optional(),
+  copyMax: z.number().optional(),
 });
 
 export type CtaData = z.infer<typeof ctaSchema>;

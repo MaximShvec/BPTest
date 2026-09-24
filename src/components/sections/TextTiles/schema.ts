@@ -3,7 +3,7 @@ import { z } from "zod";
 export const textTilesSchema = z.object({
   type: z.literal("text-tiles"),
   id: z.string().optional(),
-  title: z.string(),
+  title: z.string().optional(),
   frame: z.enum(["plain", "white"]).optional(),
   card: z.enum(["roomy", "tight"]).optional(),
   minHeight: z.number().optional(),
