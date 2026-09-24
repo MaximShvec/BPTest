@@ -15,6 +15,7 @@ export function LangSwitcher({
   onToggle,
   onSelect,
   buttonRef,
+  inline = false,
 }: {
   languages: NavLanguage[];
   open: boolean;
@@ -25,12 +26,13 @@ export function LangSwitcher({
   onToggle: () => void;
   onSelect: (code: string) => void;
   buttonRef: (node: HTMLButtonElement | null) => void;
+  inline?: boolean;
 }) {
   const currentLabel = languages.find((language) => language.code === current)?.label ?? current;
 
   return (
     <div
-      className={cx(styles.item, styles.lang, open && styles.open)}
+      className={cx(styles.item, styles.lang, inline && styles.langInline, open && styles.open)}
       onMouseOver={() => {
         if (canHover) onOpen();
       }}

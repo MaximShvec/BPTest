@@ -62,7 +62,12 @@ export function Footer({ nav, common }: { nav: Nav; common: Common }) {
           <ul className={styles.socials}>
             {nav.footer.socials.map((social) => (
               <li key={social.name}>
-                <a href={social.href} className={styles.social} aria-label={social.name} />
+                <a
+                  href={social.href}
+                  className={styles.social}
+                  aria-label={social.name}
+                  id={social.name === "Telegram" ? "tg" : undefined}
+                />
                 <span className={styles.count}>{social.count}</span>
               </li>
             ))}

@@ -38,7 +38,7 @@
 }
 
 .muted {
-  color: var(--gray300);
+  color: var(--gray300-a11y);
 }
 
 .cta {

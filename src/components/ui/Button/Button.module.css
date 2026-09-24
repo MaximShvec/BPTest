@@ -117,8 +117,12 @@
 
 .spread {
   width: 100%;
+  max-width: 100%;
+  min-width: 0;
   justify-content: space-between;
   gap: 12px;
+  flex-wrap: wrap;
+  white-space: normal;
 }
 
 @media (max-width: 767px) {

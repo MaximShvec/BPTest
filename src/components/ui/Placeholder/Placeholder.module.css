@@ -5,7 +5,7 @@
   width: 100%;
   border: 1px dashed #939393;
   border-radius: 16px;
-  color: var(--gray300);
+  color: var(--gray300-a11y);
   font-size: 12px;
   line-height: 16px;
   text-align: center;

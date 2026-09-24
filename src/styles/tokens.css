@@ -5,6 +5,8 @@
   --dark: #272727;
   --gray400: #646464;
   --gray300: #939393;
+  /* #939393 on #f3f5f5 is 2.8:1. Captions may stay at 3:1; smaller text uses this. */
+  --gray300-a11y: #7a7a7a;
   --gray200: #e3e3e3;
   --gray100: #f3f5f5;
   --white: #fff;

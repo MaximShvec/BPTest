@@ -58,13 +58,14 @@
   fill: currentColor;
 }
 
-.logo span {
-  font-family: var(--font-display), "Space Grotesk", sans-serif;
-  font-weight: 500;
-  font-size: 10px;
-  line-height: 1;
-  letter-spacing: 0;
-  color: var(--dark);
+.wordmark {
+  display: block;
+  width: 101px;
+  height: 18px;
+  flex-shrink: 0;
+  background-color: var(--dark);
+  -webkit-mask: url("/media/footer-name.svg") center / contain no-repeat;
+  mask: url("/media/footer-name.svg") center / contain no-repeat;
 }
 
 .nav {
@@ -161,6 +162,7 @@
   background: url("/media/pipka.svg") no-repeat center / 100% 100%;
 }
 
+.item:hover > .drop,
 .open > .drop {
   display: block;
 }
@@ -277,6 +279,29 @@
   right: 0;
 }
 
+.langInline {
+  position: relative;
+  right: auto;
+  top: auto;
+  transform: none;
+  z-index: 3;
+}
+
+.langInline .handle {
+  min-width: 44px;
+  min-height: 44px;
+  justify-content: center;
+}
+
+.langInline .langPanel {
+  width: min(531px, calc(100vw - 40px));
+}
+
+.langInline .drop {
+  margin-right: 0;
+  margin-left: 0;
+}
+
 .langLabel {
   display: none;
 }
@@ -312,8 +337,8 @@
 
 .burger {
   display: none;
-  width: 40px;
-  height: 40px;
+  width: 44px;
+  height: 44px;
   flex-shrink: 0;
   align-items: center;
   justify-content: center;
@@ -350,6 +375,16 @@
     display: none;
   }
 
+  .langInline {
+    display: block;
+  }
+
+  .langInline .langGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: none;
+    grid-auto-flow: row;
+  }
+
   .actions {
     margin-right: 0;
     margin-left: auto;
@@ -365,6 +400,10 @@
 }
 
 @media (max-width: 767px) {
+  .langInline .langPanel {
+    width: min(320px, calc(100vw - 40px));
+  }
+
   .inner {
     padding: 0 16px;
   }

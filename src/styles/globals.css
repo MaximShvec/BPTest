@@ -36,6 +36,10 @@ img {
   max-width: 100%;
 }
 
+html {
+  overflow-x: clip;
+}
+
 body {
   margin: 0;
   font-family: var(--font-text), system-ui, sans-serif;
@@ -127,7 +131,7 @@ a:hover {
   font-size: 10px;
   line-height: 14px;
   text-transform: uppercase;
-  color: var(--gray300);
+  color: var(--gray300-a11y);
   letter-spacing: 0;
 }
 

@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect, useRef, type CSSProperties } from "react";
+import { useEffect, useRef, useState, type CSSProperties } from "react";
 import type { Media as MediaValue } from "@/schemas/primitives";
 import { cx } from "@/lib/cx";
 import { Placeholder } from "@/components/ui/Placeholder";
@@ -19,28 +19,42 @@ function LoopVideo({
   style?: CSSProperties;
 }) {
   const ref = useRef<HTMLVideoElement>(null);
+  const [active, setActive] = useState(false);
 
   useEffect(() => {
     const video = ref.current;
     if (!video) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry?.isIntersecting) setActive(true);
+      },
+      { rootMargin: "200px" },
+    );
+    observer.observe(video);
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    const video = ref.current;
+    if (!video || !active) return;
     video.muted = true;
     const play = video.play();
     if (play) play.catch(() => undefined);
-  }, []);
+  }, [active]);
 
   return (
     <video
       ref={ref}
       className={cx(styles.video, className)}
       style={style}
-      autoPlay
+      autoPlay={active}
       muted
       loop
       playsInline
-      preload="metadata"
+      preload={active ? "metadata" : "none"}
       poster={poster}
     >
-      <source src={src} />
+      {active ? <source src={src} /> : null}
     </video>
   );
 }

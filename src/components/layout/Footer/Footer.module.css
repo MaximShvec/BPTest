@@ -163,9 +163,10 @@
 
 .socials {
   display: flex;
+  flex-wrap: wrap;
   gap: 16px;
   text-align: center;
-  flex-shrink: 0;
+  max-width: 100%;
 }
 
 .social {
@@ -189,7 +190,7 @@
 }
 
 .wordmarkWrap {
-  overflow: hidden;
+  overflow: visible;
 }
 
 .wordmark {
@@ -229,6 +230,14 @@
   .chipGrid {
     grid-template-columns: 1fr;
     gap: 16px;
+  }
+
+  .tab {
+    min-height: 44px;
+  }
+
+  .chip {
+    padding-block: 11px;
   }
 
   .bottom {

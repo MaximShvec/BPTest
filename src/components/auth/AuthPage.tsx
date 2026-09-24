@@ -5,8 +5,10 @@ import { useRouter } from "next/navigation";
 import { LockIcon } from "@/components/icons/lock";
 import { LogoIcon } from "@/components/icons/logo";
 import { MailIcon } from "@/components/icons/mail";
+import { LangSwitcher } from "@/components/layout/Header/LangSwitcher";
 import { mockLogin } from "@/lib/auth";
 import type { Auth, AuthLang } from "@/schemas/auth";
+import type { NavLanguage } from "@/schemas/nav";
 import styles from "./AuthPage.module.css";
 
 const langListeners = new Set<() => void>();
@@ -40,16 +42,21 @@ function persistLang(next: AuthLang) {
 export function AuthPage({
   mode,
   copy,
+  languages,
 }: {
   mode: "signin" | "signup";
   copy: Record<AuthLang, Auth>;
+  languages: NavLanguage[];
 }) {
   const router = useRouter();
   const lang = useSyncExternalStore(subscribeLang, readLang, getServerLang);
   const text = copy[lang];
   const langRef = useRef<HTMLDivElement>(null);
+  const langButton = useRef<HTMLButtonElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
   const [langOpen, setLangOpen] = useState(false);
+  const [picked, setPicked] = useState<string | null>(null);
+  const [canHover, setCanHover] = useState(true);
   const [noteVisible, setNoteVisible] = useState(false);
   const signup = mode === "signup";
   const year = new Date().getFullYear();
@@ -81,11 +88,30 @@ export function AuthPage({
   }, []);
 
   useEffect(() => {
+    const query = window.matchMedia("(hover: hover) and (pointer: fine)");
+    const update = () => setCanHover(query.matches);
+    update();
+    query.addEventListener("change", update);
+    return () => query.removeEventListener("change", update);
+  }, []);
+
+  useEffect(() => {
     function onPointerDown(event: PointerEvent) {
       if (!langRef.current?.contains(event.target as Node)) setLangOpen(false);
     }
+    function onKey(event: KeyboardEvent) {
+      if (event.key !== "Escape") return;
+      setLangOpen((open) => {
+        if (open) langButton.current?.focus();
+        return false;
+      });
+    }
     document.addEventListener("pointerdown", onPointerDown);
-    return () => document.removeEventListener("pointerdown", onPointerDown);
+    document.addEventListener("keydown", onKey);
+    return () => {
+      document.removeEventListener("pointerdown", onPointerDown);
+      document.removeEventListener("keydown", onKey);
+    };
   }, []);
 
   function onSubmit(event: FormEvent<HTMLFormElement>) {
@@ -107,35 +133,24 @@ export function AuthPage({
             <LogoIcon width={42} height={42} />
           </a>
           <div className={styles.langWrap} ref={langRef}>
-            <button
-              className={styles.lang}
-              type="button"
-              aria-haspopup="listbox"
-              aria-expanded={langOpen}
-              onClick={() => setLangOpen((open) => !open)}
-            >
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img className={styles.flag} src={text.flags[lang]} alt="" />
-              <svg className={styles.chevron} width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
-                <path d="M2.5 4.5L6 8l3.5-3.5" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
-              </svg>
-            </button>
-            <div className={`${styles.langMenu} ${langOpen ? styles.open : ""}`} role="listbox">
-              {text.languages.map((language) => (
-                <button
-                  key={language.code}
-                  type="button"
-                  role="option"
-                  aria-selected={language.code === lang}
-                  onClick={() => {
-                    persistLang(language.code);
-                    setLangOpen(false);
-                  }}
-                >
-                  {language.label}
-                </button>
-              ))}
-            </div>
+            <LangSwitcher
+              inline
+              languages={languages}
+              open={langOpen}
+              current={picked ?? lang}
+              canHover={canHover}
+              onOpen={() => setLangOpen(true)}
+              onClose={() => setLangOpen(false)}
+              onToggle={() => setLangOpen((open) => !open)}
+              onSelect={(code) => {
+                if (code === "en" || code === "ru") persistLang(code);
+                setPicked(code);
+                setLangOpen(false);
+              }}
+              buttonRef={(node) => {
+                langButton.current = node;
+              }}
+            />
           </div>
         </div>
 

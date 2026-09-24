@@ -30,7 +30,6 @@ export function Header({ nav, common }: { nav: Nav; common: Common }) {
   const [openPath, setOpenPath] = useState(pathname);
   const [canHover, setCanHover] = useState(true);
   const [locale, setLocale] = useState(nav.header.languages.find((language) => language.active)?.code ?? "ru");
-  const [line1, line2] = common.brand.tagline.split("\n");
 
   if (pathname !== openPath) {
     setOpenPath(pathname);
@@ -75,11 +74,7 @@ export function Header({ nav, common }: { nav: Nav; common: Common }) {
       <div className={styles.inner}>
         <Link href="/" className={styles.logo} aria-label={common.brand.name}>
           <LogoIcon />
-          <span>
-            {line1}
-            <br />
-            {line2}
-          </span>
+          <span className={styles.wordmark} aria-hidden="true" />
         </Link>
 
         <nav className={styles.nav}>
